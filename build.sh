@@ -1,5 +1,6 @@
 #!/bin/bash
+source _env.sh
 
-docker build -t jgwill/gix-adaptive-style-transfer .
+docker build -t $container_tag .
 
 

@@ -2,8 +2,9 @@
 
 # Inference 
 
+source _env.sh
 
-export content=/a/lib/datasets/gia_style_AcrylicPaint2012/IMG_0005.JPG
+export content=$lib_root/datasets/gia_style_AcrylicPaint2012/IMG_0005.JPG
 export image_size=1280
 
 CUDA_VISIBLE_DEVICES=0 python main.py \

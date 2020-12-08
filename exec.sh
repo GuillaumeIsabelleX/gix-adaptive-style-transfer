@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Connecting to docker..."
-export container_id=2656b7e868d3
+export container_id=783759dbd3fe
 docker exec -it $container_id bash
 
 

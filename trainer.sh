@@ -22,7 +22,7 @@ echo "$model_local_fullpath"
 
 echo "mkdir -p data/$modelbasename"
 
-sleep 3
+sleep 1
 mkdir -p data/$modelbasename
 sleep 1
 cp -f $lib_fullpath/*jpg data/$modelbasename
