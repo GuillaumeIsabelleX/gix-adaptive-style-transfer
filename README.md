@@ -140,6 +140,11 @@ docker exec -it $container_id bash
 
 # Working progress Checkpoints upload
 
+## Dependencies
+
+* [Droxul](https://www.npmjs.com/package/droxul)
+* NodeJS
+
 ## Scripting.Checkpoints.Publisher
 
 ### I used these script to upload checkpoints to the cloud
