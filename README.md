@@ -1,5 +1,8 @@
 # Post Training notes 2012072257
 
+ also see: cd /a/nad.previz/x/x__style_transfer_darkat__2010251156/dockers/jgwill-ai-tf1.12-cuda/gix-adaptive-style-transfer
+(Require access right)
+
 ## Dependencies and datasets
 
 * Data Large (a 105GB used for forms detection in the training datasets (painting))
@@ -12,6 +15,7 @@
 # Executing the training
 
 * The command bellow had run the Docker in BG and  started the training.
+* [open run-gpu-train-bg](run-gpu-train-bg)
 
 ```sh
 ./run-gpu-train-bg gix_MODELNAME... # Mathing what is in /a/model/models (where path will be)
@@ -40,7 +44,13 @@ $dsroot/model/models/model_giacrypaint201205
 ```
 
 
-## cat ./run-gpu-train-bg
+## cat [./run-gpu-train-bg](run-gpu-train-bg)
+
+### Dependencies: 
+
+* [_env.sh](_env.sh) 
+* [_setmodel.sh](_setmodel.sh)
+
 
 ```sh
 # Run docker using the NVIDIA-Docker 2 command (Bellow is what NVidia had ran)
@@ -85,7 +95,10 @@ docker run --runtime=nvidia -it -v /a/nad.previz/x/x__style_transfer_darkat__201
 
 
 ```
+
 # ENV
+
+* [_env.sh](_env.sh)
 
 ```sh
 #!/bin/bash
@@ -113,6 +126,8 @@ export model_local_dir=$mount_root
 ## Connect to the BG docker created
 
 * Bellow is the command used to connect to the docker image (require the container name to be adjusted)
+* [open exec.sh](exec.sh)
+
 
 ```sh
 #!/bin/bash
