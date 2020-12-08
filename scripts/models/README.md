@@ -4,6 +4,13 @@
 
 ## Scripting.Checkpoints.Publisher
 
+```sh
+
+vi _env.sh&& \ # set iteration
+source newiteration.sh&&\
+source droxtar.sh
+```
+
 ### I used these script to upload checkpoints to the cloud
 
 
