@@ -138,6 +138,16 @@ export container_id=2656b7e868d3
 docker exec -it $container_id bash
 ```
 
+# Working progress Checkpoints upload
+
+## Scripting.Checkpoints.Publisher
+
+### I used these script to upload checkpoints to the cloud
+
+* [scripts/models/README.md](scripts/models/README.md)
+* [scripts/models/_env.sh](scripts/models/_env.sh)
+* [scripts/models/newiteration.sh](scripts/models/newiteration.sh)
+* [scripts/models/droxtar.sh](scripts/models/droxtar.sh)
 
 
 # Bibliography
