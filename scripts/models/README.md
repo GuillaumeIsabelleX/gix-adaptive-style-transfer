@@ -11,3 +11,10 @@
 * [newiteration.sh](newiteration.sh)
 * [droxtar.sh](droxtar.sh)
 
+
+## Dependencies
+
+* [Droxul](https://www.npmjs.com/package/droxul)
+* NodeJS
+
+
