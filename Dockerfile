@@ -1,12 +1,16 @@
-#FROM tensorflow/tensorflow:1.12.0-devel-gpu-py3
 FROM jgwill/ai-tf:1.12.0
 
 
-RUN python --version
+RUN git clone https://github.com/GuillaumeIsabelleX/gix-adaptive-style-transfer.git /model
 
 
+WORKDIR /model
 
-#RUN python -c 'import tensorflow as tf; print(tf.__version__)'  # for Python 2
+#COPY _train_sample.sh .
+#COPY _env.sh .
+#COPY datasettrain.sh .
+COPY . .
 
+RUN chmod 775 *sh
 
-
+RUN echo "nvidia-docker run -it --rm -v /a/lib:/a/lib jgwill/IMGNAME"
