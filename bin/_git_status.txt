@@ -1,0 +1,42 @@
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   Dockerfile
+	modified:   build.sh
+	modified:   cezanne.sh
+	modified:   inference.sh
+	modified:   run-gpu
+	modified:   run-gpu-train-bg
+	modified:   trainer.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	README.md
+	_env_wsl.sh
+	_git_status.txt
+	cpu-run-gpu-train-bg
+	depl-picassojgwill_201208.sh
+	giacrypaint201205.sh
+	history-inference-2012101132.txt
+	i-picassojgwill_201208.sh
+	inference2.sh
+	migrating.sh
+	sample-inference-gia-young-picasso-201209.sh
+	simple-run
+	train-pablo-picasso-jgwill-select-2012.sh
+	ws__FIXING.code-workspace
+	ws__GAIA_Ubuntu__Deployment_of_AI_Model__2012081511.code-workspace
+	wsl-run
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dockerfile
+build.sh
+cezanne.sh
+inference.sh
+run-gpu
+run-gpu-train-bg
+trainer.sh

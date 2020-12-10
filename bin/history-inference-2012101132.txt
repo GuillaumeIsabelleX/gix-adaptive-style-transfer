@@ -1,0 +1,36 @@
+    1  vi inference.sh 
+    2  ./inference.sh picassojgwill_201208 "/105000"
+    3  vi inference.sh 
+    4  ./inference.sh picassojgwill_201208 "/90000"
+    5  vi inference.sh 
+    6  ./inference.sh picassojgwill_201208 "/45000"
+    7  ./inference.sh picassojgwill_201208 "/120000"
+    8  ./inference.sh picassojgwill_201208 "/135000"
+    9  ./inference.sh picassojgwill_201208 "/150000"
+   10  ./inference.sh gia-young-young-201209 "/135000-sketch004-gia-young-young-201209"
+   11  vi inference.sh 
+   12  ./inference.sh gia-young-young-201209 "/135000-sketch004-gia-young-young-201209-2k"
+   13  vi inference.sh 
+   14  ./inference.sh gia-young-young-201209 "/135000-sketch004-gia-young-young-201209-4k"
+   15  vi inference.sh 
+   16  ./inference.sh gia-young-young-201209 "/135000-sketch004-gia-young-young-201209-3k"
+   17  vi inference.sh 
+   18  ./inference.sh gia-young-young-201209 "/135000-sketch004-gia-young-young-201209-2_4k"
+   19  vi inference.sh 
+   20  ./inference.sh gia-young-young-201209 "/135000-sketch_sur_toile-gia-young-young-2012092015__2k"
+   21  vi ../work/sample-inference-gia-young-picasso-201209.sh
+   22  ./inference.sh picassojgwill_201208 "/225000"
+   23  ./inference.sh picassojgwill_201208 "/240000"
+   24  ./inference.sh gia-young-young-201209 "/135000__2k"
+   25  ./inference.sh picassojgwill_201208 "/270000"
+   26  ls -rtc
+   27  ls -ltr
+   28  ls data/
+   29  ls
+   30  ls -ltr
+   31  cat inference.sh 
+   32  diff ../work/inference.sh 
+   33  diff ../work/inference.sh  inference.sh 
+   34  vi ../work/inference.sh 
+   35  diff ../work/inference.sh  inference.sh 
+   36  history > ../work/history-inference-2012101132.txt
