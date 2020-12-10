@@ -22,14 +22,14 @@ echo "$model_local_fullpath"
 
 echo "mkdir -p data/$modelbasename"
 
-sleep 3
+sleep 1
 mkdir -p data/$modelbasename
 sleep 1
 cp -f $lib_fullpath/*jpg data/$modelbasename
 cp -f $lib_fullpath/*JPG data/$modelbasename
 sleep 1
 
-CUDA_VISIBLE_DEVICES=0 python main.py \
+CUDA_VISIBLE_DEVICES=-1 python main.py \
                  --model_name=$model_name \
                  --batch_size=1 \
                  --phase=train \

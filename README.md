@@ -1,7 +1,9 @@
 # Post Training notes 2012072257
 
- also see: cd /a/nad.previz/x/x__style_transfer_darkat__2010251156/dockers/jgwill-ai-tf1.12-cuda/gix-adaptive-style-transfer
-(Require access right)
+*  also see: cd /a/nad.previz/x/x__style_transfer_darkat__2010251156/dockers/jgwill-ai-tf1.12-cuda/gix-adaptive-style-transfer
+(Require access right [REPO](https://github.com/jgwill/nad.previz/tree/master/x/x__style_transfer_darkat__2010251156/dockers/jgwill-ai-tf1.12-cuda/gix-adaptive-style-transfer-cpu))
+* Also see the ./bin which is what made my first training to work. (well I copy all my work in that ./bin)
+
 
 ## Dependencies and datasets
 

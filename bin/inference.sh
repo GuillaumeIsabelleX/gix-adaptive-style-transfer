@@ -2,15 +2,26 @@
 
 # Inference 
 
-
-export content=/a/lib/datasets/gia_style_AcrylicPaint2012/IMG_0005.JPG
 export image_size=1280
 
-CUDA_VISIBLE_DEVICES=0 python main.py \
-	--model_name=model_cezanne \
+export content=/a/lib/samples/content/
+export savedir=/a/lib/results/$1$2
+export modelname=model_$1
+
+
+echo "Model is : model_$1"
+
+rm -f data/*
+cp -f $content/*jpg data
+cp -f $content/*png data
+cp -f $content/*JPG data
+cp -f $content/*PNG data
+
+CUDA_VISIBLE_DEVICES=-1 python main.py \
+	--model_name=$modelname \
 	--phase=inference \
 	--image_size=$image_size \
-	--ii_dir /a/lib/samples/content/ \
-	--save_dir=/a/lib/results/x__cezanne_inference__2012052128/
+	--ii_dir data \
+	--save_dir=$savedir/
 
 
