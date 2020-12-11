@@ -19,6 +19,7 @@ export successmsg="Archived model: $modelcontext \
                 \t\t published it to: $publishroot"
 
 (tar cvzf $tarcontext $modelcontext && droxul upload $tarcontext $publishroot && ginol -s "$successmsg") &
+#echo "(tar cvzf $tarcontext $modelcontext && droxul upload $tarcontext $publishroot && ginol -s $successmsg)"
 #echo "Processing started in BG"
 
 
