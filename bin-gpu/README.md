@@ -22,6 +22,9 @@ source _status_inferer.sh model_gia-young-picasso-201210_new /it-300k-2012160311
 
 ./run-gpu-inference model_gia-young-picasso-201210_new /it-300k-2012160311
 # Above run inference in context of GPU
+# Produces an output you have to copy paste to run the inference on the container
+nvidia-docker run -it  -v /a/nad.previz/x/x__style_transfer_darkat__2010251156/dockers/jgwill-ai-tf1.12-cuda/gix-adaptive-style-transfer:/work         -v /a/lib:/a/lib         -v /a/model/models:/model/models \
+        -e DISPLAY=10.10.22.68:0.0         jgwill/gix-adaptive-style-transfer:gpu       bash ./inferer.sh model_gia-young-picasso-201210_new-135000 /it-135k-2012160325
 
 ```
 
