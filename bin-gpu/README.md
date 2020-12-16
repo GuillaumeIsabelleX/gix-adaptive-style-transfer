@@ -4,7 +4,7 @@
 
 ## Dependencies and datasets
 
-### Traiting Phase
+### Training Phase
 
 * Data Large (a 105GB used for forms detection in the training datasets (painting))
 * Docker
@@ -14,6 +14,16 @@
 * Adaptive Style Transfer code
 
 ### Inference Phase
+
+```sh
+
+source _status_inferer.sh model_gia-young-picasso-201210_new /it-300k-2012160311
+# above give output of what might happen
+
+./run-gpu-inference model_gia-young-picasso-201210_new /it-300k-2012160311
+# Above run inference in context of GPU
+
+```
 
 * TODO
 
