@@ -1,3 +1,8 @@
+# Post scripting update 2012160428
+
+* [bin-gpu](bin-gpu) was upgraded, see readme in the subfolder
+
+
 # Post Training notes 2012072257
 
 *  also see: cd /a/nad.previz/x/x__style_transfer_darkat__2010251156/dockers/jgwill-ai-tf1.12-cuda/gix-adaptive-style-transfer
