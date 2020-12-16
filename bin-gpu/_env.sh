@@ -30,11 +30,16 @@ export container_workdir=/work
 export docker_exec_gpu=nvidia-docker
 export docker_exec_cpu=docker
 
+# CPU or GPU context -1 for CPU (it should be determined by the container_art above
+export CUDA_VISIBLE_DEVICES=0
 if [ "$container_arc" = "cpu" ]; then
     export docker_exec=$docker_exec_cpu
+    export CUDA_VISIBLE_DEVICES=-1
     echo "Docker Exec is set to CPU ($docker_exec)"
 else
     export docker_exec=$docker_exec_gpu
+    # I guess it might be another number in other hosting but on platform AS.Nad.ca it is 0
+    export CUDA_VISIBLE_DEVICES=0
     echo "Docker Exec is set to GPU ($docker_exec)"
 fi
 

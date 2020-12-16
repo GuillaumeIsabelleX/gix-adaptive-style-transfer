@@ -2,8 +2,9 @@
 
 * this is the GPU folder I used in a messy first try to train models.
 
-
 ## Dependencies and datasets
+
+### Traiting Phase
 
 * Data Large (a 105GB used for forms detection in the training datasets (painting))
 * Docker
@@ -11,6 +12,11 @@
 * nvidia-docker linux packaging
 * A Dataset of Paintings you want the model to learn from
 * Adaptive Style Transfer code
+
+### Inference Phase
+
+* TODO
+
 
 # Executing the training
 
