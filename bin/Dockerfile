@@ -1,5 +1,6 @@
-FROM jgwill/ai-tf:1.12.0-cpu
+FROM jgwill/ai-tf:1.12.0
 
+RUN ls
 #RUN git clone --single-branch --branch feat__2012181051__switch https://github.com/GuillaumeIsabelleX/gix-adaptive-style-transfer.git /model
 RUN git clone https://github.com/GuillaumeIsabelleX/gix-adaptive-style-transfer.git /model
 
