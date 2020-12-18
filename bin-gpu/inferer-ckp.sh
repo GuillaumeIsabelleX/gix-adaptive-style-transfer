@@ -7,19 +7,7 @@ source _env.sh
 
 source _inferer_env.sh $1 $2 $3
 
-#export image_size=1280
 
-#export content=$docker_lib_root/samples/content
-
-# where to read the content data
-#export content_src=data
-
-#export savedir=$docker_lib_root/results/$1$2
-
-#export modelname=model_$1
-
-
-#echo "Model is : model_$1"
 
 echo "Making a Local copy of the Data for inference..."
 rm -f data/*
