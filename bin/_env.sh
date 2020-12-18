@@ -1,6 +1,7 @@
 #!/bin/bash
 #@STCIssue Set to Your ARC
 export container_arc=cpu
+export tlid_context=2012181217
 
 #@STCGoal Set to your Local ENV where is stored your lib and models
 export mount_root=/mnt/b
@@ -41,6 +42,8 @@ fi
 
 
 export container_tag=$container_name:$container_arc
+export container_tag_tlid="$container_name:$tlid_context-$container_arc"
+
 echo "Container tag is set: $container_tag"
 
 export model_local_dir=$mount_root
