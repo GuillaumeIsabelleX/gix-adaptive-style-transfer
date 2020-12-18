@@ -26,12 +26,16 @@ echo " " >> $ind
 
 cd $content
 for f in * ; do
-	
+	# getting variable of base and file name no extension to work on stuff
 	fname=$(basename $f)
         fbnameTMP=${fname%.*}
         echo $f $fbnameTMP
+	
 	export fixedname="$fbnameTMP.jpg"
 	export fixednameori="$fbnameTMP.ori.jpg"
+
+
+	# make a copy of the original
 
 	FILE=$savefullpath/$fixednameori
 	if [ -f "$FILE" ]; then
@@ -41,6 +45,9 @@ for f in * ; do
 		cp -f $f $savefullpath/$fixednameori && echo "Copy of $f done"
 	fi
 
+
+	# Convert the original to the resolution of the inferences
+	
 	FILE=$savefullpath/$fixedname
 	if [ -f "$FILE" ]; then
                 echo "$FILE exists."
@@ -49,25 +56,24 @@ for f in * ; do
 		convert $f  -resize $img_res $savefullpath/$fixedname  && echo "Conversion of $f done"
 	fi
 
-	export h='| '
+	export h='| Content '
 	export s='| ---'
 
-	for i in $chks ; do export h=$h' |' ; done
+	for i in $chks ; do export h=$h' |'$i ; done
 	for i in $chks ; do export s=$s'| ---' ; done
 	
 	export h="$h |"
 	export s="$s |"
 
- 	ori='![]('$fixedname')'	
+	ori='[![]('$fixedname')]('$fixednameori')'	
 	export l='| '$ori
 
+	# Iterating to all checkpoints to generate our data view
 	for i in $chks ;
         	do
-        #       subdir=$i
-        #        cmd="$script $model $subdir $suffix $img_res $content $savedir $i"
-	# #content
+        
 		cfn=$fbnameTMP$suffix$suffixseparator$i'k.jpg'
-		e='| ![]('$cfn')'
+		e='| !['$i'k]('$cfn')'
 		export l=$l$e
 	done
 	export l="$l |"
@@ -80,6 +86,7 @@ for f in * ; do
 	######################## WRITTING
 	#Header
 	echo " "  >> $ind
+	echo "----"  >> $ind
 	echo " "  >> $ind
 
 	echo '## '$fbnameTMP >> $ind
@@ -87,13 +94,17 @@ for f in * ; do
 	echo " "  >> $ind
 	#echo '![]('$fixedname')' >> $ind
 	echo " "  >> $ind
+	
 	#Table
 	echo "$h" >> $ind
         echo "$s" >> $ind
         echo "$l" >> $ind
+	#Add a rows of iteration in between each 
+	echo "$h" >> $ind
 
 	cd $content
 done
 
+# Committing results to remote repo
 cd $savefullpath && pwd && sleep 2 &&(git pull;git add * ;pwd; git commit . -m "update:$ind $savefullpath" && git push) 
 
