@@ -1,7 +1,7 @@
 FROM jgwill/ai-tf:1.12.0
 
-
-RUN git clone https://github.com/GuillaumeIsabelleX/gix-adaptive-style-transfer.git /model
+#RUN ls
+RUN git clone https://github.com/GuillaumeIsabelleX/gix-adaptive-style-transfer.git /model && rm -rf /model/.git
 
 
 WORKDIR /model
