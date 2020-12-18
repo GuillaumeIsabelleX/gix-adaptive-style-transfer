@@ -8,6 +8,14 @@ export content=/a/lib/samples/content/
 export savedir=/a/lib/results/$1$2
 export modelname=model_$1
 
+export modelnametmp=model_$1
+replacerstr="model_"
+secondString=""
+
+export modelname1="${modelnametmp/$replacerstr/$secondString}"
+export modelname1="${modelname1/model_model_/$secondString}"
+
+export modelname=model_$modelname1
 
 echo "Model is : model_$1"
 
