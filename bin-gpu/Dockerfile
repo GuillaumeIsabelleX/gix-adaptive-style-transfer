@@ -1,4 +1,4 @@
-FROM guillaumeai/tf:1.12.0:gpu
+FROM guillaumeai/tf:1.12.0-gpu
 
 #RUN ls
 RUN git clone https://github.com/GuillaumeIsabelleX/gix-adaptive-style-transfer.git /model && rm -rf /model/.git
