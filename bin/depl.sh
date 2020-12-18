@@ -24,7 +24,9 @@ cmd="$docker_exec run -it  -v $(pwd):$container_workdir \
 	-e DISPLAY=$DISPLAY \
 	$container_tag
 	"
+echo "-----------------The following command will ran :"
 echo $cmd
+sleep 1
 
 $cmd
 # $docker_exec run -it  -v $(pwd):$container_workdir \
