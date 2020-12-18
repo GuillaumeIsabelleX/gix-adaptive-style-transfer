@@ -29,3 +29,5 @@ python main.py \
         --save_dir=$savedir/ \
 	--ckpt_nmbr=$ckpt_nmbr
 
+
+chmod 777 $savedir/*

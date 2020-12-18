@@ -14,3 +14,5 @@ CUDA_VISIBLE_DEVICES=0 python main.py \
 	--save_dir=/a/lib/results/x__cezanne_inference__2012052128/
 
 
+
+chmod 777 $savedir/*

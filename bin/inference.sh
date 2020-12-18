@@ -25,3 +25,4 @@ CUDA_VISIBLE_DEVICES=-1 python main.py \
 	--save_dir=$savedir/
 
 
+chmod 777 $savedir/*
