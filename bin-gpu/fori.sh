@@ -40,5 +40,6 @@ for i in $chks ;
 
 done
 
-
+# Run the prep of the data view
+source $DIR/ifor.sh
 
