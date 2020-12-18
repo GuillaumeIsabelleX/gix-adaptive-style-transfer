@@ -15,6 +15,9 @@ export content_src=data
 
 export savedir=$docker_lib_root/results/$1$2
 
+#specify for checkpoint specific running context
+export ckpt_nmbr=$3
+
 export modelnametmp=model_$1
 replacerstr="model_"
 secondString=""
