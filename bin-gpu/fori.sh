@@ -1,4 +1,10 @@
 
+echo "Current dir is : $(pwd)"
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+echo "DIR: $DIR"
+
+
 #source _fori_env.sh
 
 # iterate all check point
@@ -14,7 +20,7 @@
 #export subdir=alls
 #export workdir=$(pwd)
 
-source _fori_env.sh
+source $DIR/_fori_env.sh
 
 # /work/i4.sh model_gia-young-picasso-v03-201216_new 240 2048 /a/lib/samples/content2012181444 /a/lib/results/it-chkp 240
 # ---------------------------------
