@@ -375,7 +375,7 @@ class Artgan(object):
 
     # Don't use this function yet.
     def inference_video(self, args, path_to_folder, to_save_dir=None, resize_to_original=True,
-                        use_time_smooth_randomness=True, ckpt_nmbr=None):
+                        use_time_smooth_randomness=True, ckpt_nmbr=None,file_suffix= "_stylized"):
         """
         Run inference on the video frames. Original aspect ratio will be preserved.
         Args:
@@ -453,12 +453,12 @@ class Artgan(object):
             else:
                 pass
 
-            scipy.misc.imsave(os.path.join(to_save_dir, img_name[:-4] + "_stylized.jpg"), img)
+            scipy.misc.imsave(os.path.join(to_save_dir, img_name[:-4] + file_suffix +".jpg"), img)
 
         print("Inference is finished.")
 
     def inference(self, args, path_to_folder, to_save_dir=None, resize_to_original=True,
-                  ckpt_nmbr=None):
+                  ckpt_nmbr=None,file_suffix= "_stylized"):
 
         init_op = tf.global_variables_initializer()
         self.sess.run(init_op)
@@ -508,7 +508,7 @@ class Artgan(object):
                 pass
             img_name = os.path.basename(img_path)
             #@STCGoal HERE TO APPEND SUFFIX TO FILE
-            scipy.misc.imsave(os.path.join(to_save_dir, img_name[:-4] + "_stylized.jpg"), img)
+            scipy.misc.imsave(os.path.join(to_save_dir, img_name[:-4] + file_suffix +".jpg"), img)
 
         print("Inference is finished.")
 
