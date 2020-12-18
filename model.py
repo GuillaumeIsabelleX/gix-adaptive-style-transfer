@@ -507,6 +507,7 @@ class Artgan(object):
             else:
                 pass
             img_name = os.path.basename(img_path)
+            #@STCGoal HERE TO APPEND SUFFIX TO FILE
             scipy.misc.imsave(os.path.join(to_save_dir, img_name[:-4] + "_stylized.jpg"), img)
 
         print("Inference is finished.")
