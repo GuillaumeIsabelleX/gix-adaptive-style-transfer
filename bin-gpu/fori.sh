@@ -30,16 +30,16 @@ for i in $chks ;
 
 done
 
-for i in $chks ;
-        do
+#for i in $chks ;
+#        do
         #       subdir=$i
         #        cmd="$script $model $subdir $suffix $img_res $content $savedir $i"
 	# #content
-	for f in $content/* ; do
-		echo $f
+#	for f in $content/* ; do
+#		echo $f
 
-	done
+#	done
         
 
-done
+#done
 
