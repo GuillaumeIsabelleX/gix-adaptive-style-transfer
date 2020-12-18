@@ -3,6 +3,8 @@
 source _env.sh
 
 docker build -t $container_tag .
+echo "Built  $container_tag"
+sleep 1
 docker build -t $container_tag_tlid .
 
 docker push $container_tag
