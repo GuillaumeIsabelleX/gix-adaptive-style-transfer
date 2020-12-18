@@ -7,6 +7,7 @@ export mount_root=/mnt/b
 
 #@STCGoal Set the Target container name
 export container_name=jgwill/gix-adaptive-style-transfer
+#export container_name=jgwill/gix-adaptive-style-transfer-feat__2012181051__switch
 
 #-------------------------------------
 #@STCGoal Stay away of bellow unless your re-architecturing the whole thing
