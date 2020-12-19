@@ -5,7 +5,21 @@ source _env.sh
 
 export train_script=./trainer.sh
 
-export model_context_name=model_$1_new
+#@STCIssue Usage of the model full path generate issue model_model_MODELNAME
+#FIX  
+replacerstr="model_"
+secondString=""
+modelnametmp=$1
+export modelnameonly="${modelnametmp/$replacerstr/$secondString}"
+
+export model_context_name='model_'$modelnameonly'_new'
+
+
+#@STCGoal Inference Context variables
+export inference_script=./inferer.sh
+export model_inference_name=model_$modelnameonly
+
+
 
 export modelbasename=$1
 export lib_namespace=$1
