@@ -3,6 +3,7 @@
 # Inference 
 #./i4.sh MODELNAME "/subdir" FILE_SUFFIX IMG_SIZE CONTENTDIR SAVEDIR CHKPOINT
 #./i4.sh model_gia-young-picasso-v03-201216_new /subdir __suffix 1024 /a/lib/samples/content /a/lib/results/someoutput 285000
+source _env.sh
 
 export image_size=$4
 echo "Image size: $image_size"
@@ -38,7 +39,11 @@ cp -f $content/*png data
 cp -f $content/*JPG data
 cp -f $content/*PNG data
 
-CUDA_VISIBLE_DEVICES=-1 python main.py \
+#CUDA_VISIBLE_DEVICES=-1 python main.py \
+#echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
+#sleep 1
+
+python main.py \
 	--model_name=$modelname \
 	--phase=inference \
 	--image_size=$image_size \

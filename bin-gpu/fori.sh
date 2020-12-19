@@ -31,7 +31,7 @@ for i in $chks ;
 		cmd="$script $model $subdir $suffix $img_res $content $savedir $i"
 
 		echo "$cmd"
-		echo "running..."
+		echo "running...resolution :$img_res  "
 		sleep 1
 		$cmd
 		echo "Done this iteration... listing"
