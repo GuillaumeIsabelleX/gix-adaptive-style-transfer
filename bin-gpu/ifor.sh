@@ -21,6 +21,9 @@ echo "DIR: $DIR"
 
 source $DIR/_fori_env.sh
 
+git config --global user.email "jgi@jgwill.com"
+git config --global user.name "JGWill"
+
 # /work/i4.sh model_gia-young-picasso-v03-201216_new 240 2048 /a/lib/samples/content2012181444 /a/lib/results/it-chkp 240
 # ---------------------------------
 echo "FIXING PERMISSION NOW..."
