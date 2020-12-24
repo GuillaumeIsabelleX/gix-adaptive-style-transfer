@@ -20,7 +20,7 @@ echo "DIR: $DIR"
 #export subdir=alls
 #export workdir=$(pwd)
 
-source $DIR/_fori_env.sh
+source $DIR/_fori_env.sh $1 $2 $3 $4 $5
 
 # /work/i4.sh model_gia-young-picasso-v03-201216_new 240 2048 /a/lib/samples/content2012181444 /a/lib/results/it-chkp 240
 # ---------------------------------

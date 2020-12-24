@@ -19,7 +19,7 @@ echo "DIR: $DIR"
 #export savefullpath=$savedir/$subdir
 #export ind=index2.md
 
-source $DIR/_fori_env.sh
+source $DIR/_fori_env.sh $1 $2 $3 $4 $5 $6
 
 git config --global user.email "jgi@jgwill.com"
 git config --global user.name "JGWill"
@@ -56,6 +56,7 @@ for f in * ; do
 	fname=$(basename $f)
         fbnameTMP=${fname%.*}
         echo $f $fbnameTMP
+	sleep 1
 	
 	export fixedname="$fbnameTMP.jpg"
 	export fixednameori="$fbnameTMP.ori.jpg"
@@ -129,5 +130,5 @@ for f in * ; do
 done
 
 # Committing results to remote repo
-cd $savefullpath && pwd && sleep 2 &&(git pull;git add * ;pwd; git commit . -m "update:$ind $savefullpath" && git push) 
+cd $savefullpath && pwd && sleep 2 &&(git pull;git add * ;pwd; git commit . -m "update:$ind $savefullpath" && (git pull && git push)|| git push) 
 
