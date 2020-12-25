@@ -5,6 +5,7 @@ export tlid_context=2012181217
 
 #@STCGoal Set to your Local ENV where is stored your lib and models
 export mount_root=/mnt/b
+export mount_sysroot=/mnt/c
 
 #@STCGoal Set the Target container name
 export container_name=jgwill/gix-adaptive-style-transfer
@@ -16,9 +17,11 @@ export container_name=jgwill/gix-adaptive-style-transfer
 
 export lib_root=$mount_root/lib
 export docker_lib_root=/a/lib
-export model_root=$mount_root/model
+# where the models are located in the local machine
+#export model_root=$mount_root/model
+export model_root=$mount_sysroot/model
 
-
+#Where the container will mount it
 export container_models_fullpath=/model/models
 
 

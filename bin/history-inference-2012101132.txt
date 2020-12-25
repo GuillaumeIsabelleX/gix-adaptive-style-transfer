@@ -34,3 +34,21 @@
    34  vi ../work/inference.sh 
    35  diff ../work/inference.sh  inference.sh 
    36  history > ../work/history-inference-2012101132.txt
+Mon Dec 21 17:13:10 UTC 2020
+    1  ./inference3.sh model_giapicallo_v04__201221 /v04__045ik_-1k  "045ik__1k"
+    2  echo ./inference3.sh model_giapicallo_v04__201221 /v04__045ik_-1k  "045ik__1k"
+    3  echo './inference3.sh model_giapicallo_v04__201221 /v04__045ik_-1k  "045ik__1k"'
+    4  echo './inference3.sh model_giapicallo_v04__201221 /v04__045ik_-1k  "045ik__1k"' >> /work/sample-inference-gia-young-picasso-201209.sh 
+    5  ./inference3.sh model_giapicallo_v04__201221 /v04__045ik_-1k  "__045i__1k"
+    6  vi inference3.sh 
+    7  cp inference3.sh  inference4.sh
+    8  vi inference4.sh 
+    9  ./inference3.sh model_giapicallo_v04__201221 /v04__060ik_-1k  "__060i__1k"
+   10  ./inference3.sh model_giapicallo_v04__201221 /v04__075ik_-1k  "__075i__1k"
+   11  df -h
+   12  ls /a/lib/
+   13  history
+   14  echo "$(d
+   15  echo "$(date)"
+   16  echo "$(date)" >> /work/history-inference-2012101132.txt 
+   17  history >> /work/history-inference-2012101132.txt

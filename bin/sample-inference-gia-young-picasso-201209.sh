@@ -5,3 +5,6 @@
 
 
 
+# 
+./inference.sh model_giapicallo_v04__201221
+./inference3.sh model_giapicallo_v04__201221 /v04__045ik_-1k  "045ik__1k"
