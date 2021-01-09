@@ -4,7 +4,7 @@ export container_arc=cpu
 export tlid_context=2012181217
 
 #@STCGoal Set to your Local ENV where is stored your lib and models
-export mount_root=/mnt/b
+export mount_root=/a
 
 #@STCGoal Set the Target container name
 export container_name=jgwill/gix-adaptive-style-transfer
