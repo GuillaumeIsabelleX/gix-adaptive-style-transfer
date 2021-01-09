@@ -17,7 +17,9 @@ RUN rm -rf models
 #COPY _train_sample.sh .
 #COPY _env.sh .
 #COPY datasettrain.sh .
-#COPY . .
+COPY . .
+
+RUN dos2unix *
 
 RUN chmod 775 *sh
 
