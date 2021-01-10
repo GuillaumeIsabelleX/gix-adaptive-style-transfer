@@ -20,9 +20,10 @@ export content=$5
 #export savedir=/a/lib/results/$1$2
 export savesubdir=$2
 export savedir=$6/$savesubdir
-export modelname=model_$1
 
-export modelname1=model_$1
+
+
+export modelname1=$1
 replacerstr="model_"
 secondString=""
 
@@ -32,7 +33,7 @@ export modelname1="${modelname1/model_model_/$secondString}"
 
 export modelname=model_$modelname1
 
-echo "Model is : model_$1"
+echo "Model is : $modelname"
 
 rm -f data/*
 cp -f $content/*jpg data

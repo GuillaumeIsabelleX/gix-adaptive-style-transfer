@@ -1,0 +1,36 @@
+#!/bin/bash
+#@STCGoal TRansform into Inference on GPU
+
+source _env.sh
+source _inferer_env.sh $1 $2 $3
+
+#source _setmodel.sh $1
+
+#export model_name=$1
+#export inference_script=./inferer.sh
+#export model_inference_name=model_$1
+
+#mkdir -p $model_local_fullpath
+echo "bash $inference_script $model_name"
+
+export cmd="$docker_exec run -it  -v $(pwd):$container_workdir \
+        -v $lib_root:$docker_lib_root \
+        -v $model_root/models:$container_models_fullpath \ 
+        -e DISPLAY=$DISPLAY \
+        $container_tag \
+	bash $inference_script_ckp $model_inference_name $2 $3"
+
+echo "-- Command that will run : "
+echo "$cmd"
+echo "-----------------------"
+echo "--Running the container ..."
+sleep 1
+
+#"$cmd"
+echo "-------------@STCIssue---------------"
+echo "---@STCIssue For some reasons, the nvidia-docker is not running in the bash script context, "
+echo "---- copy and paste the command bellow to the prompt to run it manually"
+echo "---"
+echo "$cmd"
+
+

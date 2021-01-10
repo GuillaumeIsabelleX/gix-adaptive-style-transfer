@@ -18,8 +18,8 @@ export container_name=jgwill/gix-adaptive-style-transfer
 export lib_root=$mount_root/lib
 export docker_lib_root=/a/lib
 # where the models are located in the local machine
-#export model_root=$mount_root/model
-export model_root=$mount_sysroot/model
+export model_root=$mount_root/model
+#export model_root=$mount_sysroot/model
 
 #Where the container will mount it
 export container_models_fullpath=/model/models
