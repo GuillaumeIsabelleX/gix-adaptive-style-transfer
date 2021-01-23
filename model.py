@@ -348,7 +348,7 @@ class Artgan(object):
             if step % self.options.save_freq == 0 and step > self.initial_step:
                 self.save(step)
 
-            # And additionally save all checkpoints each 15000 steps.
+            # @STCGoal And additionally save all checkpoints each 15000 steps.
             if step % 15000 == 0 and step > self.initial_step:
                 self.save(step, is_long=True)
 
