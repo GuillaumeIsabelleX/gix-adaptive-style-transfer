@@ -9,7 +9,7 @@ source _setmodel2.sh picassojgwill201208
 # OVERRIDING THE CONTAINER TAG
 export container_tag=jgwill/gia-ast:test
 export container_tag=jgwill/gix-adaptive-style-transfer:gia-ast
-export container_tag=jgwill/gix-adaptive-style-transfer:ast-v2
+#export container_tag=jgwill/gix-adaptive-style-transfer:ast-v2
 
 
 echo "---------------------------------------------------"
