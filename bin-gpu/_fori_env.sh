@@ -19,7 +19,11 @@ export model=$4
 #export content=/a/lib/samples/content2012181444
 export content=$5
 #export content=/a/lib/datasets/paintergansets/paul-cezanne
+export savedirbase=/a/lib/results/proto__colorizer
+mkdir -p $savedirbase
 export savedir=/a/lib/results/it-chkp/$3
+export savedir=$savedirbase/$3
+
 #export savedir=/a/lib/results/it-chkp
 export script=/work/i4.sh
 export subdir=$2
