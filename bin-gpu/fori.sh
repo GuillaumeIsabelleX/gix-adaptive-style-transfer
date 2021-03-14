@@ -5,20 +5,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 echo "DIR: $DIR"
 
 
-#source _fori_env.sh
-
-# iterate all check point
-#@STCGoal In one shot have an observation grid of all iteration
-#@STCGoal Find the optimal checkpoint 
-#export chks="60 75 90 105 120 135 150 165 180 195 210 225 240 255 270"
-#export img_res=1024
-#export suffix="__"
-#export model=model_gia-young-picasso-v03-201216_new
-#export content=/a/lib/samples/content2012181444
-#export savedir=/a/lib/results/it-chkp
-#export script=/work/i4.sh
-#export subdir=alls
-#export workdir=$(pwd)
 
 source $DIR/_fori_env.sh $1 $2 $3 $4 $5
 
