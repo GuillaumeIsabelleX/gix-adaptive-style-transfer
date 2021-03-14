@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Inference 
+## This script is used by fori.sh, an multi-checkpoints inference renderer.
+#-------------------------------------------------
 #./i4.sh MODELNAME "/subdir" FILE_SUFFIX IMG_SIZE CONTENTDIR SAVEDIR CHKPOINT
 #./i4.sh model_gia-young-picasso-v03-201216_new /subdir __suffix 1024 /a/lib/samples/content /a/lib/results/someoutput 285000
 source _env.sh

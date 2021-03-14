@@ -1,12 +1,20 @@
 
 #
+export savedirnamespace=ap__210217
+export savedirnamespace=xe__gia-young-picasso-v03-201216-var2
+export savedirnamespace=wassily_kandinsky_v1_210310
+
+
 
 export chks_long_all="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 270 285 300"
-export partial_210108="15 30 45 60 75"
+export partial_210108="15 30 45 60 75 90"
+export partial_210108="15 30 45 60 75 90 105 120 135 150 1165 180 195"
+export partial_210108="150 165 180 195 210 225 240 255 270 285 300"
+
 #iteration 2012270346 - IMG_0019 choosen
 #export chks="30 105 150 225 240 270 285 300"
 export chks=$chks_long_all
-#export chks=$partial_210108
+export chks=$partial_210108
 #export chks="225 150 120 255 270 285"
 #export chks="30 75 120 150 225 240 255 270 285 300"
 ############################################################
@@ -19,7 +27,9 @@ export model=$4
 #export content=/a/lib/samples/content2012181444
 export content=$5
 #export content=/a/lib/datasets/paintergansets/paul-cezanne
-export savedirbase=/a/lib/results/proto__colorizer
+
+
+export savedirbase=/a/lib/results/$savedirnamespace
 mkdir -p $savedirbase
 export savedir=/a/lib/results/it-chkp/$3
 export savedir=$savedirbase/$3
