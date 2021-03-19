@@ -14,7 +14,7 @@ export partial_210108="150 165 180 195 210 225 240 255 270 285 300"
 #iteration 2012270346 - IMG_0019 choosen
 #export chks="30 105 150 225 240 270 285 300"
 export chks=$chks_long_all
-export chks=$partial_210108
+#export chks=$partial_210108
 #export chks="225 150 120 255 270 285"
 #export chks="30 75 120 150 225 240 255 270 285 300"
 ############################################################

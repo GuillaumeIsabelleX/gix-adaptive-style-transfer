@@ -5,26 +5,19 @@
 #contentpath=/a/lib/samples/ap__210217
 
 contentpath=/a/lib/samples/content0014-0019min
+contentpath=/a/lib/samples/content_210314
+
 #contentpath=/a/lib/samples/content
 
-dim=2200
-dtag=2_2k
+dim=2300
+dtag=2_3k
 
 
-ftag=v01var1
+ftag=wk__v01var1
 modeltag=model_gia-ds-wassily_kandinsky_v1_210310_new
 
 /work/fori.sh $dim $dtag $ftag $modeltag $contentpath
 
 ########################################################
-
-contentpath=/a/lib/samples/content
-
-
-
-
-modeltag=model_gia-ds-wassily_kandinsky_v1_210310_new
-
-/work/fori.sh $dim $dtag $ftag $modeltag $contentpath
 
 
