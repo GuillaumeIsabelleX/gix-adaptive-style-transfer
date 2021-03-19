@@ -5,6 +5,7 @@ RUN apt update
 RUN apt install dos2unix -y
 
 WORKDIR /model
+RUN ls
 
 RUN git clone https://github.com/GuillaumeIsabelleX/gix-adaptive-style-transfer.git . && git checkout prod && rm -rf /model/.git && du -ksh /model
 RUN dos2unix *

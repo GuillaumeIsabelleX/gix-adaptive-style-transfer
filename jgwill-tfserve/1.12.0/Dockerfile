@@ -9,3 +9,16 @@ RUN apt update
 COPY install-tf-serving .
 
 RUN apt-get install tensorflow-model-server -y
+
+
+WORKDIR /server
+
+# So we can run the clients
+RUN pip install tensorflow-serving-api==1.12.0
+
+COPY launch-tf-serve.sh .
+COPY _env.sh .
+RUN chmod a+x *sh
+#add the env to the bashrc of the root
+RUN cat _env.sh > /root/.bashrc
+
