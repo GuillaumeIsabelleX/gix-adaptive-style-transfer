@@ -27,6 +27,9 @@ mkdir -p data/$modelbasename
 sleep 1
 cp -f $lib_fullpath/*jpg data/$modelbasename
 cp -f $lib_fullpath/*JPG data/$modelbasename
+cp -f $lib_fullpath/*PNG data/$modelbasename
+cp -f $lib_fullpath/*png data/$modelbasename
+
 sleep 1
 
 CUDA_VISIBLE_DEVICES=0 python main.py \
