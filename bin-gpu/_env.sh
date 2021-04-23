@@ -4,6 +4,7 @@ export container_arc=gpu
 
 #@STCGoal Set to your Local ENV where is stored your lib and models
 export mount_root=/a
+export hb=/work/hooks
 
 #@STCGoal Set the Target container name
 export container_name=jgwill/gix-adaptive-style-transfer
