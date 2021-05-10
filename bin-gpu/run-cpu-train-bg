@@ -13,6 +13,7 @@ mkdir -p $model_local_fullpath
 echo "bash $train_script $model_name"
 
 #override GPU to CPU
+docker_exec=docker
 container_tag=jgwill/gix-adaptive-style-transfer:cpu-train
 
 $docker_exec run -it  -v $(pwd):$container_workdir \
