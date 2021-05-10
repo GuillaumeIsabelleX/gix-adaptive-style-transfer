@@ -31,6 +31,7 @@ cp -f $lib_fullpath/*PNG data/$modelbasename
 cp -f $lib_fullpath/*png data/$modelbasename
 
 sleep 1
+# CPU Training (set to -1 means CPU)
 
 CUDA_VISIBLE_DEVICES=-1 python main.py \
                  --model_name=$model_name \
