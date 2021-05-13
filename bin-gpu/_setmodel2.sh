@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-source _env.sh
+#source _env.sh
 
 export train_script=./trainer.sh
 export inference_script=./inference.sh

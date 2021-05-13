@@ -10,6 +10,6 @@ ds=gia-ds-DavidBouchardGagnon-v01a-210510
 
 
 
-#./run-gpu-train-bg-var2 $ds
-./run-cpu-train-bg $ds
+./run-gpu-train-bg-var2 $ds
+#./run-cpu-train-bg $ds
 
