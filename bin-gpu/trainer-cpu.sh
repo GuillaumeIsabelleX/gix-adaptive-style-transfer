@@ -31,8 +31,11 @@ cp -f $lib_fullpath/*PNG data/$modelbasename
 cp -f $lib_fullpath/*png data/$modelbasename
 
 sleep 1
+# CPU Training (set to -1 means CPU)
 
-CUDA_VISIBLE_DEVICES=0 python main.py \
+#CUDA_VISIBLE_DEVICES=-1 
+#echo 
+python main.py \
                  --model_name=$model_name \
                  --batch_size=1 \
                  --phase=train \
@@ -40,4 +43,7 @@ CUDA_VISIBLE_DEVICES=0 python main.py \
                  --lr=0.0002 \
                  --dsr=0.8 \
                  --ptcd=$lib_root/data_large \
-                 --ptad=./data/$modelbasename
+                 --ptad=./data/$modelbasename 
+                 #> train-tmp-cmd.sh
+#cp train-tmp-cmd.sh /work
+
