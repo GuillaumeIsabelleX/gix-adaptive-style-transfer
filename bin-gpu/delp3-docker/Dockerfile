@@ -21,3 +21,7 @@ COPY build/bashaliases .bash_aliases
 # RUN echo 'alias dxup="drox -f /config/.dropbox_uploader upload "' >> .bashrc
 
 WORKDIR /model
+COPY build/*sh .
+
+
+

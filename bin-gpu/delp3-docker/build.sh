@@ -5,8 +5,8 @@ rm -rf build
 mkdir -p build
 . ../dk-build-copy-common.sh
 ls build
-sleep 1
+#sleep 1
 
 docker build -t $containertag .
-#docker push $containertag
+docker push $containertag
 
