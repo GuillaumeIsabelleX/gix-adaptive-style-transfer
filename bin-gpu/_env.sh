@@ -17,6 +17,8 @@ export lib_root=$mount_root/lib
 export docker_lib_root=/a/lib
 export model_root=$mount_root/model
 
+export cuserhome=/root
+export dkrun_mount_droxconf_config_args="-v $HOME/.dropbox_uploader:$cuserhome/.dropbox_uploader -v $HOME:/config"
 
 export container_models_fullpath=/model/models
 
