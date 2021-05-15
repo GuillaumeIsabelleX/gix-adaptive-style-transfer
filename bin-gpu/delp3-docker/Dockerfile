@@ -14,6 +14,10 @@ RUN npm install droxul --g
 #RUN node --version
 #RUN npm --version
 WORKDIR /root
-RUN echo 'alias dx="drox -f /config/.dropbox_uploader "' >> .bashrc
-RUN echo 'alias dxup="drox -f /config/.dropbox_uploader upload "' >> .bashrc
+
+COPY build/bashaliases .bash_aliases
+
+# RUN echo 'alias dx="drox -f /config/.dropbox_uploader "' >> .bashrc
+# RUN echo 'alias dxup="drox -f /config/.dropbox_uploader upload "' >> .bashrc
+
 WORKDIR /model

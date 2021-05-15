@@ -1,5 +1,0 @@
-alias dx="drox -f /config/.dropbox_uploader "
-alias dxmkdir="drox -f /config/.dropbox_uploader mkdir "
-alias dxmd="drox -f /config/.dropbox_uploader mkdir "
-alias dxup="drox -f /config/.dropbox_uploader upload "
-
