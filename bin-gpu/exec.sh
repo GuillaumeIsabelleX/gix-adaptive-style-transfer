@@ -9,8 +9,10 @@ source _env.sh
 
 source _setmodel2.sh DEPRECATING
 
-export container_tag=guillaumeai/ast:gpu-cpu-limitation-210421
+#export container_tag=guillaumeai/ast:gpu-cpu-limitation-210421
 
+#drox support
+export container_tag=guillaumeai/ast:gpu-cpu-limitation-210516
 
 #export container_tag=jgwill/gix-adaptive-style-transfer-feat__2012181051__switch:cpu
 args="$@"
