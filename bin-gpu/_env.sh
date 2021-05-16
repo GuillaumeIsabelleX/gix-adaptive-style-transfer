@@ -19,6 +19,8 @@ export model_root=$mount_root/model
 
 export cuserhome=/root
 export dkrun_mount_droxconf_config_args="-v $HOME/.dropbox_uploader:$cuserhome/.dropbox_uploader -v $HOME:/config"
+#binroot support in container
+export dkrun_mount_binroot=" -v $binroot:$binroot "
 
 export container_models_fullpath=/model/models
 
