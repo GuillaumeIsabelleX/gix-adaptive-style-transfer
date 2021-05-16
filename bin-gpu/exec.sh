@@ -26,6 +26,10 @@ fi
 
 
 echo "---------------------------------------------------"
+echo "-----docker args :   "
+echo "----$args-----"
+echo "------------"
+
 cmd="$docker_exec run -it --rm -v $(pwd):$container_workdir \
 	-v $lib_root:$docker_lib_root \
 	-v  $model_root/models:$container_models_fullpath \
@@ -37,6 +41,6 @@ cmd="$docker_exec run -it --rm -v $(pwd):$container_workdir \
 echo "-----------------The following command will run :"
 echo $cmd
 sleep 1
+echo "-------------------------------------"
 
 $cmd
-

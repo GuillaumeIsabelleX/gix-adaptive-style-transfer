@@ -1,4 +1,34 @@
 #!/bin/bash
+
+echo DEPRECATED
+echo "Container guillaumeai/ast:gpu-cpu-limitation-210516 now support droxul upload"
+
+
+
+exit 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 echo "Batch starting"
 sdir=/work
 sfile=render-gia-ds-DavidBouchardGagnon-v01b-210510-864.sh

@@ -1,12 +1,19 @@
 
-echo "Current dir is : $(pwd)"
+getenvo="--get-env-only"
+
+#echo "Current dir is : $(pwd)"
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-echo "DIR: $DIR"
+#echo "DIR: $DIR"
 
 
 
-source $DIR/_fori_env.sh $1 $2 $3 $4 $5
+source $DIR/_fori_env.sh $1 $2 $3 $4 $5 $6
+
+if  [ "$3" == "$getenvo" ] ||  [ "$4" == "$getenvo" ] ||  [ "$5" == "$getenvo" ] || [ "$6" == "$getenvo" ] 
+	then 
+		echo "Environment setup only"
+	else
 
 # /work/i4.sh model_gia-young-picasso-v03-201216_new 240 2048 /a/lib/samples/content2012181444 /a/lib/results/it-chkp 240
 # ---------------------------------
@@ -28,4 +35,5 @@ done
 
 # Run the prep of the data view
 #source $DIR/ifor.sh
+fi
 

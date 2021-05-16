@@ -35,11 +35,11 @@ export modelname=model_$modelname1
 
 echo "Model is : model_$1"
 
-rm -f data/*
-cp -f $content/*jpg data
-cp -f $content/*png data
-cp -f $content/*JPG data
-cp -f $content/*PNG data
+rm -f data/* &> /dev/null
+cp -f $content/*jpg data &> /dev/null
+cp -f $content/*png data &> /dev/null
+cp -f $content/*JPG data &> /dev/null
+cp -f $content/*PNG data &> /dev/null
 
 #CUDA_VISIBLE_DEVICES=-1 python main.py \
 #echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
@@ -54,6 +54,9 @@ python main.py \
 	--file_suffix=$file_suffix \
 	--ckpt_nmbr=$ckpt_nmbr
 
+if  [ $savedir != "/" ] ; then
+	chown -R 1000.1000 $savedir
+fi
 
-chmod 777 $savedir/*
+#chmod 777 $savedir/*
 #./i4.sh model_gia-young-picasso-v03-201216_new /subdir __suffix 1024 /a/lib/samples/content /a/lib/results/someoutput 285000
