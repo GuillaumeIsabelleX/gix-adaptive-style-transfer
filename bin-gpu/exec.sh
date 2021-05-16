@@ -20,7 +20,8 @@ if [ -f "$1" ]; then #we spec a file
 	#chg args
 	args="/work/$1"
 	shift 
-	args+=" \"$@\""
+	#args+=" \"$@\""
+	args+=" $@"
 fi
 
 

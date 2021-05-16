@@ -19,6 +19,9 @@ export partial_210108="$1"
 export chks=$chks_long_all
 export chks=$partial_210108
 
+echo "--------------------------------"
+echo "-------chks=$chks---------------"
+
 
 #contentpath=/a/lib/samples/ap__210217
 
