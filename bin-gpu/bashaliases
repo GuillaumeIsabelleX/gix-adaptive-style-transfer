@@ -7,4 +7,5 @@ alias dxls="drox -f /config/.dropbox_uploader list "
 
 #alias drob="dros -f /config/.dropbox_uploader "
 
-
+export binroot=/a/bin
+alias cdb="cd $binroot"
