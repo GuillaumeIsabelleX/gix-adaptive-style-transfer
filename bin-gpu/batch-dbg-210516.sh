@@ -60,14 +60,18 @@ for chp in "${arr[@]}"; do
   c=/a/lib/samples/sketch_redraw_2103
   export r=512
 
-  #renderpass $s $chp "$c" "$r" "$resultbase"
-  #echo $s "$chp" $c $r ;$s "$chp" $c $r
-  #droxupload "$resultbase" "$r"
+  renderpass $s $chp "$c" "$r" "$resultbase"
+
+  renderpass $s "$chp" "/a/lib/samples/content" 576 "$resultbase"
 
   #renderpass $s "$chp" "$c" 1536 "$resultbase"
   #renderpass $s "$chp" "$c" 2200 "$resultbase"
+  #renderpass $s "$chp" "/a/lib/results/gia-ds-DavidBouchardGagnon-v01b-210510-864/dbg_v01b/512x" 2200 "$resultbase"
 
+  #renderpass $s "$chp" "/a/lib/results/gia-ds-DavidBouchardGagnon-v01b-210510-864/dbg_v01b/640x" 2100 "$resultbase"
 
   #renderpass $s "$chp" "/a/lib/samples/pierre" 1536 "$resultbase"
   renderpass $s "$chp" "/a/lib/datasets/pierret_ds_210512-864" 640 "$resultbase"
 done
+
+sleep 8
