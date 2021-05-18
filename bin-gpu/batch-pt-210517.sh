@@ -2,7 +2,7 @@
 echo "Batch $0 starting"
 sleep 1
 sdir=/work
-sfile=render-gia-ds-DavidBouchardGagnon-v01b-210510-864.sh
+sfile=render-gia-ds-pierret_ds_210512-864-v01-210517-864.sh
 s=$sdir/$sfile
 chmod +x $s
 cd /model

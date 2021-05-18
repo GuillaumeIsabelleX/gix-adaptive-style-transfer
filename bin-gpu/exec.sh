@@ -40,7 +40,7 @@ cmd="$docker_exec run -it --rm -v $(pwd):$container_workdir \
 	"
 echo "-------RUNNING :"
 echo $cmd
-sleep 1
+#sleep 1
 echo "-------------------------------------"
 
 $cmd

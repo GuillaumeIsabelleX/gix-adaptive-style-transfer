@@ -11,8 +11,8 @@ export model_context_name=model_$1
 export modelbasename=$1
 export lib_namespace=$1
 
-echo "Model context: $model_context_name"
-echo "Modelbasename: $modelbasename"
+#echo "Model context: $model_context_name"
+#echo "Modelbasename: $modelbasename"
 
 #model_local_fullpath
 

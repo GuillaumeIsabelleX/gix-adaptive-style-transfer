@@ -1,6 +1,15 @@
 #!/bin/bash
 echo "Batch $0 starting"
-source _env.sh
+if [ -f "/work/_env.sh" ] ; then
+  source /work/_env.sh
+else 
+  source _env.sh 
+fi
+#Loading functions
+# if [ -e $binroot/__fn.sh ]; then
+#                 source $binroot/__fn.sh $@
+# fi
+
 source $1
 
 echo $modeltag $ftag
@@ -11,6 +20,13 @@ sfile=render.sh
 s=$sdir/$sfile
 chmod +x $s
 cd /model
+
+# Source the rendering functions
+if [ -f "/work/_fn_render.sh" ] ; then
+  source /work/_fn_render.sh
+else 
+  source _fn_render.sh
+fi
 
 
 #can we learn that from the ENV ??
@@ -34,9 +50,37 @@ if [ "$1" == "" ] ; then #
   # <contentpath> <resolution>"
   exit 1
 fi
+shift
 arr=("$@")
 for chp in "${arr[@]}"; do
-#for chp in ("$@"); do
+
+
+  #echo "$TORENDER"
+  #echo "--"
+  # readarray -t y <<<"$TORENDER"
+  y=(${TORENDER//$';'/ })
+  for l in "${y[@]}"; do 
+    l=$(echo "$l" |tr "#" " " | sed -e 's/;//g'  | sed -e 's/\ //g')
+    if [ "$l" != "" ]; then
+
+      ll=(${l//$','/ })
+      c=${ll[0]}
+      r=${ll[1]}
+      isnotnumberexit $r "Resolution must be a number"
+      #echo "c:$c, r:$r"
+      
+      # echo "renderpass \$s \$chp \$c \$r \$resultbase"
+      # echo "s: $s"
+      # echo "chp: $chp"
+      # echo "renderpass $s $chp $c $r $resultbase"
+      
+      renderpass $s $chp $c $r "$resultbase"
+      #sleep 2
+    fi
+  done
+  #  renderpass $s $chp "$c" 600 "$resultbase"
+  
+
 
   #chp=$(echo "$1" | sed 's/"//')
   #echo "----chp:$chp--------"
@@ -44,10 +88,10 @@ for chp in "${arr[@]}"; do
   #chp="$1"
   #ress=$(echo $2 | sed 's/"//')
  
-  c=/a/lib/samples/sc
-  export r=511
+  # c=/a/lib/samples/sc
+  # export r=511
 
-  renderpass $s $chp "$c" 600 "$resultbase"
+  # renderpass $s $chp "$c" 600 "$resultbase"
 
   # renderpass $s "$chp" "/a/lib/datasets/SmallCreation" 520 "$resultbase"
 

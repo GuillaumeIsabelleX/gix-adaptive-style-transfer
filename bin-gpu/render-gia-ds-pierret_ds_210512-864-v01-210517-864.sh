@@ -1,6 +1,6 @@
 #!/bin/bash
 #export savedirnamespace=gia-ds-DavidBouchardGagnon-v01a-210510__two_passes
-export savedirnamespace=gia-ds-DavidBouchardGagnon-v01b-210510-864
+export savedirnamespace=gia-ds-pierret_ds_210512-864-v01-210517-864
 export dimloop="256 512 768 1024 1280 1536 1792 2048 2304 2560 2816"
 export dimloop="512 1024"
 export dimloop="$3"
@@ -41,8 +41,8 @@ fi
 
 
 
-modeltag=model_gia-ds-DavidBouchardGagnon-v01b-210510-864_new
-ftag=dbg_v01b
+modeltag=model_gia-ds-pierret_ds_210512-864-v01-210517-864_new
+ftag=pt_v01
 
 #Enable just getting the Env from this
 getenvo="--get-env-only"
