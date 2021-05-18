@@ -61,6 +61,9 @@ for chp in "${arr[@]}"; do
   y=(${TORENDER//$';'/ })
   for l in "${y[@]}"; do 
     l=$(echo "$l" |tr "#" " " | sed -e 's/;//g'  | sed -e 's/\ //g')
+    l=$(echo "$l" |tr "#" " " | sed -e 's/SAVEDIRBASE/'"$savedirbase"'/g'  | sed -e 's/\ //g')
+    echo "$l"
+    exit
     if [ "$l" != "" ]; then
 
       ll=(${l//$','/ })
