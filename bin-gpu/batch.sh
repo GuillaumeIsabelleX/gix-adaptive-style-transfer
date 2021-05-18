@@ -6,14 +6,17 @@ else
   source _env.sh 
 fi
 #Loading functions
-# if [ -e $binroot/__fn.sh ]; then
-#                 source $binroot/__fn.sh $@
-# fi
+if [ -e $binroot/__fn.sh ]; then
+       source $binroot/__fn.sh $@
+       d "Just sourced __fn.sh"
+else
+    echo "__fn.sh was not loaded"
+    exit 3
+fi
 
-source $1
-
-echo $modeltag $ftag
-
+source "$1"
+DEBUG=1
+dvar modeltag ftag binroot
 
 sdir=/work
 sfile=render.sh
@@ -31,17 +34,15 @@ fi
 
 #can we learn that from the ENV ??
 #export resultbase="/a/lib/results/gia-ds-DavidBouchardGagnon-v01b-210510-864/dbg_v01b"
-source $s 1234 $2 $3 --get-env-only
+d source $s 1234 $2 $3 --get-env-only
+source $s 123456 $2 $3 --get-env-only
+
+
+
 export resultbase="$savedir"
-echo "-----------ENV-----------------"
-echo "savedir:$savedir"
-echo "savedirnamespace:$savedirnamespace"
-echo "savedirbase:$savedirbase"
-echo "savefullpath:$savefullpath"
-echo "modeltag:$modeltag"
-echo "libresultroot:$libresultroot"
-echo "ftag:$ftag"
-echo "-----------ENV-----------------"
+d "-----------ENV---$0---->>----------"
+dvar ftag savedir savedirnamespace savedirbase savefullpath modeltag libresultroot
+d "-----------ENV---$0--->>-----------"
 
 
 if [ "$1" == "" ] ; then #
@@ -52,23 +53,39 @@ if [ "$1" == "" ] ; then #
 fi
 shift
 arr=("$@")
+d "${arr[@]}"
+
 for chp in "${arr[@]}"; do
 
 
   #echo "$TORENDER"
   #echo "--"
   # readarray -t y <<<"$TORENDER"
+  export TORENDER=$(echo "$_TORENDER" | sed -e 's/\#//g' |  sed -e 's/ //g')
   y=(${TORENDER//$';'/ })
+
   for l in "${y[@]}"; do 
-    l=$(echo "$l" |tr "#" " " | sed -e 's/;//g'  | sed -e 's/\ //g')
-    l=$(echo "$l" |tr "#" " " | sed -e 's/SAVEDIRBASE/'"$savedirbase"'/g'  | sed -e 's/\ //g')
+    #echo "$l"
+    # regexfix=$(echo "$savedir" | sed -e 's/\//\\\//g')
+    # echo "$regexfix"
+    # l=$(echo "$l" | sed "s/SAVEDIRBASE/$regexfix/")
+    # echo "$l"
+    #l=$(echo "$l" |tr "#" " ")
+    # l=$(echo "$l" |tr "#" " " | sed -e 's/;//g'  | sed -e 's/\ //g')
+    #echo replacetextbypath "SAVEDIRBASE" "$savedir" "$l"
+    l=$(replacetextbypath "SAVEDIRBASE" "$savedir" "$l")
     echo "$l"
-    exit
+
     if [ "$l" != "" ]; then
 
       ll=(${l//$','/ })
       c=${ll[0]}
       r=${ll[1]}
+      dvar ll
+      dvar c r
+    
+     
+      
       isnotnumberexit $r "Resolution must be a number"
       #echo "c:$c, r:$r"
       

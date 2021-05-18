@@ -11,18 +11,34 @@ export modeltag=model_gia-ds-pierret_ds_210512-864-v01-210517-864_new
 # <Source content path>,<resolution>;
 # /a/lib/datasets/SmallCreation,520;
 # /a/lib/samples/sc,600;
-read -r -d '' TORENDER << KEEPMEHERE
-# SAVEDIRBASE/520x,2200;
+# LIBROOT = /a/lib
+# LIBRESULT = /a/lib/results
+# LIBSAMPLES = /a/lib/samples
+# LIBDATASETS = /a/lib/datasets
+
+export container_arc=cpu
+
+read -r -d '' _TORENDER << RENDERME
+# /a/lib/samples/sc,710;
+# /a/lib/datasets/SmallCreation,720;
 # /a/lib/samples/content,576;
-# /a/lib/results/gia-ds-pierret_ds_210512-864-v01-210517-864/pt_v01/576x,2200;
-# /a/lib/results/gia-ds-pierret_ds_210512-864-v01-210517-864/pt_v01/520x,2200;
-KEEPMEHERE
+# SAVEDIRBASE/710x,2200;
+RENDERME
 
 # /a/lib/samples/sc,600;
 read -r -d '' IGNORED << DISABLED_KEEPASREFEFERENCE
+# SAVEDIRBASE/720x,2100;
+# SAVEDIRBASE/600x,2000;
 # BELLOW ARE DISABLED, useful to keep those you dont want to process
+# /a/lib/samples/content,576;
+# /a/lib/results/gia-ds-pierret_ds_210512-864-v01-210517-864/pt_v01/576x,2200;
+# /a/lib/results/gia-ds-pierret_ds_210512-864-v01-210517-864/pt_v01/520x,2200;
+# SAVEDIRBASE/520x,2200;
 # /a/lib/results/gia-ds-pierret_ds_210512-864-v01-210517-864/pt_v01/520x,2200;
 echo "savedirbase:$savedirbase"
 echo "savefullpath:$savefullpath"
-# SAVEDIRBASE/520x,2200;
 DISABLED_KEEPASREFEFERENCE
+
+
+# DONT TOUCH THIS
+# export TORENDER=$(echo "$_TORENDER" | sed -e 's/\#//g' |  sed -e 's/ //g')

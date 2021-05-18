@@ -1,4 +1,5 @@
 
+d "------_fori_env.sh----->>------"
 #echo $1 $2 $3 $4 $5 
 #sleep 1
 #echo "--------------------------------------"
@@ -34,15 +35,22 @@ export content=$5
 export libresultroot=/a/lib/results
 export savedirbase=$libresultroot/$savedirnamespace
 mkdir -p $savedirbase
-echo "export savedir=$savedirbase/$3" >> $DIR/__context.sh
+echo "export savedir=$savedirbase/$3" >> $FORIDIR/__context.sh
 export savedir=$savedirbase/$3
 
 export script=/work/i4.sh
 export subdir=$2
 export savefullpath=$savedir/$subdir
-echo "export savefullpath=$savedir/$subdir" >> $DIR/__context.sh
+dvar subdir savefullpath
+
+echo "export savefullpath=$savedir/$subdir" >> $FORIDIR/__context.sh
+DEBUG=1
+dcfile
+dvar subdir
+
 export ind=index.md
 
 #2048 2k v03 model_gia-young-picasso-v03-201216_new
 #2048 2k v03 model_gia-young-picasso-v03-201216_new /a/lib/samples/content0014
 
+echo "-------$0----"

@@ -1,4 +1,11 @@
 #!/bin/bash
+#Loading functions
+if [ -e $binroot/__fn.sh ]; then
+       source $binroot/__fn.sh $@
+fi
+
+#LIMITATION BYPASS
+export container_arc=cpu
 #export savedirnamespace=gia-ds-DavidBouchardGagnon-v01a-210510__two_passes
 #export savedirnamespace=gia-ds-pierret_ds_210512-864-v01-210517-864
 export dimloop="256 512 768 1024 1280 1536 1792 2048 2304 2560 2816"
@@ -47,18 +54,22 @@ fi
 #Enable just getting the Env from this
 getenvo="--get-env-only"
 
-if [ "$1" == "$getenvo" ]|| [ "$2" == "$getenvo" ]||[ "$3" == "$getenvo" ]||[ "$4" == "$getenvo" ] ; 	then 
-
+if [ "$1" == "$getenvo" ] || [ "$2" == "$getenvo" ] || [ "$3" == "$getenvo" ] || [ "$4" == "$getenvo" ]  || [ "$5" == "$getenvo" ] || [ "$6" == "$getenvo" ]|| [ "$7" == "$getenvo" ] ; 	then 
+	#echo "ENVONLY"
 	#echo "Trying to load fori"
-	dim="ENVSETUPONLY"
-	dtag=$d'ENVSETUPONLY'
+	dim="1234"
+	dtag=$dim'x'
 	if [ -f "/work/_fori_env.sh" ]; then 
 	
 		#echo "Loading fori from /work";
 		#	echo 'source /work/_fori_env.sh $dim $dtag $ftag $modeltag $contentpath'
 		#echo source /work/_fori_env.sh $dim $dtag $ftag $modeltag $contentpath
+		DEBUG=1
+		d "source /work/fori.sh $dim $dtag $ftag $modeltag $contentpath"
 		source /work/fori.sh $dim $dtag $ftag $modeltag $contentpath
 	else 
+		echo "NOT ENV ONLY"
+		
 		if [ -f "./_fori_env.sh" ]; then 
 			#echo "Loading fori from current dir";
 			source ./fori.sh $dim $dtag $ftag $modeltag $contentpath; 
@@ -68,15 +79,20 @@ if [ "$1" == "$getenvo" ]|| [ "$2" == "$getenvo" ]||[ "$3" == "$getenvo" ]||[ "$
 
 else  
 
-	for d in $dimloop;
+	for dim in $dimloop;
 	do 
+	DEBUG=1
+	dvar dim dimloop
 		echo "---------------------------------"
-		echo "- Processing resolution : $d ----"
-		echo "--------------------------------"
-		sleep 1
-		dim=$d
-		dtag=$d'x'
-		/work/fori.sh $dim $dtag $ftag $modeltag $contentpath &> /dev/null
+		echo "- Processing resolution : $dim ----"
+		echo "-----$dtag $ftag $modeltag $contentpath---------------------------"
+		#sleep 1
+		
+		# dim=$d
+		dtag=$dim'x'
+		/work/fori.sh $dim $dtag $ftag $modeltag $contentpath 
+		#&> /dev/null
+		
 	done
 
 	########################################################

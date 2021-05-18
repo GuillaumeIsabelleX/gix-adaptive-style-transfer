@@ -16,7 +16,7 @@ fi
 droxupload() {
   local rb=$1;  local rr=$2
   local restag=$rr'x';export respath=$rb/$restag
-  echo "------DROX---$restag------"
+  echo "------DROX---$restag--->>---"
   #echo "---Restag: $restag ---------"
   #echo "---Respath: $respath ---------"
   if [ -e "$respath" ] ; then
@@ -26,7 +26,7 @@ droxupload() {
     exit 3
   fi
   #echo "$rr : Results will be sent in background"
-  echo "-----------------------------";sleep 3
+  echo "-----------------------------";sleep 1
 }
 
 renderpass(){
@@ -34,7 +34,8 @@ renderpass(){
   echo "----Starting to process:-chpp:$chpp--$rr---->>>"
   #echo " $ss $chpp $cc $rr "
   #sleep 1
-  $ss "$chpp" $cc $rr
-  droxupload "$rb" "$rr"
-  echo "---Ending processing--chpp:$chpp--$rr----<<<"
+  $ss "$chpp" $cc $rr && \
+  droxupload "$rb" "$rr" && \
+  echo "---Ending processing--chpp:$chpp--$rr----<<<" || \
+  (echo "Failed to render or upload" && exit 6)
 }
