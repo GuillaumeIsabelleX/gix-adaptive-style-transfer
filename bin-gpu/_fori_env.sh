@@ -1,7 +1,7 @@
 
-echo $1 $2 $3 $4 $5 
+#echo $1 $2 $3 $4 $5 
 #sleep 1
-echo "--------------------------------------"
+#echo "--------------------------------------"
 #  NOW DEFINE IT IN THE RENDER SCRIPT
 #export savedirnamespace=ap__210217
 #export savedirnamespace=xe__gia-young-picasso-v03-201216-var2

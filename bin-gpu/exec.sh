@@ -25,7 +25,7 @@ if [ -f "$1" ]; then #we spec a file
 fi
 
 
-echo "---------------------------------------------------"
+echo "--------------------------------------"
 echo "-----docker args :   "
 echo "----$args-----"
 echo "------------"
@@ -38,7 +38,7 @@ cmd="$docker_exec run -it --rm -v $(pwd):$container_workdir \
 	$dkrun_mount_binroot \
 	$container_tag "$args"
 	"
-echo "-----------------The following command will run :"
+echo "-------RUNNING :"
 echo $cmd
 sleep 1
 echo "-------------------------------------"

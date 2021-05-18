@@ -1,4 +1,10 @@
-if [ "$droxuplib" == "" ]; then source _env.sh ; fi
+if [ "$droxuplib" == "" ]; then 
+  if [ -f "/work/_env.sh" ] ; then
+    source /work/_env.sh
+  else 
+    source _env.sh 
+  fi
+fi
 
 droxupload() {
   local rb=$1;  local rr=$2
