@@ -6,6 +6,8 @@ export container_arc=gpu
 export mount_root=/a
 export hb=/work/hooks
 
+export droxuplib=/a/bin/droxuplib.sh
+
 #@STCGoal Set the Target container name
 export container_name=jgwill/gix-adaptive-style-transfer
 
