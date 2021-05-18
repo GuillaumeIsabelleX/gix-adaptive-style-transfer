@@ -8,13 +8,13 @@
 source _env.sh
 
 export image_size=$4
-echo "Image size: $image_size"
+#echo "Image size: $image_size"
 export ckpt_k=$7
 export ckpt_nmbr=$ckpt_k'000'
-echo "ckpt_nmbr=$ckpt_nmbr"
+#echo "ckpt_nmbr=$ckpt_nmbr"
 
 export file_suffix=$3'__'$ckpt_k'k'
-echo "file_suffix=$file_suffix"
+#echo "file_suffix=$file_suffix"
 
 #export content=/a/lib/samples/content/
 export content=$5
@@ -34,28 +34,35 @@ export modelname1="${modelname1/model_model_/$secondString}"
 export modelname=model_$modelname1
 
 echo "Model is : model_$1"
+sleep 1
+if [ "$1" == "$getenvo" ] || [ "$2" == "$getenvo" ] || [ "$3" == "$getenvo" ]||[ "$4" == "$getenvo" ] || [ "$image_size" == "ENVSETUPONLY" ] ; 	then 
 
-rm -f data/* &> /dev/null
-cp -f $content/*jpg data &> /dev/null
-cp -f $content/*png data &> /dev/null
-cp -f $content/*JPG data &> /dev/null
-cp -f $content/*PNG data &> /dev/null
+	echo "..."
+	sleep 3
+else 
 
-#CUDA_VISIBLE_DEVICES=-1 python main.py \
-#echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
-#sleep 1
+	rm -f data/* &> /dev/null
+	cp -f $content/*jpg data &> /dev/null
+	cp -f $content/*png data &> /dev/null
+	cp -f $content/*JPG data &> /dev/null
+	cp -f $content/*PNG data &> /dev/null
 
-python main.py \
-	--model_name=$modelname \
-	--phase=inference \
-	--image_size=$image_size \
-	--ii_dir data \
-	--save_dir=$savedir/ \
-	--file_suffix=$file_suffix \
-	--ckpt_nmbr=$ckpt_nmbr
+	#CUDA_VISIBLE_DEVICES=-1 python main.py \
+	#echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
+	#sleep 1
 
-if  [ $savedir != "/" ] ; then
-	chown -R 1000.1000 $savedir
+	python main.py \
+		--model_name=$modelname \
+		--phase=inference \
+		--image_size=$image_size \
+		--ii_dir data \
+		--save_dir=$savedir/ \
+		--file_suffix=$file_suffix \
+		--ckpt_nmbr=$ckpt_nmbr
+
+	if  [ $savedir != "/" ] ; then
+		chown -R 1000.1000 $savedir
+	fi
 fi
 
 #chmod 777 $savedir/*

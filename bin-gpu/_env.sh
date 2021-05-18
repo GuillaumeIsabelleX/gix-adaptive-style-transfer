@@ -9,6 +9,8 @@ export hb=/work/hooks
 #@STCGoal Set the Target container name
 export container_name=jgwill/gix-adaptive-style-transfer
 
+export getenvo="--get-env-only"
+
 #-------------------------------------
 #@STCGoal Stay away of bellow unless your re-architecturing the whole thing
 #---------------------------------------

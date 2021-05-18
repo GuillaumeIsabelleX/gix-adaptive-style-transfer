@@ -50,17 +50,17 @@ getenvo="--get-env-only"
 if [ "$1" == "$getenvo" ]|| [ "$2" == "$getenvo" ]||[ "$3" == "$getenvo" ]||[ "$4" == "$getenvo" ] ; 	then 
 
 	echo "Trying to load fori"
-	dim="1234"
-	dtag=$d'XYZ'
+	dim="ENVSETUPONLY"
+	dtag=$d'ENVSETUPONLY'
 	if [ -f "/work/_fori_env.sh" ]; then 
 	
-		echo "Loading fori from /work";
+		#echo "Loading fori from /work";
 		#	echo 'source /work/_fori_env.sh $dim $dtag $ftag $modeltag $contentpath'
-		echo source /work/_fori_env.sh $dim $dtag $ftag $modeltag $contentpath
+		#echo source /work/_fori_env.sh $dim $dtag $ftag $modeltag $contentpath
 		source /work/fori.sh $dim $dtag $ftag $modeltag $contentpath
 	else 
 		if [ -f "./_fori_env.sh" ]; then 
-			echo "Loading fori from current dir";
+			#echo "Loading fori from current dir";
 			source ./fori.sh $dim $dtag $ftag $modeltag $contentpath; 
 
 		fi

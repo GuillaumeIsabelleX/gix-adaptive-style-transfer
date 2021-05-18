@@ -1,6 +1,6 @@
 
 echo $1 $2 $3 $4 $5 
-sleep 1
+#sleep 1
 echo "--------------------------------------"
 #  NOW DEFINE IT IN THE RENDER SCRIPT
 #export savedirnamespace=ap__210217
@@ -34,13 +34,13 @@ export content=$5
 export libresultroot=/a/lib/results
 export savedirbase=$libresultroot/$savedirnamespace
 mkdir -p $savedirbase
-#export savedir=/a/lib/results/it-chkp/$3
+echo "export savedir=$savedirbase/$3" >> $DIR/__context.sh
 export savedir=$savedirbase/$3
 
-#export savedir=/a/lib/results/it-chkp
 export script=/work/i4.sh
 export subdir=$2
 export savefullpath=$savedir/$subdir
+echo "export savefullpath=$savedir/$subdir" >> $DIR/__context.sh
 export ind=index.md
 
 #2048 2k v03 model_gia-young-picasso-v03-201216_new
