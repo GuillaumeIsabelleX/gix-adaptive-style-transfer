@@ -22,6 +22,3 @@ COPY build/bashaliases .bash_aliases
 
 WORKDIR /model
 COPY build/*sh .
-
-
-
