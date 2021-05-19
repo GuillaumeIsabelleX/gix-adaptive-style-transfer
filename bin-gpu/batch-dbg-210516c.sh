@@ -1,48 +1,45 @@
 #!/bin/bash
 echo "Batch $0 starting"
-if [ -f "/work/_env.sh" ] ; then
-  source /work/_env.sh
-else 
-  source _env.sh 
-fi
-#Loading functions
-if [ -e $binroot/__fn.sh ]; then
-       source $binroot/__fn.sh $@
-       d "Just sourced __fn.sh"
-else
-    echo "__fn.sh was not loaded"
-    exit 3
-fi
-
-source "$1"
-DEBUG=1
-dvar modeltag ftag binroot
-
+sleep 1
 sdir=/work
-sfile=render.sh
+sfile=render-gia-ds-DavidBouchardGagnon-v01b-210510-864.sh
 s=$sdir/$sfile
 chmod +x $s
 cd /model
 
-# Source the rendering functions
-if [ -f "/work/_fn_render.sh" ] ; then
-  source /work/_fn_render.sh
-else 
-  source _fn_render.sh
-fi
-
+droxupload() {
+  local rb=$1;  local rr=$2
+  local restag=$rr'x';export respath=$rb/$restag
+  echo "------DROX---$restag------"
+  #echo "---Restag: $restag ---------"
+  #echo "---Respath: $respath ---------"
+  (cd $respath;pwd;bash /a/bin/droxuplib.sh &> /dev/null && echo "----done uploading $restag--- ") &
+  #echo "$rr : Results will be sent in background"
+  echo "-----------------------------";sleep 3
+}
+renderpass(){
+  local ss=$1;local chpp=$2 ; local cc="$3";local rr="$4";local rb=$5
+  echo "----Starting to process:-chpp:$chpp--$rr---->>>"
+  sleep 1
+  #echo $ss "$chpp" $cc $rr 
+  $ss "$chpp" $cc $rr
+  droxupload "$rb" "$rr"
+  echo "---Ending processing--chpp:$chpp--$rr----<<<"
+}
 
 #can we learn that from the ENV ??
 #export resultbase="/a/lib/results/gia-ds-DavidBouchardGagnon-v01b-210510-864/dbg_v01b"
-d source $s 1234 $2 $3 --get-env-only
-source $s 123456 $2 $3 --get-env-only
-
-
-
+source $s 1234 $2 $3 --get-env-only
 export resultbase="$savedir"
-d "-----------ENV---$0---->>----------"
-dvar ftag savedir savedirnamespace savedirbase savefullpath modeltag libresultroot
-d "-----------ENV---$0--->>-----------"
+echo "-----------ENV-----------------"
+echo "savedir:$savedir"
+echo "savedirnamespace:$savedirnamespace"
+echo "savedirbase:$savedirbase"
+echo "savefullpath:$savefullpath"
+echo "modeltag:$modeltag"
+echo "libresultroot:$libresultroot"
+echo "ftag:$ftag"
+echo "-----------ENV-----------------"
 
 
 if [ "$1" == "" ] ; then #
@@ -51,56 +48,9 @@ if [ "$1" == "" ] ; then #
   # <contentpath> <resolution>"
   exit 1
 fi
-shift
 arr=("$@")
-d "${arr[@]}"
-
 for chp in "${arr[@]}"; do
-
-
-  #echo "$TORENDER"
-  #echo "--"
-  # readarray -t y <<<"$TORENDER"
-  export TORENDER=$(echo "$_TORENDER" | sed -e 's/\#//g' |  sed -e 's/ //g')
-  y=(${TORENDER//$';'/ })
-
-  for l in "${y[@]}"; do 
-    #echo "$l"
-    # regexfix=$(echo "$savedir" | sed -e 's/\//\\\//g')
-    # echo "$regexfix"
-    # l=$(echo "$l" | sed "s/SAVEDIRBASE/$regexfix/")
-    # echo "$l"
-    #l=$(echo "$l" |tr "#" " ")
-    # l=$(echo "$l" |tr "#" " " | sed -e 's/;//g'  | sed -e 's/\ //g')
-    #echo replacetextbypath "SAVEDIRBASE" "$savedir" "$l"
-    l=$(replacetextbypath "SAVEDIRBASE" "$savedir" "$l")
-    echo "$l"
-
-    if [ "$l" != "" ]; then
-
-      ll=(${l//$','/ })
-      c=${ll[0]}
-      r=${ll[1]}
-      dvar ll
-      dvar c r
-    
-     
-      
-      isnotnumberexit $r "Resolution must be a number"
-      #echo "c:$c, r:$r"
-      
-      # echo "renderpass \$s \$chp \$c \$r \$resultbase"
-      # echo "s: $s"
-      # echo "chp: $chp"
-      # echo "renderpass $s $chp $c $r $resultbase"
-      
-      renderpass $s $chp $c $r "$resultbase"
-      #sleep 2
-    fi
-  done
-  #  renderpass $s $chp "$c" 600 "$resultbase"
-  
-
+#for chp in ("$@"); do
 
   #chp=$(echo "$1" | sed 's/"//')
   #echo "----chp:$chp--------"
@@ -108,10 +58,10 @@ for chp in "${arr[@]}"; do
   #chp="$1"
   #ress=$(echo $2 | sed 's/"//')
  
-  # c=/a/lib/samples/sc
-  # export r=511
+  c=/a/lib/samples/sc
+  export r=511
 
-  # renderpass $s $chp "$c" 600 "$resultbase"
+  #renderpass $s $chp "$c" 600 "$resultbase"
 
   # renderpass $s "$chp" "/a/lib/datasets/SmallCreation" 520 "$resultbase"
 
@@ -125,7 +75,7 @@ for chp in "${arr[@]}"; do
 
 # #composite
 
-  # renderpass $s "$chp" "/a/lib/results/gia-ds-DavidBouchardGagnon-v01b-210510-864/dbg_v01b/600x" 2049 "$resultbase"
+  renderpass $s "$chp" "/a/lib/results/gia-ds-DavidBouchardGagnon-v01b-210510-864/dbg_v01b/600x" 2049 "$resultbase"
 
   # renderpass $s "$chp" "/a/lib/results/gia-ds-DavidBouchardGagnon-v01b-210510-864/dbg_v01b/520x" 2202 "$resultbase"
 
