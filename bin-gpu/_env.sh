@@ -21,9 +21,10 @@ export lib_root=$mount_root/lib
 export docker_lib_root=/a/lib
 export model_root=$mount_root/model
 
-export cuserhome=/home/jgi
-export dkrun_mount_droxconf_config_args="-v $HOME:$cuserhome -v $HOME:/config"
-# export dkrun_mount_droxconf_config_args="-v $HOME/.dropbox_uploader:$cuserhome/.dropbox_uploader -v $HOME:/config"
+# export cuserhome=/home/jgi
+export cuserhome=/root
+#export dkrun_mount_droxconf_config_args="-v $HOME:$cuserhome -v $HOME:/config"
+export dkrun_mount_droxconf_config_args="-v $HOME/.dropbox_uploader:$cuserhome/.dropbox_uploader -v $HOME:/config"
 #binroot support in container
 export dkrun_mount_binroot=" -v $binroot:$binroot -e binroot=$binroot "
 

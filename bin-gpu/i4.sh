@@ -72,9 +72,9 @@ if [ "$1" == "$getenvo" ] || [ "$2" == "$getenvo" ] || [ "$3" == "$getenvo" ]||[
 	echo "..."
 else 
 
-echo "-----------ENV--$0---------------"
+echo "------i4-----ENV--$0---------------"
 dvar ftag savedir savedirnamespace savedirbase savefullpath modeltag libresultroot image_size
-echo "-----------ENV---$0----<<----------"
+echo "------i4-----ENV---$0----<<----------"
 
 
 	rm -f data/* &> /dev/null
@@ -87,6 +87,7 @@ echo "-----------ENV---$0----<<----------"
 	#echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
 	#sleep 1
 CUDA_VISIBLE_DEVICES=-1
+
 	cmd="python main.py \
 		--model_name=$modelname \
 		--phase=inference \
