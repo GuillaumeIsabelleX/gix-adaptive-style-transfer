@@ -16,19 +16,19 @@ export model_name='model_'$modelbasename'_new'
 
 echo " model_name= $model_name"
 
-echo "data/$modelbasename"
-echo "$model_local_fullpath"
+#echo "data/$modelbasename"
+#echo "$model_local_fullpath"
 
 
-echo "mkdir -p data/$modelbasename"
+#echo "mkdir -p data/$modelbasename"
 
-sleep 1
+#sleep 1
 mkdir -p data/$modelbasename
-sleep 1
-cp -f $lib_fullpath/*jpg data/$modelbasename
-cp -f $lib_fullpath/*JPG data/$modelbasename
-cp -f $lib_fullpath/*PNG data/$modelbasename
-cp -f $lib_fullpath/*png data/$modelbasename
+#sleep 1
+cp -f $lib_fullpath/*jpg data/$modelbasename &> /dev/null
+cp -f $lib_fullpath/*JPG data/$modelbasename &> /dev/null
+cp -f $lib_fullpath/*PNG data/$modelbasename &> /dev/null
+cp -f $lib_fullpath/*png data/$modelbasename &> /dev/null
 
 sleep 1
 

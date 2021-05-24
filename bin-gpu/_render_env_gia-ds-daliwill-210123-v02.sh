@@ -1,32 +1,34 @@
 
-. _env_gia-ds-daliwill-210123-v02.sh
+#. _env_gia-ds-daliwill-210123-v02.sh
 #### Which has the following var
 #Determine where we will save in $resultroot
-#export savedirnamespace=
-#subdir of this render in the namespace above
-#export ftag=
-#The model store we will be using
-#export modeltag=
-
-##########################################
-####### WHAT TO RENDER IS DEFINED HERE ##
-# <Source content path>,<resolution>;
-# /a/lib/datasets/SmallCreation,520;
-# /a/lib/samples/sc,600;
-# LIBROOT = /a/lib
-# LIBRESULT = /a/lib/results
-# LIBSAMPLES = /a/lib/samples
-# LIBDATASETS = /a/lib/datasets
+export ds=gia-ds-daliwill-210123-v02
+export modelname='model_'$ds'_new'
+export modeltag=$modelname
+export ftag=sdw_v02
+export savedirnamespace=${ds//"gia-ds-"/}
 
 export container_arc=cpu
 
 read -r -d '' _TORENDER << RENDERME
+# /a/lib/samples/sc,1788;
+# SAVEDIRBASE/1788x,2300;
+# /a/lib/samples/content,1111;
+# /a/lib/samples/content,576;
+# /a/lib/datasets/SmallCreation,720;
+RENDERME
+# SAVEDIRBASE/1111x,1911;
+# SAVEDIRBASE/1911x,2311;
+# SAVEDIRBASE/720x,2100;
+# SAVEDIRBASE/1111x,2100;
+
+
 # /a/lib/samples/content,576;
 # /a/lib/samples/sc,1710;
 # /a/lib/samples/sc,710;
 # /a/lib/datasets/SmallCreation,720;
 # /a/lib/samples/sc210518,640;
-RENDERME
+#RENDERME
 
 # /a/lib/samples/sc,600;
 read -r -d '' IGNORED << DISABLED_KEEPASREFEFERENCE
