@@ -33,6 +33,7 @@ echo "------------"
 cmd="$docker_exec run -it --rm -v $(pwd):$container_workdir \
 	-v $lib_root:$docker_lib_root \
 	-v  $model_root/models:$container_models_fullpath \
+	-v $(cd ..;pwd):/wmodel \
 	-e DISPLAY=$DISPLAY \
 	$dkrun_mount_droxconf_config_args \
 	$dkrun_mount_binroot \
