@@ -25,6 +25,7 @@ fi
 echo "---------------------------------------------------"
 cmd="$docker_exec run -it  -v $(pwd):$container_workdir \
 	-v $lib_root:$docker_lib_root \
+	-v $(cd ..;pwd):/wmodel \
 	-v  $model_root/models:$container_models_fullpath \
 	-e DISPLAY=$DISPLAY \
 	$container_tag "$args"
