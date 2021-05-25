@@ -47,6 +47,7 @@ echo "----$args-----"
 echo "------------"
 
 cmd="$docker_exec run $docker_run_context -v $(pwd):$container_workdir \
+	--name "ast_render" \
 	-v $lib_root:$docker_lib_root \
 	-v  $model_root/models:$container_models_fullpath \
 	-e DISPLAY=$DISPLAY \
