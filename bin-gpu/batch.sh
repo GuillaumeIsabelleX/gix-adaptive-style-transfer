@@ -93,7 +93,8 @@ for chp in "${arr[@]}"; do
       # echo "s: $s"
       # echo "chp: $chp"
       # echo "renderpass $s $chp $c $r $resultbase"
-      
+      dvar s chp c r resultbase
+      #sleep 3
       renderpass $s $chp $c $r "$resultbase"
       #sleep 2
     fi

@@ -1,9 +1,10 @@
 #!/bin/bash
+#@STCGoal train more than 300ik
 
 source _env.sh 
 source _setmodel.sh $1
 
-
+last_checkpoint_to_train=360000
 #export model_rel_path=model/models/$model_context_name
 #export model_local_fullpath=$model_local_dir/$model_rel_path
 
@@ -35,6 +36,7 @@ sleep 1
 CUDA_VISIBLE_DEVICES=0 python main.py \
                  --model_name=$model_name \
                  --batch_size=1 \
+		 --total_steps=$last_checkpoint_to_train \
                  --phase=train \
                  --image_size=768 \
                  --lr=0.0002 \
