@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#@STCGoal Train more than 300ik
+
+
+source _env.sh
+
+source _setmodel.sh $1
+
+echo "Mount Point::"
+echo "$model_local_fullpath:$model_rel_path"
+
+export model_name=$1
+#./run-gpu-train-bg-more-chk-higher-res
+train_script=/work/trainer-more-higher-res.sh
+
+mkdir -p $model_local_fullpath
+echo "bash $train_script $model_name"
+#Model context: model_gia-ds-daliwill-210123-v02_new
+#Modelbasename: gia-ds-daliwill-210123-v02
+containername=ast_trainermore_higher_res
+
+docker rm $containername &> /dev/null
+
+$docker_exec run -it  -v $(pwd):$container_workdir \
+	--name $containername \
+        -v $lib_root:$docker_lib_root \
+	-v $(cd ..;pwd):/wmodel \
+        -v  $model_local_fullpath:/$model_rel_path \
+        -e DISPLAY=$DISPLAY \
+        $container_tag \
+	bash $train_script $model_name
