@@ -22,8 +22,8 @@ export model_inference_name=model_$modelnameonly
 export modelbasename=$modelnameonly
 export lib_namespace=$modelnameonly
 
-echo "Model context: $model_context_name"
-echo "Modelbasename: $modelbasename"
+#echo "Model context: $model_context_name"
+#echo "Modelbasename: $modelbasename"
 
 #model_local_fullpath
 

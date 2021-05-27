@@ -8,7 +8,7 @@ last_checkpoint_to_train=405000
 #export model_rel_path=model/models/$model_context_name
 #export model_local_fullpath=$model_local_dir/$model_rel_path
 
-echo "model_local_fullpath: $model_local_fullpath"
+#echo "model_local_fullpath: $model_local_fullpath"
 
 if [ -e "/work/model.py" ]; then #we are in container context
 	cp /work/model.py /model  && \
