@@ -4,7 +4,7 @@
 #@a This makes a model to render locally in a container
 #@state The wmodel is our current repo branch with 
  cd /wmodel/ && \
-     mkdir /m && \
+     mkdir -p /m && \
      tar cf - * | (cd /m; tar xf -) && \
      cd /m && \
      mv models models.old && \

@@ -3,15 +3,24 @@
 # Inference 
 
 source _env.sh
+#/a/lib/datasets/SmallCreation/model_gia-ds-DavidBouchardGagnon-v01b-210510-864_new
+export content=$lib_root/datasets/SmallCreation/
+export image_size=2100
+export modelname=model_gia-ds-DavidBouchardGagnon-v01b-210510-864_new
+export chp=345000
+if [ "$1" != "" ];then # we have a chp specified
+	chp=$1'000'
+fi
+export savedir=/a/lib/results/_highres_png__210525/$chp
 
-export content=$lib_root/datasets/gia_style_AcrylicPaint2012/IMG_0005.JPG
-export image_size=1280
 
-CUDA_VISIBLE_DEVICES=0 python main.py \
-	--model_name=model_cezanne \
+CUDA_VISIBLE_DEVICES=-1
+python main.py \
+	--model_name=$modelname \
 	--phase=inference \
+	--ckpt_nmbr=$chp \
 	--image_size=$image_size \
-	--ii_dir /a/lib/samples/content/ \
-	--save_dir=/a/lib/results/x__cezanne_inference__2012052128/
+	--ii_dir $content \
+	--save_dir=$savedir
 
 
