@@ -15,7 +15,7 @@ else
 fi
 
 source "$1"
-DEBUG=1
+DEBUG=0
 dvar modeltag ftag binroot
 
 sdir=/work

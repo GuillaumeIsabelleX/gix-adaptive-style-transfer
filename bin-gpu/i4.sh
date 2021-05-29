@@ -3,7 +3,7 @@
 if [ -e $binroot/__fn.sh ]; then
        source $binroot/__fn.sh $@
 fi
-DEBUG=1
+DEBUG=0
 # Inference 
 ## This script is used by fori.sh, an multi-checkpoints inference renderer.
 #-------------------------------------------------

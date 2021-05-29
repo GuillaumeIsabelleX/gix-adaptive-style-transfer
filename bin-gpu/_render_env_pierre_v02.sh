@@ -4,6 +4,7 @@ export savedirnamespace=gia-ds-pierret_ds_210512-864-v02-210527-864
 #subdir of this render in the namespace above
 export ftag=pt_v02
 #The model store we will be using
+#model_gia-ds-pierret_ds_210512-864-v02-210527-864_new
 export modeltag=model_gia-ds-pierret_ds_210512-864-v02-210527-864_new
 
 ##########################################
@@ -19,11 +20,15 @@ export modeltag=model_gia-ds-pierret_ds_210512-864-v02-210527-864_new
 export container_arc=cpu
 
 read -r -d '' _TORENDER << RENDERME
+# /a/lib/samples/sc210518,640;
+# SAVEDIRBASE/720x,2100;
+# /a/lib/samples/sc,710;
+RENDERME
 # /a/lib/samples/content,576;
 # /a/lib/samples/sc,710;
 # /a/lib/datasets/SmallCreation,720;
 # /a/lib/samples/sc210518,640;
-RENDERME
+#RENDERME
 
 # /a/lib/samples/sc,600;
 read -r -d '' IGNORED << DISABLED_KEEPASREFEFERENCE
