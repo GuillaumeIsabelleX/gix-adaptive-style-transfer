@@ -471,6 +471,8 @@ class Artgan(object):
                 print(" [*] Load SUCCESS")
             else:
                 print(" [!] Load failed...")
+                #Exit if we can not load (fix issue inferencing noizy image)
+                sys.exit()
 
         # Create folder to store results.
         if to_save_dir is None:
