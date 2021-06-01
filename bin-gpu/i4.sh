@@ -3,7 +3,7 @@
 if [ -e $binroot/__fn.sh ]; then
        source $binroot/__fn.sh $@
 fi
-DEBUG=1
+DEBUG=0
 # Inference 
 ## This script is used by fori.sh, an multi-checkpoints inference renderer.
 #-------------------------------------------------
@@ -96,7 +96,7 @@ CUDA_VISIBLE_DEVICES=-1
 		--save_dir=$savedir/ \
 		--file_suffix=$file_suffix \
 		--ckpt_nmbr=$ckpt_nmbr"
-echo "$cmd"
+d "$cmd"
 $cmd
 
 	if  [ $savedir != "/" ] ; then # so we dont fuck the whole OS with permissions...

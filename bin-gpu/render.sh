@@ -64,7 +64,7 @@ if [ "$1" == "$getenvo" ] || [ "$2" == "$getenvo" ] || [ "$3" == "$getenvo" ] ||
 		#echo "Loading fori from /work";
 		#	echo 'source /work/_fori_env.sh $dim $dtag $ftag $modeltag $contentpath'
 		#echo source /work/_fori_env.sh $dim $dtag $ftag $modeltag $contentpath
-		DEBUG=1
+		DEBUG=0
 		d "source /work/fori.sh $dim $dtag $ftag $modeltag $contentpath"
 		source /work/fori.sh $dim $dtag $ftag $modeltag $contentpath
 	else 
@@ -81,7 +81,7 @@ else
 
 	for dim in $dimloop;
 	do 
-	DEBUG=1
+	DEBUG=0
 	dvar dim dimloop
 		echo "---------------------------------"
 		echo "- Processing resolution : $dim ----"

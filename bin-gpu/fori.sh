@@ -10,7 +10,7 @@ getenvo="--get-env-only"
 FORIDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 #echo "FORIDIR: $FORIDIR"
 
-DEBUG=1
+DEBUG=0
 
 d "--------------------------"
 d "---------$0---------->>"

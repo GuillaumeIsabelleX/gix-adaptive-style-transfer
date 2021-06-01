@@ -18,12 +18,12 @@ if [ -e "/work/model.py" ]; then #we are in container context
 	#made it our new version to train with
 	
 fi
-
+export img_training_size=864
 export lib_root_folder=datasets
 export lib_fullpath=$lib_root/$lib_root_folder/$lib_namespace
 export model_name='model_'$modelbasename'_new'
 
-#echo " model_name= $model_name"
+echo " model_name= $model_name"
 
 #echo "data/$modelbasename"
 #echo "$model_local_fullpath"
@@ -40,14 +40,19 @@ cp -f $lib_fullpath/*PNG data/$modelbasename &> /dev/null
 cp -f $lib_fullpath/*png data/$modelbasename &> /dev/null
 
 sleep 1
-
+lr=0.0002
+dsr=0.8
+batch_size=1
 CUDA_VISIBLE_DEVICES=0 python main.py \
                  --model_name=$model_name \
-                 --batch_size=1 \
+                 --batch_size=$batch_size \
 		 --total_steps=$last_checkpoint_to_train \
                  --phase=train \
-                 --image_size=768 \
-                 --lr=0.0002 \
-                 --dsr=0.8 \
+                 --image_size=$img_training_size \
+                 --lr=$lr \
+                 --dsr=$dsr \
                  --ptcd=$lib_root/data_large \
-                 --ptad=./data/$modelbasename
+                 --ptad=./data/$modelbasename \
+		 && (echo "AST Training succeeded" ; exit 0) \
+		 || (echo "AST Training failed" ; exit 1)
+

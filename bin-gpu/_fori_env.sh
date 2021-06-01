@@ -44,7 +44,7 @@ export savefullpath=$savedir/$subdir
 dvar subdir savefullpath
 
 echo "export savefullpath=$savedir/$subdir" >> $FORIDIR/__context.sh
-DEBUG=1
+DEBUG=0
 dcfile
 dvar subdir
 

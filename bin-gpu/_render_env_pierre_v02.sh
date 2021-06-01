@@ -1,10 +1,11 @@
 #### Which has the following var
 #Determine where we will save in $resultroot
-export savedirnamespace=gia-ds-pierret_ds_210512-864-v01b-210519-864
+export savedirnamespace=gia-ds-pierret_ds_210512-864-v02-210527-864
 #subdir of this render in the namespace above
-export ftag=pt_v01b
+export ftag=pt_v02
 #The model store we will be using
-export modeltag=model_gia-ds-pierret_ds_210512-864-v01b-210519-864_new
+#model_gia-ds-pierret_ds_210512-864-v02-210527-864_new
+export modeltag=model_gia-ds-pierret_ds_210512-864-v02-210527-864_new
 
 ##########################################
 ####### WHAT TO RENDER IS DEFINED HERE ##
@@ -19,13 +20,23 @@ export modeltag=model_gia-ds-pierret_ds_210512-864-v01b-210519-864_new
 export container_arc=cpu
 
 read -r -d '' _TORENDER << RENDERME
+# /a/lib/samples/content,1360;
+# SAVEDIRBASE/1360x,2160;
+RENDERME
+
+# /a/lib/samples/content,2200;
+# SAVEDIRBASE/640x,2095;
+
+# /a/lib/samples/sc210518,640;
+# /a/lib/samples/content,2200;
 # /a/lib/samples/content,576;
-# /a/lib/samples/sc,1710;
+# /a/lib/samples/sc,710;
+
+# /a/lib/samples/content,576;
 # /a/lib/samples/sc,710;
 # /a/lib/datasets/SmallCreation,720;
 # /a/lib/samples/sc210518,640;
-# SAVEDIRBASE/576x,2076;
-RENDERME
+#RENDERME
 
 # /a/lib/samples/sc,600;
 read -r -d '' IGNORED << DISABLED_KEEPASREFEFERENCE
