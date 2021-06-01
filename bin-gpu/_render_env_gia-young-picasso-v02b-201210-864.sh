@@ -13,7 +13,7 @@ export container_arc=cpu
 read -r -d '' _TORENDER << RENDERME
 # /a/lib/samples/content,1111;
 # /a/lib/samples/content0025,1250;
-# SAVEDIRBASE/1250x,2525
+# SAVEDIRBASE/1250x,2222
 RENDERME
 # SAVEDIRBASE/2300x,2323;
 

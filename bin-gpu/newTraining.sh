@@ -55,4 +55,5 @@ echo "render:  ./doit.sh $rendertargetfile 15 30 45 ..."
 echo "# $ftag : $ds"  >> .bash_aliases
 echo "alias train$ftag=\"./$traintargetfile\"" >> .bash_aliases
 echo "alias render$ftag=\"./doit.sh $rendertargetfile \""  >> .bash_aliases
+echo 'alias render'$ftag'Edit="vi '$rendertargetfile' "'  >> .bash_aliases
 

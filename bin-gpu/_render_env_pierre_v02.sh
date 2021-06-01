@@ -20,10 +20,18 @@ export modeltag=model_gia-ds-pierret_ds_210512-864-v02-210527-864_new
 export container_arc=cpu
 
 read -r -d '' _TORENDER << RENDERME
-# /a/lib/samples/sc210518,640;
-# SAVEDIRBASE/720x,2100;
-# /a/lib/samples/sc,710;
+# /a/lib/samples/content,1360;
+# SAVEDIRBASE/1360x,2160;
 RENDERME
+
+# /a/lib/samples/content,2200;
+# SAVEDIRBASE/640x,2095;
+
+# /a/lib/samples/sc210518,640;
+# /a/lib/samples/content,2200;
+# /a/lib/samples/content,576;
+# /a/lib/samples/sc,710;
+
 # /a/lib/samples/content,576;
 # /a/lib/samples/sc,710;
 # /a/lib/datasets/SmallCreation,720;

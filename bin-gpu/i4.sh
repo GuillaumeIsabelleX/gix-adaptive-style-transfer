@@ -96,7 +96,7 @@ CUDA_VISIBLE_DEVICES=-1
 		--save_dir=$savedir/ \
 		--file_suffix=$file_suffix \
 		--ckpt_nmbr=$ckpt_nmbr"
-echo "$cmd"
+d "$cmd"
 $cmd
 
 	if  [ $savedir != "/" ] ; then # so we dont fuck the whole OS with permissions...

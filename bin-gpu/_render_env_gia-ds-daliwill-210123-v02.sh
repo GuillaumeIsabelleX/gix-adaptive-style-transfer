@@ -11,8 +11,11 @@ export savedirnamespace=${ds//"gia-ds-"/}
 export container_arc=cpu
 
 read -r -d '' _TORENDER << RENDERME
-# SAVEDIRBASE/2300x,2323;
+# /a/lib/samples/content0025,1250;
+# SAVEDIRBASE/1250x,2525
 RENDERME
+# SAVEDIRBASE/2300x,2323;
+
 # /a/lib/samples/sc,1788;
 # SAVEDIRBASE/1788x,2300;
 # SAVEDIRBASE/2300x,2323;
