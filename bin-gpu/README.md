@@ -3,7 +3,8 @@
 * I decided to publish to above in [Astia2105](https://github.com/GuillaumeAI/astia2105) which will become somewhere I work and use this as a submodule.
 
 ----
-
+# --@par 
+# --@d something
 # Intentions
 
 * A well organized distribution of used libraries with my enhancements that others can use (and so is myself)
