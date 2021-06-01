@@ -26,18 +26,20 @@ cd $cdir
 tfile=$sdir/train-$ds.sh
 traintargetfile=$tfile
 if [ ! -e "$tfile" ]; then #@state do process, we are new
+	cp $traintemplate $tfile && \
  	sed -i 's/DSNAME/'"$ds"'/g' $tfile && \
 	  sed -i 's/FTAG/'"$ftag"'/g' && msg_status "Train file completed $tfile" 0 || \
-	  msg_status "Failed to prep $tfile" 1 
+	  (msg_status "Failed to prep $tfile" 1   && exit 1)
 
  fi
  cd $cdir
 tfile=$sdir/_render_env_$ds.sh
 rendertargetfile=$tfile
 if [ ! -e "$tfile" ]; then #@state do process, we are new
+	cp $rendertemplate $tfile && \
  	sed -i 's/DSNAME/'"$ds"'/g' $tfile && \
           sed -i 's/FTAG/'"$ftag"'/g' && msg_status "Render file completed $tfile" 0 || \
-          msg_status "Failed to prep $tfile" 1
+	  (msg_status "Failed to prep $tfile" 1 && exit 1)
 
 fi
 
