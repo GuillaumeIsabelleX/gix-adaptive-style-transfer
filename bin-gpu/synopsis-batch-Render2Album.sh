@@ -44,12 +44,12 @@ cloudit() {
 	#@a then published to the cloud
 	#@a then an address is generated and send as notification thru email
 log_status "Rendering" STARTING && \
-echo	$executer $renderbatch $chks && \
+	$executer $renderbatch $chks && \
 	log_status "Rendering" COMPLETED && \
 	cd $savefulldir && \
 	log_info "Now in $savefulldir" && \
 	log_status "ContactSheetMaking" STARTING && \
-	(($csmForeachFolderInCurrent  && sleep 25 && for csm in _*csm*jpg ; do echo cloudit $csm;done ) &) && \
+	(($csmForeachFolderInCurrent  && sleep 25 && for csm in _*csm*jpg ; do cloudit $csm;done ) &) && \
 	sleep 1 && \
 	log "-------------------------------------------" && \
 	log_info "Entering $renderToMnotageToPipelineEndingByCloudPublished" && \
