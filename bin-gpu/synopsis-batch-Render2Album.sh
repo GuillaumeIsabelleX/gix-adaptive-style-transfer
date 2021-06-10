@@ -8,8 +8,9 @@ else
 fi
 export LOG_FILE=/var/log/gia/result_To_Montage_Pipeline-To_cloudNotified.sh.txt
 export LOG_ENABLED=y
-log_info "Starting $0"
 DEBUG=1
+log_info "Starting $0"
+
 
 executer=./doit.sh-cpu
 renderbatch="_render_env_gia-young-picasso-v02b-201210-864.sh-batch"
@@ -43,14 +44,16 @@ cloudit() {
 	#@a then published to the cloud
 	#@a then an address is generated and send as notification thru email
 log_status "Rendering" STARTING && \
-	$executer $renderbatch $chks && \
+echo	$executer $renderbatch $chks && \
 	log_status "Rendering" COMPLETED && \
 	cd $savefulldir && \
 	log_info "Now in $savefulldir" && \
 	log_status "ContactSheetMaking" STARTING && \
-	(($csmForeachFolderInCurrent  && sleep 35 && for csm in _*csm*jpg ; do cloudit "$csm";done ) &) && \
-	sleep 3 && \
-	$renderToMnotageToPipelineEndingByCloudPublished && \
+	(($csmForeachFolderInCurrent  && sleep 25 && for csm in _*csm*jpg ; do echo cloudit $csm;done ) &) && \
+	sleep 1 && \
+	log "-------------------------------------------" && \
+	log_info "Entering $renderToMnotageToPipelineEndingByCloudPublished" && \
+	(cd $savefulldir && pwd && $renderToMnotageToPipelineEndingByCloudPublished) && \
 	log_status "renderToMnotageToPipelineEndingByCloudPublished" COMPLETED || \
 	log_status "renderToMnotageToPipelineEndingByCloudPublished" FAILED
 #$tclouddir $tcloudgetaddress
