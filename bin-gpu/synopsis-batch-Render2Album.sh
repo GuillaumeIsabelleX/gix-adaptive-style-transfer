@@ -14,10 +14,12 @@ log_info "Starting $0"
 
 executer=./doit.sh-cpu
 renderbatch="_render_env_gia-young-picasso-v02b-201210-864.sh-batch"
-chks="150 165 180 195 210 225 240 255 270 285 15 30 45 60 75 90 105 120 135"
+chks="300 150 165 180 195 210 225 240 255 270 285 15 30 45 60 75 90 105 120 135"
 renderToMnotageToPipelineEndingByCloudPublished="$binroot/result_To_Montage_Pipeline-To_cloudNotified.sh"
-csmForeachFolderInCurrent="$binroot/_csm_foreach_dir_in_current.sh"
-export tclouddir=/home/jgi/astiapreviz
+#csmForeachFolderInCurrent="$binroot/_csm_foreach_dir_in_current.sh"
+csmForeachFolderInCurrent="$binroot/_csm_foreach_dir_in_current_As_Label.sh"
+export tcloudroot=/home/jgi/astiapreviz
+
 export tcloudgetaddress=/home/jgi/astiapreviz/_getaddress.sh
 
 . _render_env_gia-young-picasso-v02b-201210-864.sh-batch 
@@ -25,6 +27,8 @@ export ds=gia-young-picasso-v02b-201210-864
 export modelname='model_'$ds'_new'
 export modeltag=$modelname
 export ftag=pkw_v02b864
+export tclouddir=$tcloudroot/$ftag
+mkdir -p $tclouddir
 export savedirnamespace=${ds//"gia-ds-"/}
 export savefulldir=$libroot/results/$savedirnamespace/$ftag
 
@@ -32,8 +36,8 @@ dvar ds modelname modeltag ftag savedirnamespace savefulldir
 cloudit() {
 	local f="$1"
 	(cp $f $tclouddir && \
-		cd $tclouddir && \
-		$tcloudgetaddress $f --sns && echo "done adding $f to $tclouddir")
+		cd $tcloudroot && \
+		$tcloudgetaddress $ftag/$f --sns && echo "done adding $f to $tclouddir")
 
 }
 #@a Rendering is completed, \
@@ -49,7 +53,7 @@ log_status "Rendering" STARTING && \
 	cd $savefulldir && \
 	log_info "Now in $savefulldir" && \
 	log_status "ContactSheetMaking" STARTING && \
-	(($csmForeachFolderInCurrent  && sleep 25 && for csm in _*csm*jpg ; do cloudit $csm;done ) &) && \
+	(($csmForeachFolderInCurrent  && sleep 20 && for csm in _*csm*jpg ; do cloudit $csm;done ) &) && \
 	sleep 1 && \
 	log "-------------------------------------------" && \
 	log_info "Entering $renderToMnotageToPipelineEndingByCloudPublished" && \
