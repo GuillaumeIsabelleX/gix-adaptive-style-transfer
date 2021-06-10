@@ -2,9 +2,9 @@
 #Determine where we will save in $resultroot
 export savedirnamespace=gia-ds-DavidBouchardGagnon-v01b-210510-864
 #subdir of this render in the namespace above
-export ftag=dbg_v01b
-export ftag=compo_dbg_v01b
+export ftag=dbg_v01b2
 #The model store we will be using
+#model_gia-ds-pierret_ds_210512-864-v02-210527-864_new
 export modeltag=model_gia-ds-DavidBouchardGagnon-v01b-210510-864_new
 
 ##########################################
@@ -20,22 +20,28 @@ export modeltag=model_gia-ds-DavidBouchardGagnon-v01b-210510-864_new
 export container_arc=cpu
 
 read -r -d '' _TORENDER << RENDERME
-# /a/lib/samples/content,1233;
-# SAVEDIRBASE/1233x,2100;
-# SAVEDIRBASE/720x,2100;
-# /a/lib/samples/sc210518,522;
-# SAVEDIRBASE/522x, 2222;
+# /a/lib/samples/contentslimmer,1600;
+# SAVEDIRBASE/1600x,2261;
+# /a/lib/samples/contentslimmer,940;
+# SAVEDIRBASE/940x,2294;
 RENDERME
+
+# /a/lib/samples/content,2200;
+# SAVEDIRBASE/640x,2095;
+
+# /a/lib/samples/sc210518,640;
+# /a/lib/samples/content,2200;
+# /a/lib/samples/content,576;
+# /a/lib/samples/sc,710;
+
+# /a/lib/samples/content,576;
+# /a/lib/samples/sc,710;
+# /a/lib/datasets/SmallCreation,720;
+# /a/lib/samples/sc210518,640;
+#RENDERME
 
 # /a/lib/samples/sc,600;
 read -r -d '' IGNORED << DISABLED_KEEPASREFEFERENCE
-# /a/lib/samples/content,576;
-# /a/lib/samples/sc,910;
-# /a/lib/datasets/SmallCreation,910;
-# /a/lib/samples/sc210518,910;
-# SAVEDIRBASE/910x,1610;
-# SAVEDIRBASE/1610x,2110;
-
 
 # SAVEDIRBASE/720x,2100;
 # SAVEDIRBASE/640x,2095;
