@@ -13,7 +13,8 @@ fi
 
 ## @STCGoal Well organized relational rendering and classification / presentation 
 ## @a A log of what is rendered where we will 
-. $1
+if [ "$ftag" == "" ]; then . $1; fi
+
 tdatadir=$libroot/results/$savedirnamespace/$ftag/.gia
 mkdir -p $tdatadir
 tdatafile=$tdatadir/renderinglog.giads
