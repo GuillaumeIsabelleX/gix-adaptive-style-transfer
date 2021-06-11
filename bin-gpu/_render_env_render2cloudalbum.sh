@@ -12,6 +12,7 @@ export resolution=512
 export ftag=$ftagprefix$2x$1
 export savedirnamespace=${ds//"gia-ds-"/}
 
+
 #where is mounted the s3 disk
 export tcloudroot=/home/jgi/astiapreviz
 

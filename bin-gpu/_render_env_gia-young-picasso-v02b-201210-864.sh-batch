@@ -12,6 +12,7 @@ export reso2x=$reso2'x'
 export ftag=pkw_v02b$reso'x'
 export savedirnamespace=${ds//"gia-ds-"/}
 
+
 export container_arc=cpu
 
 read -r -d '' _TORENDER << R
