@@ -56,4 +56,4 @@ echo "# $ftag : $ds"  >> .bash_aliases
 echo "alias train$ftag=\"./$traintargetfile\"" >> .bash_aliases
 echo "alias render$ftag=\"./doit.sh $rendertargetfile \""  >> .bash_aliases
 echo 'alias render'$ftag'Edit="vi '$rendertargetfile' "'  >> .bash_aliases
-
+echo "alias : source .bash_aliases then : renderinko-v01  or renderinko-v01Edit"
