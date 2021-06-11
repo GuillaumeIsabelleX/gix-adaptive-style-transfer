@@ -53,4 +53,4 @@ export ind=index.md
 #2048 2k v03 model_gia-young-picasso-v03-201216_new
 #2048 2k v03 model_gia-young-picasso-v03-201216_new /a/lib/samples/content0014
 
-echo "-------$0----"
+#echo "-------$0----"

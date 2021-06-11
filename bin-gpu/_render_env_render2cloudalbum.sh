@@ -1,5 +1,5 @@
 
-if [ "$1" == "" ] || [ "$2" == "" ];then echo "Usage: $0 <contentDir (from lib/samples)> <resolution> "; exit 1 ; fi
+#if [ "$1" == "" ] || [ "$2" == "" ];then echo "Usage: $0 <contentDir (from lib/samples)> <resolution> "; exit 1 ; fi
 
 #### Which has the following var
 #Determine where we will save in $resultroot
@@ -7,8 +7,8 @@ export ds=gia-young-picasso-v02b-201210-864
 export modelname='model_'$ds'_new'
 export modeltag=$modelname
 export ftagprefix=pkw_v02b
-export contenttag=$1
-export resolution=$2
+export contenttag=sc-21050101
+export resolution=512
 export ftag=$ftagprefix$2x$1
 export savedirnamespace=${ds//"gia-ds-"/}
 

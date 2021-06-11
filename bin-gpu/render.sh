@@ -85,7 +85,7 @@ else
 	dvar dim dimloop
 		echo "---------------------------------"
 		echo "- Processing resolution : $dim ----"
-		echo "-----$dtag $ftag $modeltag $contentpath---------------------------"
+                echo "---------------------------------" #echo "-----$dtag $ftag $modeltag $contentpath---------------------------"
 		#sleep 1
 		
 		# dim=$d

@@ -5,8 +5,10 @@
 #export ftag=pkw_v02b2k$1
 
 renderbatch="_render_env_gia-young-picasso-v02b-201210-864.sh-batch"
+echo "----- MIGHT WANT TO EDIT THAT FIRST, otherwise just quit and it will continue------------"
+vi $renderbatch
 . $renderbatch
-chks="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 270 285 300 315 330 345 360 375"
+chks="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 270 285 300 315 330 345 360 375 390 405"
 
 if [ -e $binroot/__fn.sh ] && [ "$FNLOADED" == "" ]; then
    source $binroot/__fn.sh $@
@@ -16,7 +18,7 @@ else
 fi
 export LOG_FILE=/var/log/gia/result_To_Montage_Pipeline-To_cloudNotified.sh.txt
 export LOG_ENABLED=y
-DEBUG=1
+DEBUG=0
 log_info "Starting $0"
 log_status "$renderbatch" CONFIG
 log_status "$ds" DS
