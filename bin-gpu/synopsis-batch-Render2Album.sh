@@ -1,9 +1,11 @@
 #!/bin/bash
 #@STCGoal An album montage is created and published from render in the cloud, an address is received for the Album along with a Contact sheet URL image
 #@STCStatus Works - Next is parametrize it so we can specify the Datasets/Model and ftag.
-export ds=gia-young-picasso-v02b-201210-864
-export ftag=pkw_v02b2k$1
+#export ds=gia-young-picasso-v02b-201210-864
+#export ftag=pkw_v02b2k$1
+
 renderbatch="_render_env_gia-young-picasso-v02b-201210-864.sh-batch"
+. $renderbatch
 chks="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 270 285 300 315 330 345 360 375"
 
 if [ -e $binroot/__fn.sh ] && [ "$FNLOADED" == "" ]; then
