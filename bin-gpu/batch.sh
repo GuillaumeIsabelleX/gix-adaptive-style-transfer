@@ -40,9 +40,9 @@ source $s 123456 $2 $3 --get-env-only
 
 
 export resultbase="$savedir"
-d "-----------ENV---$0---->>----------"
-dvar ftag savedir savedirnamespace savedirbase savefullpath modeltag libresultroot
-d "-----------ENV---$0--->>-----------"
+#d "-----------ENV---$0---->>----------"
+#dvar ftag savedir savedirnamespace savedirbase savefullpath modeltag libresultroot
+#d "-----------ENV---$0--->>-----------"
 
 
 if [ "$1" == "" ] ; then #

@@ -72,9 +72,9 @@ if [ "$1" == "$getenvo" ] || [ "$2" == "$getenvo" ] || [ "$3" == "$getenvo" ]||[
 	echo "..."
 else 
 
-echo "------i4-----ENV--$0---------------"
-dvar ftag savedir savedirnamespace savedirbase savefullpath modeltag libresultroot image_size
-echo "------i4-----ENV---$0----<<----------"
+#echo "------i4-----ENV--$0---------------"
+#dvar ftag savedir savedirnamespace savedirbase savefullpath modeltag libresultroot image_size
+#echo "------i4-----ENV---$0----<<----------"
 
 
 	rm -f data/* &> /dev/null
