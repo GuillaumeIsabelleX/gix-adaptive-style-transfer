@@ -1,5 +1,9 @@
 #!/bin/bash
 #@STCGoal An album montage is created and published from render in the cloud, an address is received for the Album along with a Contact sheet URL image
+#@STCStatus Works - Next is parametrize it so we can specify the Datasets/Model and ftag.
+export ds=gia-young-picasso-v02b-201210-864
+export ftag=pkw_v02b864
+
 if [ -e $binroot/__fn.sh ] && [ "$FNLOADED" == "" ]; then
    source $binroot/__fn.sh $@
 else 
@@ -22,11 +26,11 @@ export tcloudroot=/home/jgi/astiapreviz
 
 export tcloudgetaddress=/home/jgi/astiapreviz/_getaddress.sh
 
-. _render_env_gia-young-picasso-v02b-201210-864.sh-batch 
-export ds=gia-young-picasso-v02b-201210-864
+#. _render_env_gia-young-picasso-v02b-201210-864.sh-batch 
+
 export modelname='model_'$ds'_new'
 export modeltag=$modelname
-export ftag=pkw_v02b864
+
 export tclouddir=$tcloudroot/$ftag
 mkdir -p $tclouddir
 export savedirnamespace=${ds//"gia-ds-"/}
