@@ -2,8 +2,11 @@
 
 #### Which has the following var
 #Determine where we will save in $resultroot
+#model_gia-young-picasso-v02b-201210-864_new-120ik
 export ds=gia-young-picasso-v02b-201210-864
-export modelname='model_'$ds'_new'
+#export modelname='model_'$ds'_new'
+export modelname=model_gia-young-picasso-v02b-201210-864_new-120ik
+
 export modeltag=$modelname
 export reso=256
 export reso2=640

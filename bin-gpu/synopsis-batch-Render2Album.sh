@@ -9,6 +9,7 @@ echo "----- MIGHT WANT TO EDIT THAT FIRST, otherwise just quit and it will conti
 vi $renderbatch
 . $renderbatch
 chks="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 270 285 300 315 330 345 360 375 390 405"
+chks="120"
 
 if [ -e $binroot/__fn.sh ] && [ "$FNLOADED" == "" ]; then
    source $binroot/__fn.sh $@
