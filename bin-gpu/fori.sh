@@ -33,13 +33,13 @@ if  [ "$3" == "$getenvo" ] ||  [ "$4" == "$getenvo" ] ||  [ "$5" == "$getenvo" ]
 			subdir=$img_res'x'
 			cmd="$script $model $subdir $suffix $img_res $content $savedir $i"
 
-			echo "-----fori.sh------>>----"
-			echo "$cmd"
-			echo "-----fori.sh------<<----"
+			#echo "-----fori.sh------>>----"
+			#echo "$cmd"
+			#echo "-----fori.sh------<<----"
 			
 			#echo "running...resolution :$img_res  "
 			#sleep 1
-			$cmd
+			echo -n "-- Inferencing  checkpoint: $i..." && $cmd &> /dev/null && echo "...COMPLETED" || echo "Inferencing FAILED"
 			#echo "Done this iteration... listing"
 			#sleep 1
 			#ls $savedir/$subdir/*__$i* >> $savedir/index.md

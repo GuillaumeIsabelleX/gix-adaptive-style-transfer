@@ -1,13 +1,17 @@
 
-if [ "$1" == "" ] || [ "$2" == "" ];then echo "Usage: $0 <contentDir (from lib/samples)> <resolution> "; exit 1 ; fi
+#if [ "$1" == "" ] || [ "$2" == "" ];then echo "Usage: $0 <contentDir (from lib/samples)> <resolution> "; exit 1 ; fi
 
 #### Which has the following var
 #Determine where we will save in $resultroot
 export ds=gia-young-picasso-v02b-201210-864
 export modelname='model_'$ds'_new'
 export modeltag=$modelname
-export ftag=pkw_v02b$2x$1
+export ftagprefix=pkw_v02b
+export contenttag=sc-21050101
+export resolution=512
+export ftag=$ftagprefix$2x$1
 export savedirnamespace=${ds//"gia-ds-"/}
+
 
 #where is mounted the s3 disk
 export tcloudroot=/home/jgi/astiapreviz
@@ -15,7 +19,7 @@ export tcloudroot=/home/jgi/astiapreviz
 export container_arc=cpu
 
 read -r -d '' _TORENDER << RENDERME
-# /a/lib/samples/$1,$2;
+# /a/lib/samples/$contenttag,$resolution;
 RENDERME
 # /a/lib/samples/contentslimmer,864;
 #RENDERME

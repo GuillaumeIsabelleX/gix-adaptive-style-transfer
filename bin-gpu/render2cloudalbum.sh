@@ -4,8 +4,9 @@
 #export ds=gia-young-picasso-v02b-201210-864
 #export ftag=pkw_v02b2k$1
 
-renderbatch="_render_env_batch_synopsis.sh"
-. $renderbatch $1 $2
+renderbatch="_render_env_render2cloudalbum.sh"
+. $renderbatch
+
 chks="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 270 285 300 315 330 345 360 375 390"
 
 if [ -e $binroot/__fn.sh ] && [ "$FNLOADED" == "" ]; then
@@ -33,16 +34,17 @@ export tcloudgetaddress=/home/jgi/astiapreviz/_getaddress.sh
 
 #. _render_env_gia-young-picasso-v02b-201210-864.sh-batch 
 
-export modelname='model_'$ds'_new'
-export modeltag=$modelname
+#export modelname='model_'$ds'_new'
+#export modeltag=$modelname
 log_status "$modeltag" MODELTAG
 
 export tclouddir=$tcloudroot/$ftag
 mkdir -p $tclouddir
-export savedirnamespace=${ds//"gia-ds-"/}
+#export savedirnamespace=${ds//"gia-ds-"/}
 export savefulldir=$libroot/results/$savedirnamespace/$ftag
 
 dvar ds modelname modeltag ftag savedirnamespace savefulldir
+
 cloudit() {
 	local f="$1"
 	(cp $f $tclouddir && \

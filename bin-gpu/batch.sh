@@ -74,7 +74,7 @@ for chp in "${arr[@]}"; do
     # l=$(echo "$l" |tr "#" " " | sed -e 's/;//g'  | sed -e 's/\ //g')
     #echo replacetextbypath "SAVEDIRBASE" "$savedir" "$l"
     l=$(replacetextbypath "SAVEDIRBASE" "$savedir" "$l")
-    echo "$l"
+    #echo "$l"
 
     if [ "$l" != "" ]; then
 
@@ -93,7 +93,7 @@ for chp in "${arr[@]}"; do
       # echo "s: $s"
       # echo "chp: $chp"
       # echo "renderpass $s $chp $c $r $resultbase"
-      dvar s chp c r resultbase
+      #dvar s chp c r resultbase
       #sleep 3
       renderpass $s $chp $c $r "$resultbase"
       #sleep 2
@@ -157,5 +157,5 @@ for chp in "${arr[@]}"; do
 
   # renderpass $s "$chp" "/a/lib/datasets/pierret_ds_210512-864" 640 "$resultbase"
 done
-
+echo " -- :)  Well, it's going to end some day  :) --"
 sleep 18

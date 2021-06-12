@@ -20,11 +20,13 @@ export modeltag=model_gia-ds-DavidBouchardGagnon-v01b-210510-864_new
 export container_arc=cpu
 
 read -r -d '' _TORENDER << RENDERME
+# /a/lib/datasets/DavidBouchardGagnon,512
+RENDERME
 # /a/lib/samples/contentslimmer,1600;
 # SAVEDIRBASE/1600x,2261;
 # /a/lib/samples/contentslimmer,940;
 # SAVEDIRBASE/940x,2294;
-RENDERME
+#RENDERME
 
 # /a/lib/samples/content,2200;
 # SAVEDIRBASE/640x,2095;
