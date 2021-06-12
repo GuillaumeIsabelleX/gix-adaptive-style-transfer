@@ -31,11 +31,11 @@ export model=$4
 #export content=/a/lib/samples/content2012181444
 export content=$5
 #export content=/a/lib/datasets/paintergansets/paul-cezanne
-
+export contextfile=__context.$HOSTNAME.sh
 export libresultroot=/a/lib/results
 export savedirbase=$libresultroot/$savedirnamespace
 mkdir -p $savedirbase
-echo "export savedir=$savedirbase/$3" >> $FORIDIR/__context.sh
+echo "export savedir=$savedirbase/$3" >> $FORIDIR/$contextfile
 export savedir=$savedirbase/$3
 
 export script=/work/i4.sh
@@ -43,7 +43,7 @@ export subdir=$2
 export savefullpath=$savedir/$subdir
 dvar subdir savefullpath
 
-echo "export savefullpath=$savedir/$subdir" >> $FORIDIR/__context.sh
+echo "export savefullpath=$savedir/$subdir" >> $FORIDIR/$contextfile
 DEBUG=0
 dcfile
 dvar subdir
