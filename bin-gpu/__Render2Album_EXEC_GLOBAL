@@ -1,0 +1,53 @@
+#!/bin/bash
+
+if [ -e $binroot/__fn.sh ] && [ "$FNLOADED" == "" ]; then
+   source $binroot/__fn.sh $@
+else 
+	echo "Could not load functions..."
+	exit 1
+fi
+
+export LOG_ENABLED=y
+DEBUG=0
+
+renderToMnotageToPipelineEndingByCloudPublished="$binroot/result_To_Montage_Pipeline-To_cloudNotified.sh"
+#csmForeachFolderInCurrent="$binroot/_csm_foreach_dir_in_current.sh"
+csmForeachFolderInCurrent="$binroot/_csm_foreach_dir_in_current_As_Label.sh"
+export tcloudroot=/home/jgi/astiapreviz
+
+export tcloudgetaddress=/home/jgi/astiapreviz/_getaddress.sh
+
+export tclouddir=$tcloudroot/$ftag
+mkdir -p $tclouddir
+
+export savefulldir=$libroot/results/$savedirnamespace/$ftag
+
+
+cloudit() {
+	local f="$1"
+	(cp $f $tclouddir && \
+		cd $tcloudroot && \
+		$tcloudgetaddress $ftag/$f --sns && echo "done adding $f to $tclouddir")
+
+}
+
+log_status "Rendering" STARTING && \
+	$executer $renderbatch $chks && \
+	log_status "Rendering" COMPLETED && \
+	cd $savefulldir && \
+	log_info "Now in $savefulldir" && \
+	log_status "ContactSheetMaking" STARTING && \
+	(($csmForeachFolderInCurrent  && sleep 20 && for csm in _*csm*jpg ; do cloudit $csm;done ) &) && \
+	sleep 1 && \
+	log "-------------------------------------------" && \
+	log_info "Entering $renderToMnotageToPipelineEndingByCloudPublished" && \
+	(cd $savefulldir && pwd && $renderToMnotageToPipelineEndingByCloudPublished) && \
+	log_status "renderToMnotageToPipelineEndingByCloudPublished" COMPLETED || \
+	log_status "renderToMnotageToPipelineEndingByCloudPublished" FAILED
+#$tclouddir $tcloudgetaddress
+#@a Publish pass to ADAPT
+#tar cf - _montage-dbg_v01b2_by_content__315k__gal | (cd /home/jgi/astiapreviz/; tar xf -; ./_getaddress.sh _montage-dbg_v01b2_by_content__315k__gal --sns)
+
+
+
+
