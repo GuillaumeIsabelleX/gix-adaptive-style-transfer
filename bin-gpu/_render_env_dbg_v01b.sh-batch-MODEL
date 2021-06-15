@@ -67,7 +67,7 @@ R
 #RENDERME
 
 # /a/lib/samples/sc,600;
-read -r -d '' IGNORED << DISABLED_KEEPASREFEFERENCE
+
 
 # SAVEDIRBASE/720x,2100;
 # SAVEDIRBASE/640x,2095;
@@ -87,9 +87,7 @@ read -r -d '' IGNORED << DISABLED_KEEPASREFEFERENCE
 # /a/lib/results/gia-ds-pierret_ds_210512-864-v01-210517-864/pt_v01/520x,2200;
 # SAVEDIRBASE/520x,2200;
 # /a/lib/results/gia-ds-pierret_ds_210512-864-v01-210517-864/pt_v01/520x,2200;
-echo "savedirbase:$savedirbase"
-echo "savefullpath:$savefullpath"
-DISABLED_KEEPASREFEFERENCE
+
 
 
 # DONT TOUCH THIS

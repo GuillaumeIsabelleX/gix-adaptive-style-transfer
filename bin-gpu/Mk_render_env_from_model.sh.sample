@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#Cleanup
+rm _Render2Album-_render_env_dbg_v01b.sh-batch-datasets__pierret_ds_210512-jpg__pt_IMG_4426.sh  _Render2Album-_render_env_dbg_v01b.sh-batch-datasets__pierret_ds_210512-jpg__pt_IMG_4426.sh ; echo "------------------------------"
+#Sample
+./Mk_render_env_from_model.sh _render_env_dbg_v01b.sh-batch-MODEL /a/lib/datasets/pierret_ds_210512-jpg/pt_IMG_4521.jpg 512 --run
