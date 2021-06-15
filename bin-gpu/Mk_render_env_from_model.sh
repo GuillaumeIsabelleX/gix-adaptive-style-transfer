@@ -12,7 +12,8 @@ echo -n "Generating file..."
 usage() {
 
 	#echo "usage : $0 <SFILE> <TFILE> <CONTENTPATH> <RESO> [FSUFFIX]"
-	echo "usage : $0 <SFILE> <CONTENTPATH> <RESO> [FSUFFIX]"
+	echo "usage : $0 <SFILE> <CONTENTPATH> <RESO> [FSUFFIX] --run"
+	echo --run  will run the render after then
 
 }
 
