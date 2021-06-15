@@ -23,7 +23,7 @@ droxupload() {
   if [ -e "$respath" ] ; then
   (cd $respath;bash $droxuplib &> /dev/null && echo "done uploading") &
   else
-    echo "humm... $respath is non existent, you might want to check things up (ref:$0)"
+    echo "humm... $respath is non existent, you might want to check things up (ref:$0) OR maybe something was fucked up before this"
     exit 3
   fi
   #echo "$rr : Results will be sent in background"

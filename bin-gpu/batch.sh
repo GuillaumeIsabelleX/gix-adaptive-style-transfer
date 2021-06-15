@@ -38,15 +38,15 @@ fi
 #can we learn that from the ENV ??
 #export resultbase="/a/lib/results/gia-ds-DavidBouchardGagnon-v01b-210510-864/dbg_v01b"
 #d source $s 1234 $2 $3 --get-env-only
-echo source $s 123456 $2 $3 --get-env-only
-source $s 123456 $2 $3 --get-env-only
+#echo source $s 123456 $2 $3 --get-env-only
+#source $s 123456 $2 $3 --get-env-only
 
 
 
 export resultbase="$savedir"
-#d "-----------ENV---$0---->>----------"
-#dvar ftag savedir savedirnamespace savedirbase savefullpath modeltag libresultroot
-#d "-----------ENV---$0--->>-----------"
+d "--------------batch.sh---->>----------"
+dvar ftag savedir savedirnamespace savedirbase savefullpath modeltag libresultroot
+d "-----------batch.sh--->>-----------"
 
 
 if [ "$1" == "" ] ; then #

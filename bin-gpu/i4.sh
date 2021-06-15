@@ -11,6 +11,10 @@ DEBUG=0
 #./i4.sh model_gia-young-picasso-v03-201216_new /subdir __suffix 1024 /a/lib/samples/content /a/lib/results/someoutput 285000
 #source _env.sh
 d "------------------i4.sh----------->>----"
+
+d "1:$1, 2:$2, 3:$3, 4:$4, 5:$5, 6:$6" && sleep 4
+
+
 if [ "$4" != "" ]; then 
 	export image_size=$4
 fi

@@ -11,13 +11,15 @@ fi
 #export renderbatch=$1
 
 export LOG_ENABLED=y
-DEBUG=0
+DEBUG=1
 log_info "Starting $0"
 log_status "$renderbatch" CONFIG
 log_status "$ds" DS
 log_status "$ftag" FTAG
-sleep 2
-executer=./doit.sh-cpu
+
+sleep 1
+
+export executer=./doit.sh-cpu
 
 renderToMnotageToPipelineEndingByCloudPublished="$binroot/result_To_Montage_Pipeline-To_cloudNotified.sh"
 #csmForeachFolderInCurrent="$binroot/_csm_foreach_dir_in_current.sh"
@@ -34,7 +36,8 @@ mkdir -p $tclouddir
 #export savedirnamespace=${ds//"gia-ds-"/}
 export savefulldir=$libroot/results/$savedirnamespace/$ftag
 
-dvar ds modelname modeltag ftag savedirnamespace savefulldir
+dvar ds modelname modeltag ftag savedirnamespace savefulldir && sleep 2
+
 cloudit() {
 	local f="$1"
 	(cp $f $tclouddir && \
@@ -50,7 +53,7 @@ cloudit() {
 	#@a then published to the cloud
 	#@a then an address is generated and send as notification thru email
 log_status "Rendering" STARTING && \
-	echo $executer $renderbatch $chks && sleep 22  && \
+	$executer $renderbatch "$chks" && sleep 1  && \
 	log_status "Rendering" COMPLETED && \
 	cd $savefulldir && \
 	log_info "Now in $savefulldir" && \

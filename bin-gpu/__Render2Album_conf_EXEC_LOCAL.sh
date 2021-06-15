@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Entering $0"
+echo "--->> Entering __Render2Album_conf_EXEC_LOCAL.sh"
 echo "fname:$fname"
 echo "modelname:$modelname"
 
@@ -34,11 +34,15 @@ if [ -d "$contentpath" ]; then #@state We have a dir
 else
 	cp $contentpath /a/lib/__tmpdbg
 fi
-resox=$reso'x'
-read -r -d '' _TORENDER << R
+export resox=$reso'x'
+read -r -d '' __TORENDER << R
 # /a/lib/__tmpdbg,$reso
 R
+export img_size=$reso
 
+export _TORENDER="$__TORENDER"
+echo "_TORENDER=$_TORENDER"
+sleep 3
 # SAVEDIRBASE/$resox,2300;
 # /a/lib/samples/content,576;
 

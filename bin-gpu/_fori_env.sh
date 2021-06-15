@@ -20,11 +20,15 @@ d "------_fori_env.sh----->>------"
 #export chks=$chks_long_all
 #export chks=$partial_210108
 #export chks="225 150 120 255 270 285"
-#export chks="30 75 120 150 225 240 255 270 285 300"
-############################################################
+#export chks="30 75 120 150 225 240 255 270 285 300"$savefulldir
+###########################################################
+echo "1:$1, 2:$2, 3:$3, 4:$4, 5:$5, 6:$6"
+echo " DOES THIS HAS THE RIGHT OUTPUT PATH : savefulldir=$savefulldir"
+echo "------------------------CALISS ---_fori...-----------------------------"
+sleep 3
 
-export img_res=$1
-export suffix="_$3_$2_"
+if [ "$img_res" == "" ] ; then export img_res=$1 ; fi
+export suffix="_$3_$img_res_"
 export suffixseparator="__"
 #export model=model_gia-young-picasso-v03-201216_new
 export model=$4
@@ -34,11 +38,13 @@ export content=$5
 export contextfile=./contexts/__context.$HOSTNAME.sh
 export libresultroot=/a/lib/results
 export savedirbase=$libresultroot/$savedirnamespace
-mkdir -p $savedirbase
+mkdir -p $savedirbase && echo "Created $savedirbase" || (echo "FAILED TO CREATE $savedirbase" && sleep 10 )
+
 echo "export savedir=$savedirbase/$3" >> $FORIDIR/$contextfile
 export savedir=$savedirbase/$3
+echo "--savedir=$savedir" && sleep 1
 
-export script=/work/i4.sh
+export i4script=/work/i4.sh
 export subdir=$2
 export savefullpath=$savedir/$subdir
 dvar subdir savefullpath

@@ -45,8 +45,10 @@ fi
 #contentpath=/a/lib/samples/sketch_redraw_2103
 #contentpath=/a/lib/samples/sketch__spider__210211
 if [ "$2" != "" ]; then
+
 	contentpath=$2
 fi
+#echo "-----contentpath=$contentpath"
 #contentpath=/a/lib/samples/content
 #contentpath=/a/lib/samples/dbg/dbg_two_passes__tests__210515
 
@@ -94,6 +96,8 @@ else
 		
 		# dim=$d
 		dtag=$dim'x'
+		#echo /work/fori.sh $dim $dtag $ftag $modeltag $contentpath 
+		#sleep 1
 		/work/fori.sh $dim $dtag $ftag $modeltag $contentpath 
 		#&> /dev/null
 		

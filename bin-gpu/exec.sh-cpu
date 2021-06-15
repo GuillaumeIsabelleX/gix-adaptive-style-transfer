@@ -33,8 +33,8 @@ if [ -f "$1" ]; then #we spec a file
 	#args+=" \"$@\""
 	args+=" $@"
 else 
-	echo "-AHHHHHHHHHHHHHHHH: RenderFile Conf not supplied as first args"
-	sleep 7
+	echo "..."
+	sleep 1
 fi
 
 # Optionally use a second argument -bg

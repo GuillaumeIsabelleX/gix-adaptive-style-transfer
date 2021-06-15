@@ -21,6 +21,6 @@ export LOG_ENABLED=y
 DEBUG=0
 
 
-./_Render2Album_EXEC_GLOBAL.sh 
+. __Render2Album_EXEC_GLOBAL.sh
 #$renderbatch
 
