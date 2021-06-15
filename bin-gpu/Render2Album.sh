@@ -6,7 +6,7 @@
 
 #renderbatch="_render_env_gia-young-picasso-v02b-201210-864.sh-batch"
 #renderbatch="_render_env_gia-ds-Inktobers-v01-210611-864x.sh"
-renderbatch="RENDERBATCH"
+renderbatch="_render_env_dbg_v01b.sh-batch"
 if [ "$renderbatch" == "" ] || [ ! -e "$renderbatch" ] ; then 
 	echo "\$renderbatch must be defined already"
 	exit 1
@@ -27,7 +27,7 @@ vi $renderbatch
 #chks="15 30 45 60 75 90 105 120 135 150 165"
 
 
-export LOG_FILE=/var/log/gia/render2album-RENDERBATCH.log
+export LOG_FILE=/var/log/gia/result_To_Montage_Pipeline-To_cloudNotified.sh.txt
 export LOG_ENABLED=y
 DEBUG=0
 log_info "Starting $0"

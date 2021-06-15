@@ -1,0 +1,48 @@
+#!/bin/bash
+
+export contentpath={{CONTENTPATH}}
+
+export reso={{RESO}}
+export fname='{{FNAME}}'
+export fsuffix='{{FSUFFIX}}'
+export chksFULL="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 270 285 300 315 330 345 360 375 390 405"
+export chks="{{CHKS}}"
+
+if [ "$chks" == "CHKS" ] ||  [ "$chks" == "" ]; then export chks="$chksFULL"; fi 
+
+export ftag=$fname'-'$reso$fsuffix
+
+export modelname={{MODELNAME}}
+
+export savedirnamespace=${ds//"gia-ds-"/}
+#export savedirnamespace=DSNAME
+
+ds={{DSNAME}}
+
+#got modelname from Dataset
+if [ "$modelname" == "" ] ||  [ "$modelname" == "DS" ]; then  export modelname='model_'$ds'_new'; fi
+export modeltag=$modelname
+
+
+
+
+
+export container_arc=cpu
+if [ -e "/a/lib/__tmpdbg" ] ; then 
+	rm -rf /a/lib/__tmpdbg 
+fi
+
+mkdir -p /a/lib/__tmpdbg
+if [ -d "$contentpath" ]; then #@state We have a dir 
+	cp $contentpath/* /a/lib/__tmpdbg
+else
+	cp $contentpath /a/lib/__tmpdbg
+fi
+resox=$reso'x'
+read -r -d '' _TORENDER << R
+# /a/lib/__tmpdbg,$reso
+R
+
+# SAVEDIRBASE/$resox,2300;
+# /a/lib/samples/content,576;
+
