@@ -4,7 +4,7 @@ echo "--->> Entering __Render2Album_conf_EXEC_LOCAL.sh"
 echo "fname:$fname"
 echo "modelname:$modelname"
 
-if [ "$chks" == "CHKS" ] ||  [ "$chks" == "" ]; then export chks="$chksFULL"; fi 
+if [ "$chks" == "CHKS" ] ||  [ "$chks" == "" ] ||  [ "$chks" == "ALL" ]; then export chks="$chksFULL"; fi 
 
 export ftag=$fname'-'$reso$fsuffix
 
