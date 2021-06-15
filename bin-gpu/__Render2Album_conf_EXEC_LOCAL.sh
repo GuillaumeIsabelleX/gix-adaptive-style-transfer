@@ -1,23 +1,16 @@
 #!/bin/bash
 
-export contentpath={{CONTENTPATH}}
-
-export reso={{RESO}}
-export fname='{{FNAME}}'
-export fsuffix='{{FSUFFIX}}'
-export chksFULL="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 270 285 300 315 330 345 360 375 390 405"
-export chks="{{CHKS}}"
 
 if [ "$chks" == "CHKS" ] ||  [ "$chks" == "" ]; then export chks="$chksFULL"; fi 
 
 export ftag=$fname'-'$reso$fsuffix
 
-export modelname={{MODELNAME}}
 
 export savedirnamespace=${ds//"gia-ds-"/}
-#export savedirnamespace=DSNAME
 
-ds={{DSNAME}}
+# Ways to override it
+if [ "$SAVEDIRNAMESPACE" != "" ] ; export savedirnamespace="$SAVEDIRNAMESPACE" ; fi
+
 
 #got modelname from Dataset
 if [ "$modelname" == "" ] ||  [ "$modelname" == "DS" ]; then  export modelname='model_'$ds'_new'; fi
