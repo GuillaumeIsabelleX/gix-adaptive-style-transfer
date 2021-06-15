@@ -32,6 +32,9 @@ if [ -f "$1" ]; then #we spec a file
 	shift 
 	#args+=" \"$@\""
 	args+=" $@"
+else 
+	echo "-AHHHHHHHHHHHHHHHH: RenderFile Conf not supplied as first args"
+	sleep 7
 fi
 
 # Optionally use a second argument -bg

@@ -14,7 +14,10 @@ else
     exit 3
 fi
 
-source "$1"
+if [ -e "$1" ]; then 
+	source "$1"
+fi
+
 DEBUG=0
 dvar modeltag ftag binroot
 
@@ -34,7 +37,7 @@ fi
 
 #can we learn that from the ENV ??
 #export resultbase="/a/lib/results/gia-ds-DavidBouchardGagnon-v01b-210510-864/dbg_v01b"
-d source $s 1234 $2 $3 --get-env-only
+#d source $s 1234 $2 $3 --get-env-only
 echo source $s 123456 $2 $3 --get-env-only
 source $s 123456 $2 $3 --get-env-only
 
@@ -52,8 +55,7 @@ if [ "$1" == "" ] ; then #
   # <contentpath> <resolution>"
   exit 1
 fi
-echo "------------------------------------------------------HEIL------------"
-echo "_TORENDER=$_TORENDER"
+
 
 shift
 arr=("$@")

@@ -3,6 +3,10 @@ if [ "$1" == "" ] || [ "$2" == "" ]; then
 	echo "Usage: $0 <conf render bash source> <checkpoint1 checkpoint2 ...>"
 	exit
 fi
+echo "---------------------------$0-------------------------"
+echo "------------1:$1"
+echo "------------2:$2"
+sleep 7
 #Run the batch which will load the env and start the rendering
 arr=("$@")
 
@@ -13,7 +17,10 @@ fi
 
 ## @STCGoal Well organized relational rendering and classification / presentation 
 ## @a A log of what is rendered where we will 
-if [ "$ftag" == "" ]; then . $1; fi
+if [ "$ftag" == "" ]; then 
+	echo "Resourcing $1 because ftag is null"
+	. $1 
+fi
 
 tdatadir=$libroot/results/$savedirnamespace/$ftag/.gia
 mkdir -p $tdatadir

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Entering $0"
+echo "fname:$fname"
+echo "modelname:$modelname"
 
 if [ "$chks" == "CHKS" ] ||  [ "$chks" == "" ]; then export chks="$chksFULL"; fi 
 
@@ -9,7 +12,7 @@ export ftag=$fname'-'$reso$fsuffix
 export savedirnamespace=${ds//"gia-ds-"/}
 
 # Ways to override it
-if [ "$SAVEDIRNAMESPACE" != "" ] ; export savedirnamespace="$SAVEDIRNAMESPACE" ; fi
+if [ "$SAVEDIRNAMESPACE" != "" ] ;then export savedirnamespace="$SAVEDIRNAMESPACE" ; fi
 
 
 #got modelname from Dataset

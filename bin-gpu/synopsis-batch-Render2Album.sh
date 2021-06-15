@@ -60,7 +60,7 @@ cloudit() {
 	#@a then published to the cloud
 	#@a then an address is generated and send as notification thru email
 log_status "Rendering" STARTING && \
-	$executer $renderbatch $chks && \
+sleep 1 &&	$executer $renderbatch $chks && \
 	log_status "Rendering" COMPLETED && \
 	cd $savefulldir && \
 	log_info "Now in $savefulldir" && \

@@ -8,6 +8,7 @@ else
 	exit 1
 fi
 
+#export renderbatch=$1
 
 export LOG_ENABLED=y
 DEBUG=0
@@ -15,7 +16,7 @@ log_info "Starting $0"
 log_status "$renderbatch" CONFIG
 log_status "$ds" DS
 log_status "$ftag" FTAG
-
+sleep 2
 executer=./doit.sh-cpu
 
 renderToMnotageToPipelineEndingByCloudPublished="$binroot/result_To_Montage_Pipeline-To_cloudNotified.sh"
@@ -49,7 +50,7 @@ cloudit() {
 	#@a then published to the cloud
 	#@a then an address is generated and send as notification thru email
 log_status "Rendering" STARTING && \
-	$executer $renderbatch $chks && \
+	echo $executer $renderbatch $chks && sleep 22  && \
 	log_status "Rendering" COMPLETED && \
 	cd $savefulldir && \
 	log_info "Now in $savefulldir" && \

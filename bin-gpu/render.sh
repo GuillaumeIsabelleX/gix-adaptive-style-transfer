@@ -26,9 +26,12 @@ fi
 
 #iteration 2012270346 - IMG_0019 choosen
 #export chks="30 105 150 225 240 270 285 300"
-export chks=$chks_long_all
-export chks=$partial_210108
-
+if [ "$chks" == "" ] ||  [ "$chks" == "CHKS" ] ; then
+	export chks=$chks_long_all
+	export chks=$partial_210108
+else 
+	log_info "-----CHKS were already defined : $chks"
+fi
 #echo "--------------------------------"
 #echo "-------chks=$chks---------------"
 

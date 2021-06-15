@@ -4,7 +4,7 @@
 
 
 
-renderbatch="{{RENDERBATCH}}"
+renderbatch="__Render2Album_conf__dali_v02.sh"
 
 if [ "$renderbatch" == "" ] || [ ! -e "$renderbatch" ] ; then 
 	echo "\$renderbatch must be defined already"
