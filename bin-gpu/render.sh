@@ -1,7 +1,7 @@
 #!/bin/bash
 #Loading functions
 if [ -e $binroot/__fn.sh ]; then
-       source $binroot/__fn.sh $@
+       source $binroot/__fn.sh
 fi
 
 #LIMITATION BYPASS
@@ -17,6 +17,7 @@ export dimloop="$3"
 export chks_long_all="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 270 285 300"
 if [ "$1" != "" ]; then
 	export partial_210108="$1"
+	echo "Checkpoints from ARGS: $partial_210108"
 fi
 #export partial_210108="30 45 60 75 90 105 120 135 150 165 180 195"
 #export partial_210108="210" #Interesting checkpoint

@@ -6,20 +6,28 @@ export ds=gia-ds-Inktobers-v01-210611-864x
 export modelname='model_'$ds'_new'
 export modeltag=$modelname
 
-export reso=2200
+export reso=2048
 #chks="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 270 285 300 315 330 345 360 375 390 405"
-export chks="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 "
+export chks="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 270 285 300"
 
-export ftag=inko-v01-$reso'x'210613
+export ftag=inko-v01-$reso'x210614b'
 export savedirnamespace=${ds//"gia-ds-"/}
-
-
+#/a/lib/datasets/pierret_ds_210512
+export contentpath=/a/lib/datasets/pierret_ds_210512/pt_IMG_4662.png
 export container_arc=cpu
-
+rm -rf /a/lib/__tmp
+mkdir -p /a/lib/__tmp
+if [ -d "$contentpath" ]; then #@state We have a dir 
+	cp $contentpath/* /a/lib/__tmp
+else
+	cp $contentpath /a/lib/__tmp
+fi
 read -r -d '' _TORENDER << R
+# /a/lib/__tmp,2048
+R
 # /a/lib/samples/contentslimmer,1024;
 # /a/lib/samples/sc-21050101,$reso
-R
+
 # /a/lib/samples/content0025,1250;
 # SAVEDIRBASE/1250x,2222
 #RENDERME

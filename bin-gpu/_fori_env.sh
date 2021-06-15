@@ -31,7 +31,7 @@ export model=$4
 #export content=/a/lib/samples/content2012181444
 export content=$5
 #export content=/a/lib/datasets/paintergansets/paul-cezanne
-export contextfile=__context.$HOSTNAME.sh
+export contextfile=./contexts/__context.$HOSTNAME.sh
 export libresultroot=/a/lib/results
 export savedirbase=$libresultroot/$savedirnamespace
 mkdir -p $savedirbase

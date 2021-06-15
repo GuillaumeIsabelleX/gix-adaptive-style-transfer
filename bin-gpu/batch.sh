@@ -35,6 +35,7 @@ fi
 #can we learn that from the ENV ??
 #export resultbase="/a/lib/results/gia-ds-DavidBouchardGagnon-v01b-210510-864/dbg_v01b"
 d source $s 1234 $2 $3 --get-env-only
+echo source $s 123456 $2 $3 --get-env-only
 source $s 123456 $2 $3 --get-env-only
 
 
@@ -51,14 +52,22 @@ if [ "$1" == "" ] ; then #
   # <contentpath> <resolution>"
   exit 1
 fi
+echo "------------------------------------------------------HEIL------------"
+echo "_TORENDER=$_TORENDER"
+
 shift
 arr=("$@")
 d "${arr[@]}"
+echo "INFO: Checkpoints to render: "
+for chp in "${arr[@]}"; do
+	echo -n "$chp..."
+done
+echo "..Ya"
 
 for chp in "${arr[@]}"; do
 
 
-  #echo "$TORENDER"
+  #echo "$_TORENDER"
   #echo "--"
   # readarray -t y <<<"$TORENDER"
   export TORENDER=$(echo "$_TORENDER" | sed -e 's/\#//g' |  sed -e 's/ //g')
@@ -72,6 +81,7 @@ for chp in "${arr[@]}"; do
     # echo "$l"
     #l=$(echo "$l" |tr "#" " ")
     # l=$(echo "$l" |tr "#" " " | sed -e 's/;//g'  | sed -e 's/\ //g')
+    #echo "$l"
     #echo replacetextbypath "SAVEDIRBASE" "$savedir" "$l"
     l=$(replacetextbypath "SAVEDIRBASE" "$savedir" "$l")
     #echo "$l"
