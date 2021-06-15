@@ -1,4 +1,6 @@
 zold/
+**/context*
+**/*context*
 
 _tmp/
 # Byte-compiled / optimized / DLL files
