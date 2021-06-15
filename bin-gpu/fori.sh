@@ -39,7 +39,7 @@ if  [ "$3" == "$getenvo" ] ||  [ "$4" == "$getenvo" ] ||  [ "$5" == "$getenvo" ]
 			
 			#echo "running...resolution :$img_res  "
 			#sleep 1
-			echo -n "-- Inferencing  checkpoint: $i..." && $cmd &> /dev/null && echo "...COMPLETED" || echo "Inferencing FAILED"
+			echo -n " checkpoint: $i,000." && ((sleep 1;echo -n "."; sleep 1 ; echo -n ".")&) && $cmd &> /dev/null && echo -n "...DONE ;" || echo "Inferencing FAILED"
 			#echo "Done this iteration... listing"
 			#sleep 1
 			#ls $savedir/$subdir/*__$i* >> $savedir/index.md

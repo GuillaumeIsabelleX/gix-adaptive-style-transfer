@@ -18,7 +18,10 @@ RUN rm -rf model
 WORKDIR /model
 RUN git clone https://github.com/GuillaumeIsabelleX/gix-adaptive-style-transfer.git .
 
-
+RUN git fetch --all &&  git checkout -b feat-cli-container-210110 origin/feat-cli-container-210110
+USER root
+RUN apt install dos2unix -y
+RUN dos2unix *
 WORKDIR /root
 
 COPY build/bashaliases .bash_aliases
@@ -43,4 +46,5 @@ RUN chown -R jgi.jgi /model
 USER $UNAME
 
 RUN git pull
+
 

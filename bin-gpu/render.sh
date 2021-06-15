@@ -83,9 +83,9 @@ else
 	do 
 	DEBUG=0
 	dvar dim dimloop
-		echo "---------------------------------"
-		echo "- Processing resolution : $dim ----"
-                echo "---------------------------------" #echo "-----$dtag $ftag $modeltag $contentpath---------------------------"
+		echo "------INFERENCING----------------------------------------------------------------------------"
+		echo -n "-  resolution : $dim ; "
+                #echo "---------------------------------" #echo "-----$dtag $ftag $modeltag $contentpath---------------------------"
 		#sleep 1
 		
 		# dim=$d

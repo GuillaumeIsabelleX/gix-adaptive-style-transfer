@@ -7,6 +7,6 @@ mkdir -p build
 ls build
 #sleep 1
 
-docker build -t $containertag .
+docker build -t $containertag . && \
 docker push $containertag
 

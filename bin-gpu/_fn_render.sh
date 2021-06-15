@@ -37,6 +37,6 @@ renderpass(){
   #sleep 1
   $ss "$chpp" $cc $rr && \
   droxupload "$rb" "$rr" && \
-  echo ":)" || \
+  echo "...Uploaded" || \
   (echo "Failed to render or upload" && exit 6)
 }

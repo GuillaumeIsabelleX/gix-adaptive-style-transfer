@@ -5,16 +5,24 @@
 export ds=gia-ds-Inktobers-v01-210611-864x
 export modelname='model_'$ds'_new'
 export modeltag=$modelname
-export ftag=inko-v01
+
+export reso=2200
+#chks="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 270 285 300 315 330 345 360 375 390 405"
+export chks="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 "
+
+export ftag=inko-v01-$reso'x'210613
 export savedirnamespace=${ds//"gia-ds-"/}
+
 
 export container_arc=cpu
 
-read -r -d '' _TORENDER << RENDERME
-# /a/lib/samples/content,1111;
+read -r -d '' _TORENDER << R
+# /a/lib/samples/contentslimmer,1024;
+# /a/lib/samples/sc-21050101,$reso
+R
 # /a/lib/samples/content0025,1250;
 # SAVEDIRBASE/1250x,2222
-RENDERME
+#RENDERME
 # SAVEDIRBASE/2300x,2323;
 
 # /a/lib/samples/sc,1788;
