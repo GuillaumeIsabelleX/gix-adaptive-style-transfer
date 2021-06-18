@@ -17,7 +17,7 @@ log_status "$renderbatch" CONFIG
 log_status "$ds" DS
 log_status "$ftag" FTAG
 
-sleep 1
+#sleep 1
 
 export executer=./doit.sh-cpu
 
@@ -55,12 +55,12 @@ cloudit() {
 	#@a then an address is generated and send as notification thru email
 log_status "Rendering" STARTING && \
 	mkdir -p $savefulldir && echo "--Created : $savefulldir " && \
-	$executer $renderbatch "$chks" && sleep 2  && \
+	$executer $renderbatch "$chks" && sleep 1  && \
 	log_status "Rendering" COMPLETED && \
 	cd $savefulldir && \
 	log_info "Now in $savefulldir" && \
 	log_status "ContactSheetMaking" STARTING && \
-	(($csmForeachFolderInCurrent && $csmForeachFolderInCurrentAsLabel && sleep 20 && for csm in _*csm*jpg ; do cloudit $csm;done ) &) && \
+	(($csmForeachFolderInCurrent && $csmForeachFolderInCurrentAsLabel && sleep 17 && for csm in _*csm*jpg ; do cloudit $csm;done ) &) && \
 	sleep 1 && \
 	log "-------------------------------------------" && \
 	log_info "Entering $renderToMnotageToPipelineEndingByCloudPublished" && \
