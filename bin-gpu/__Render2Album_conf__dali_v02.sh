@@ -2,10 +2,10 @@
 
 export contentpath="/a/lib/samples/redraw/Sketch__2101240002__01_cc01-redraw.jpg"
 
-export reso=864
+export reso=512
 export fname='dali_v02'
 export fsuffix=''
-export chks="120 180 240 270 315"
+export chks="CHKS"
 
 
 export modelname="model_gia-ds-daliwill-210123-v02_new"

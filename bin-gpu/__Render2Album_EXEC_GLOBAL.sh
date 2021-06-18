@@ -22,21 +22,22 @@ sleep 1
 export executer=./doit.sh-cpu
 
 renderToMnotageToPipelineEndingByCloudPublished="$binroot/result_To_Montage_Pipeline-To_cloudNotified.sh"
-#csmForeachFolderInCurrent="$binroot/_csm_foreach_dir_in_current.sh"
-csmForeachFolderInCurrent="$binroot/_csm_foreach_dir_in_current_As_Label.sh"
+csmForeachFolderInCurrent="$binroot/_csm_foreach_dir_in_current.sh"
+csmForeachFolderInCurrentAsLabel="$binroot/_csm_foreach_dir_in_current_As_Label.sh"
 export tcloudroot=/home/jgi/astiapreviz
 
 export tcloudgetaddress=/home/jgi/astiapreviz/_getaddress.sh
 
 
 log_status "$modeltag" MODELTAG
-
+DEBUG=1
 export tclouddir=$tcloudroot/$ftag
 mkdir -p $tclouddir
 #export savedirnamespace=${ds//"gia-ds-"/}
 export savefulldir=$libroot/results/$savedirnamespace/$ftag
 
 dvar ds modelname modeltag ftag savedirnamespace savefulldir && sleep 2
+DEBUG=0
 
 cloudit() {
 	local f="$1"
@@ -53,12 +54,13 @@ cloudit() {
 	#@a then published to the cloud
 	#@a then an address is generated and send as notification thru email
 log_status "Rendering" STARTING && \
-	$executer $renderbatch "$chks" && sleep 1  && \
+	mkdir -p $savefulldir && echo "--Created : $savefulldir " && \
+	$executer $renderbatch "$chks" && sleep 2  && \
 	log_status "Rendering" COMPLETED && \
 	cd $savefulldir && \
 	log_info "Now in $savefulldir" && \
 	log_status "ContactSheetMaking" STARTING && \
-	(($csmForeachFolderInCurrent  && sleep 20 && for csm in _*csm*jpg ; do cloudit $csm;done ) &) && \
+	(($csmForeachFolderInCurrent && $csmForeachFolderInCurrentAsLabel && sleep 20 && for csm in _*csm*jpg ; do cloudit $csm;done ) &) && \
 	sleep 1 && \
 	log "-------------------------------------------" && \
 	log_info "Entering $renderToMnotageToPipelineEndingByCloudPublished" && \

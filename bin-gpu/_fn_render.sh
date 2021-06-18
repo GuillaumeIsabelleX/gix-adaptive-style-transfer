@@ -17,9 +17,10 @@ droxupload() {
   local rb=$1;  local rr=$2
   local restag=$rr'x';export respath=$rb/$restag
   
-  #echo "------DROX---$restag--->>---"
-  #echo "---Restag: $restag ---------"
-  #echo "---Respath: $respath ---------"
+  echo "------DROX---$restag--->>---"
+  echo "--rb:$rb, rr:$rr ---"
+  echo "---Restag: $restag ---------"
+  echo "---Respath: $respath ---------"
   if [ -e "$respath" ] ; then
   (cd $respath;bash $droxuplib &> /dev/null && echo "done uploading") &
   else

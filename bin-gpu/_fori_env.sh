@@ -22,10 +22,10 @@ d "------_fori_env.sh----->>------"
 #export chks="225 150 120 255 270 285"
 #export chks="30 75 120 150 225 240 255 270 285 300"$savefulldir
 ###########################################################
-echo "1:$1, 2:$2, 3:$3, 4:$4, 5:$5, 6:$6"
-echo " DOES THIS HAS THE RIGHT OUTPUT PATH : savefulldir=$savefulldir"
-echo "------------------------CALISS ---_fori...-----------------------------"
-sleep 3
+#echo "1:$1, 2:$2, 3:$3, 4:$4, 5:$5, 6:$6"
+#echo " DOES THIS HAS THE RIGHT OUTPUT PATH : savefulldir=$savefulldir"
+#echo "------------------------CALISS ---_fori...-----------------------------"
+#sleep 3
 
 if [ "$img_res" == "" ] ; then export img_res=$1 ; fi
 export suffix="_$3_$img_res_"
