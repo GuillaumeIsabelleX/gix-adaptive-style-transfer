@@ -7,7 +7,7 @@ export chksFULL="15 30 45 60 75 90 105 120 135 150 165 180 195 210 225 240 255 2
 echo "--->> Entering __Render2Album_conf_EXEC_LOCAL.sh"
 echo "fname:$fname"
 echo "modelname:$modelname"
-echo "chks:$chks"
+echo -n "chks:$chks"
 
 if [ "$chks" == "CHKS" ] ||  [ "$chks" == "" ] ||  [ "$chks" == "ALL" ]; then 
 	
@@ -16,7 +16,7 @@ if [ "$chks" == "CHKS" ] ||  [ "$chks" == "" ] ||  [ "$chks" == "ALL" ]; then
 
 fi 
 
-echo "chks:$chks"
+echo "...$chks"
 
 export ftag=$fname'-'$reso$fsuffix
 
