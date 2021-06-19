@@ -18,7 +18,7 @@ mkdir -p $model_local_fullpath
 #Model context: model_gia-ds-daliwill-210123-v02_new
 #Modelbasename: gia-ds-daliwill-210123-v02
 containername=ast_trainermore
-
+docker stop $containername  &> /dev/null
 docker rm $containername &> /dev/null
 
 $docker_exec run -it  -v $(pwd):$container_workdir \
