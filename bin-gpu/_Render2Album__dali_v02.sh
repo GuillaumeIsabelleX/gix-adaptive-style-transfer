@@ -3,8 +3,8 @@
 #@STCStatus Remodeling with Templating
 
 
-
-export renderbatch="{{RENDERBATCH}}"
+start=$(date)
+export renderbatch="__Render2Album_conf__dali_v02.sh"
 
 if [ "$renderbatch" == "" ] || [ ! -e "$renderbatch" ] ; then 
 	echo "\$renderbatch must be defined already"
@@ -12,7 +12,7 @@ if [ "$renderbatch" == "" ] || [ ! -e "$renderbatch" ] ; then
 fi
 
 echo "----- MIGHT WANT TO EDIT THAT FIRST, otherwise just quit and it will continue------------"
-if [ "\$1" == "" ] ; then vi $renderbatch ; fi
+vi $renderbatch
 . $renderbatch && echo "Loaded $_" || (echo "Could not source $_" ; exit 1)
 
 
@@ -23,4 +23,5 @@ DEBUG=0
 
 . __Render2Album_EXEC_GLOBAL.sh
 #$renderbatch
-
+echo "start:$start"
+date
