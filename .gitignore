@@ -1,4 +1,5 @@
 zold/
+*.swp
 **/context*
 **/*context*
 
