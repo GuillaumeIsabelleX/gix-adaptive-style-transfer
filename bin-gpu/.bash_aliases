@@ -26,7 +26,8 @@ alias renderfpw_v02Edit="vi _render_env_gia-ds-fpolsonwill_v02_210424.sh "
 alias trainpik_v05="./train-gia-young-picasso-v05-2101082232.sh"
 alias renderpik_v05="./doit.sh _render_env_gia-young-picasso-v05-2101082232.sh "
 alias renderpik_v05Edit="vi _render_env_gia-young-picasso-v05-2101082232.sh "
-# gk_v01 : gia-ds-GabrielleKelly-v01-210624-1024x
-alias traingk_v01="./train-gia-ds-GabrielleKelly-v01-210624-1024x.sh"
-alias rendergk_v01="./doit.sh _render_env_gia-ds-GabrielleKelly-v01-210624-1024x.sh "
-alias rendergk_v01Edit="vi _render_env_gia-ds-GabrielleKelly-v01-210624-1024x.sh "
+
+# gk_v01 : gia-ds-GabrielleKelly-v01-210624-928x
+alias traingk_v01="./train-gia-ds-GabrielleKelly-v01-210624-928x.sh"
+alias rendergk_v01="./doit.sh _render_env_gia-ds-GabrielleKelly-v01-210624-928x.sh "
+alias rendergk_v01Edit="vi _render_env_gia-ds-GabrielleKelly-v01-210624-928x.sh "

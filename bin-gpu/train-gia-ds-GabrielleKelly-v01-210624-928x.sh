@@ -5,7 +5,7 @@
 (cd /a/lib/datasets;git pull)
 
 
-ds=gia-ds-GabrielleKelly-v01-210624-1024x
+ds=gia-ds-GabrielleKelly-v01-210624-928x
 
 
 # CHOOSE THE DESIRED TRAINER
