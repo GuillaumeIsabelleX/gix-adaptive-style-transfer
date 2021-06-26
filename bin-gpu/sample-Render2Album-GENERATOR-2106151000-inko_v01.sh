@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #CHKS="120 180 240 270 315"
-CHKS="CHKS"
-RESO=1224
+CHKS="210 225 240 255 270 285 300 315 330 345 360 375 390 405"
+RESO=2200
 CONTENTPATH="/a/lib/samples/redraw/Sketch__2101240002__01_cc01-redraw.jpg"
-FNAME='ink_v01_tst'
+FNAME='ink_v01_tst3'
 DSNAME="gia-ds-Inktobers-v01-210611-864x"
 
 MODELNAME="model_gia-ds-Inktobers-v01-210611-864x_new"
