@@ -8,9 +8,11 @@
 ds=DSNAME
 
 
+# CHOOSE THE DESIRED TRAINER
 
-./run-gpu-train-bg-more-chk-higher-res $ds
-#./run-gpu-train-bg-more-chk $ds
+./run-gpu-train-bg-more-chk-higher-res-1k $ds  #Train in 1024x (dataset must be in 1k)
+#./run-gpu-train-bg-more-chk-higher-res $ds    #Train in 864x
+#./run-gpu-train-bg-more-chk $ds	       #Train regular but more checkpoints
 #./run-gpu-train-bg $ds
 #./run-gpu-train-bg-var2 $ds
 #./run-cpu-train-bg $ds

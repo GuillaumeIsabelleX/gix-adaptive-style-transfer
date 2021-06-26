@@ -49,7 +49,7 @@ fi
 git add $traintargetfile $rendertargetfile &> /dev/null
 git commit $traintargetfile $rendertargetfile -m "add:$ftag $ds" &> /dev/null && \
 git push &> /dev/null &
-
+echo "---------------------Training and Rendering script generated-----------------"
 echo "train :  ./$traintargetfile"
 echo "render:  ./doit.sh $rendertargetfile 15 30 45 ..."
 echo "# $ftag : $ds"  >> .bash_aliases
