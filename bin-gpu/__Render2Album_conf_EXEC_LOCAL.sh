@@ -34,21 +34,22 @@ export modeltag=$modelname
 
 
 
+tmppath=/a/lib/samples/__tmpdbg
 
 export container_arc=cpu
-if [ -e "/a/lib/__tmpdbg" ] ; then 
-	rm -rf /a/lib/__tmpdbg 
+if [ -e "$tmppath" ] ; then 
+	rm -rf $tmppath
 fi
 
-mkdir -p /a/lib/__tmpdbg
+mkdir -p $tmppath
 if [ -d "$contentpath" ]; then #@state We have a dir 
-	cp $contentpath/* /a/lib/__tmpdbg
+	cp $contentpath/* $tmppath
 else
-	cp $contentpath /a/lib/__tmpdbg
+	cp $contentpath $tmppath
 fi
 export resox=$reso'x'
 read -r -d '' __TORENDER << R
-# /a/lib/__tmpdbg,$reso
+# $tmppath,$reso
 R
 export img_size=$reso
 

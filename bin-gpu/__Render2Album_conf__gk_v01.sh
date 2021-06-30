@@ -1,9 +1,11 @@
 #!/bin/bash
 
 export contentpath="/a/lib/samples/redraw/Sketch__2101240002__01_cc01-redraw.jpg"
+export contentpath="/a/lib/samples/contentslimmer/IMG_0025.jpg"
+export contentpath="/a/lib/results/ds-GabrielleKelly-v01-210624-864x/gk_v01-2200/2200x/"
 
-export reso=2200
-export fname='gk_v01'
+export reso=2250
+export fname='gk_v01_redraw_twop'
 export fsuffix=''
 export chks="CHKS"
 
