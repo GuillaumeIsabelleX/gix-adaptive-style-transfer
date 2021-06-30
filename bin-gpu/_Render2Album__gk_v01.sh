@@ -12,7 +12,7 @@ if [ "$renderbatch" == "" ] || [ ! -e "$renderbatch" ] ; then
 fi
 
 echo "----- MIGHT WANT TO EDIT THAT FIRST, otherwise just quit and it will continue------------"
-if [ "\$1" == "" ] ; then vi $renderbatch ; fi
+if [ "$1" == "" ] ; then vi $renderbatch ; fi
 . $renderbatch && echo "Loaded $_" || (echo "Could not source $_" ; exit 1)
 
 
