@@ -1,0 +1,26 @@
+2021-06-23T22:58:31-0400 INFO - Starting ./_Render2Album__pik_v05.sh
+2021-06-23T22:58:31-0400 CONFIG - __Render2Album_conf__pik_v05.sh
+2021-06-23T22:58:31-0400 DS - gia-young-picasso-v05-2101082232
+2021-06-23T22:58:31-0400 FTAG - pik_v05-2200
+2021-06-23T22:58:31-0400 MODELTAG - model_gia-young-picasso-v05-2101082232_new
+2021-06-23T22:58:32-0400 DEBUG - ds = gia-young-picasso-v05-2101082232
+2021-06-23T22:58:32-0400 DEBUG - modelname = model_gia-young-picasso-v05-2101082232_new
+2021-06-23T22:58:32-0400 DEBUG - modeltag = model_gia-young-picasso-v05-2101082232_new
+2021-06-23T22:58:32-0400 DEBUG - ftag = pik_v05-2200
+2021-06-23T22:58:32-0400 DEBUG - savedirnamespace = gia-young-picasso-v05-2101082232
+2021-06-23T22:58:32-0400 DEBUG - savefulldir = /a/lib/results/gia-young-picasso-v05-2101082232/pik_v05-2200
+2021-06-23T22:58:34-0400 STARTING - Rendering
+2021-06-23T23:01:59-0400 COMPLETED - Rendering
+2021-06-23T23:15:21-0400 INFO - Starting ./_Render2Album__pik_v05.sh
+2021-06-23T23:15:21-0400 CONFIG - __Render2Album_conf__pik_v05.sh
+2021-06-23T23:15:21-0400 DS - gia-young-picasso-v05-2101082232
+2021-06-23T23:15:21-0400 FTAG - pik_v05-2202
+2021-06-23T23:15:21-0400 MODELTAG - model_gia-young-picasso-v05-2101082232_new
+2021-06-23T23:15:21-0400 DEBUG - ds = gia-young-picasso-v05-2101082232
+2021-06-23T23:15:21-0400 DEBUG - modelname = model_gia-young-picasso-v05-2101082232_new
+2021-06-23T23:15:21-0400 DEBUG - modeltag = model_gia-young-picasso-v05-2101082232_new
+2021-06-23T23:15:21-0400 DEBUG - ftag = pik_v05-2202
+2021-06-23T23:15:21-0400 DEBUG - savedirnamespace = gia-young-picasso-v05-2101082232
+2021-06-23T23:15:21-0400 DEBUG - savefulldir = /a/lib/results/gia-young-picasso-v05-2101082232/pik_v05-2202
+2021-06-23T23:15:23-0400 STARTING - Rendering
+2021-06-23T23:30:56-0400 COMPLETED - Rendering

@@ -1,0 +1,91 @@
+2021-06-15T12:06:58-0400 INFO - Starting ./_Render2Album__pik_v02b_tst.sh
+2021-06-15T12:06:58-0400 CONFIG - __Render2Album_conf__pik_v02b_tst.sh
+2021-06-15T12:06:58-0400 DS - gia-young-picasso-v02b-201210-864
+2021-06-15T12:06:58-0400 FTAG - pik_v02b_tst-1024
+2021-06-15T12:06:59-0400 MODELTAG - model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:06:59-0400 DEBUG - ds = gia-young-picasso-v02b-201210-864
+2021-06-15T12:06:59-0400 DEBUG - modelname = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:06:59-0400 DEBUG - modeltag = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:06:59-0400 DEBUG - ftag = pik_v02b_tst-1024
+2021-06-15T12:07:00-0400 DEBUG - savedirnamespace = gia-young-picasso-v02b-201210-864
+2021-06-15T12:07:00-0400 DEBUG - savefulldir = /a/lib/results/gia-young-picasso-v02b-201210-864/pik_v02b_tst-1024
+2021-06-15T12:07:02-0400 STARTING - Rendering
+2021-06-15T12:07:03-0400 COMPLETED - Rendering
+2021-06-15T12:07:03-0400 FAILED - renderToMnotageToPipelineEndingByCloudPublished
+2021-06-15T12:09:22-0400 INFO - Starting ./_Render2Album__pik_v02b_tst.sh
+2021-06-15T12:09:22-0400 CONFIG - __Render2Album_conf__pik_v02b_tst.sh
+2021-06-15T12:09:22-0400 DS - gia-young-picasso-v02b-201210-864
+2021-06-15T12:09:22-0400 FTAG - pik_v02b_tst-1024
+2021-06-15T12:09:23-0400 MODELTAG - model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:09:23-0400 DEBUG - ds = gia-young-picasso-v02b-201210-864
+2021-06-15T12:09:23-0400 DEBUG - modelname = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:09:23-0400 DEBUG - modeltag = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:09:23-0400 DEBUG - ftag = pik_v02b_tst-1024
+2021-06-15T12:09:23-0400 DEBUG - savedirnamespace = gia-young-picasso-v02b-201210-864
+2021-06-15T12:09:23-0400 DEBUG - savefulldir = /a/lib/results/gia-young-picasso-v02b-201210-864/pik_v02b_tst-1024
+2021-06-15T12:09:25-0400 STARTING - Rendering
+2021-06-15T12:13:41-0400 INFO - Starting ./_Render2Album__pik_v02b_tst.sh
+2021-06-15T12:13:41-0400 CONFIG - __Render2Album_conf__pik_v02b_tst.sh
+2021-06-15T12:13:41-0400 DS - gia-young-picasso-v02b-201210-864
+2021-06-15T12:13:41-0400 FTAG - pik_v02b_tst-1024
+2021-06-15T12:13:42-0400 MODELTAG - model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:13:42-0400 DEBUG - ds = gia-young-picasso-v02b-201210-864
+2021-06-15T12:13:42-0400 DEBUG - modelname = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:13:42-0400 DEBUG - modeltag = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:13:42-0400 DEBUG - ftag = pik_v02b_tst-1024
+2021-06-15T12:13:42-0400 DEBUG - savedirnamespace = gia-young-picasso-v02b-201210-864
+2021-06-15T12:13:42-0400 DEBUG - savefulldir = /a/lib/results/gia-young-picasso-v02b-201210-864/pik_v02b_tst-1024
+2021-06-15T12:13:44-0400 STARTING - Rendering
+2021-06-15T12:13:46-0400 COMPLETED - Rendering
+2021-06-15T12:13:46-0400 FAILED - renderToMnotageToPipelineEndingByCloudPublished
+2021-06-15T12:15:22-0400 INFO - Starting ./_Render2Album__pik_v02b_tst.sh
+2021-06-15T12:15:22-0400 CONFIG - __Render2Album_conf__pik_v02b_tst.sh
+2021-06-15T12:15:22-0400 DS - gia-young-picasso-v02b-201210-864
+2021-06-15T12:15:22-0400 FTAG - pik_v02b_tst-1024
+2021-06-15T12:15:23-0400 MODELTAG - model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:15:23-0400 DEBUG - ds = gia-young-picasso-v02b-201210-864
+2021-06-15T12:15:23-0400 DEBUG - modelname = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:15:23-0400 DEBUG - modeltag = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:15:23-0400 DEBUG - ftag = pik_v02b_tst-1024
+2021-06-15T12:15:23-0400 DEBUG - savedirnamespace = gia-young-picasso-v02b-201210-864
+2021-06-15T12:15:23-0400 DEBUG - savefulldir = /a/lib/results/gia-young-picasso-v02b-201210-864/pik_v02b_tst-1024
+2021-06-15T12:15:25-0400 STARTING - Rendering
+2021-06-15T12:15:56-0400 COMPLETED - Rendering
+2021-06-15T12:19:22-0400 INFO - Starting ./_Render2Album__pik_v02b_tst.sh
+2021-06-15T12:19:22-0400 CONFIG - __Render2Album_conf__pik_v02b_tst.sh
+2021-06-15T12:19:22-0400 DS - gia-young-picasso-v02b-201210-864
+2021-06-15T12:19:22-0400 FTAG - pik_v02b_tst-1024
+2021-06-15T12:19:23-0400 MODELTAG - model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:19:23-0400 DEBUG - ds = gia-young-picasso-v02b-201210-864
+2021-06-15T12:19:23-0400 DEBUG - modelname = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:19:23-0400 DEBUG - modeltag = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:19:23-0400 DEBUG - ftag = pik_v02b_tst-1024
+2021-06-15T12:19:23-0400 DEBUG - savedirnamespace = gia-young-picasso-v02b-201210-864
+2021-06-15T12:19:23-0400 DEBUG - savefulldir = /a/lib/results/gia-young-picasso-v02b-201210-864/pik_v02b_tst-1024
+2021-06-15T12:19:25-0400 STARTING - Rendering
+2021-06-15T12:27:43-0400 INFO - Starting ./_Render2Album__pik_v02b_tst.sh
+2021-06-15T12:27:43-0400 CONFIG - __Render2Album_conf__pik_v02b_tst.sh
+2021-06-15T12:27:43-0400 DS - gia-young-picasso-v02b-201210-864
+2021-06-15T12:27:43-0400 FTAG - pik_v02b_tst-1024
+2021-06-15T12:27:44-0400 MODELTAG - model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:27:44-0400 DEBUG - ds = gia-young-picasso-v02b-201210-864
+2021-06-15T12:27:44-0400 DEBUG - modelname = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:27:44-0400 DEBUG - modeltag = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:27:45-0400 DEBUG - ftag = pik_v02b_tst-1024
+2021-06-15T12:27:45-0400 DEBUG - savedirnamespace = gia-young-picasso-v02b-201210-864
+2021-06-15T12:27:45-0400 DEBUG - savefulldir = /a/lib/results/gia-young-picasso-v02b-201210-864/pik_v02b_tst-1024
+2021-06-15T12:27:47-0400 STARTING - Rendering
+2021-06-15T12:33:46-0400 COMPLETED - Rendering
+2021-06-15T12:43:59-0400 INFO - Starting ./_Render2Album__pik_v02b_tst.sh
+2021-06-15T12:43:59-0400 CONFIG - __Render2Album_conf__pik_v02b_tst.sh
+2021-06-15T12:43:59-0400 DS - gia-young-picasso-v02b-201210-864
+2021-06-15T12:43:59-0400 FTAG - pik_v02b_tst2-1280
+2021-06-15T12:44:00-0400 MODELTAG - model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:44:01-0400 DEBUG - ds = gia-young-picasso-v02b-201210-864
+2021-06-15T12:44:01-0400 DEBUG - modelname = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:44:01-0400 DEBUG - modeltag = model_gia-young-picasso-v02b-201210-864_new
+2021-06-15T12:44:01-0400 DEBUG - ftag = pik_v02b_tst2-1280
+2021-06-15T12:44:01-0400 DEBUG - savedirnamespace = gia-young-picasso-v02b-201210-864
+2021-06-15T12:44:01-0400 DEBUG - savefulldir = /a/lib/results/gia-young-picasso-v02b-201210-864/pik_v02b_tst2-1280
+2021-06-15T12:44:03-0400 STARTING - Rendering
+2021-06-15T12:50:58-0400 COMPLETED - Rendering

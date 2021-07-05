@@ -1,0 +1,13 @@
+2021-06-15T11:48:06-0400 INFO - Starting ./_Render2Album__dbg_v01b_tst.sh
+2021-06-15T11:48:06-0400 CONFIG - __Render2Album_conf__dbg_v01b_tst.sh
+2021-06-15T11:48:06-0400 DS - ds-DavidBouchardGagnon-v01b-210510-864
+2021-06-15T11:48:06-0400 FTAG - dbg_v01b_tst-864
+2021-06-15T11:48:07-0400 MODELTAG - model_gia-ds-DavidBouchardGagnon-v01b-210510-864_new
+2021-06-15T11:48:07-0400 DEBUG - ds = ds-DavidBouchardGagnon-v01b-210510-864
+2021-06-15T11:48:07-0400 DEBUG - modelname = model_gia-ds-DavidBouchardGagnon-v01b-210510-864_new
+2021-06-15T11:48:07-0400 DEBUG - modeltag = model_gia-ds-DavidBouchardGagnon-v01b-210510-864_new
+2021-06-15T11:48:07-0400 DEBUG - ftag = dbg_v01b_tst-864
+2021-06-15T11:48:07-0400 DEBUG - savedirnamespace = ds-DavidBouchardGagnon-v01b-210510-864
+2021-06-15T11:48:07-0400 DEBUG - savefulldir = /a/lib/results/ds-DavidBouchardGagnon-v01b-210510-864/dbg_v01b_tst-864
+2021-06-15T11:48:09-0400 STARTING - Rendering
+2021-06-15T11:49:24-0400 COMPLETED - Rendering

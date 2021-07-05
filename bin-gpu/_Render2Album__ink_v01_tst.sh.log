@@ -1,0 +1,52 @@
+2021-06-15T13:59:35-0400 INFO - Starting ./_Render2Album__ink_v01_tst.sh
+2021-06-15T13:59:35-0400 CONFIG - __Render2Album_conf__ink_v01_tst.sh
+2021-06-15T13:59:35-0400 DS - gia-ds-Inktobers-v01-210611-864x
+2021-06-15T13:59:35-0400 FTAG - ink_v01_tst-1224
+2021-06-15T13:59:36-0400 MODELTAG - model_gia-ds-Inktobers-v01-210611-864x_new
+2021-06-15T13:59:36-0400 DEBUG - ds = gia-ds-Inktobers-v01-210611-864x
+2021-06-15T13:59:36-0400 DEBUG - modelname = model_gia-ds-Inktobers-v01-210611-864x_new
+2021-06-15T13:59:36-0400 DEBUG - modeltag = model_gia-ds-Inktobers-v01-210611-864x_new
+2021-06-15T13:59:36-0400 DEBUG - ftag = ink_v01_tst-1224
+2021-06-15T13:59:36-0400 DEBUG - savedirnamespace = Inktobers-v01-210611-864x
+2021-06-15T13:59:36-0400 DEBUG - savefulldir = /a/lib/results/Inktobers-v01-210611-864x/ink_v01_tst-1224
+2021-06-15T13:59:38-0400 STARTING - Rendering
+2021-06-15T14:04:58-0400 COMPLETED - Rendering
+2021-06-15T14:12:00-0400 INFO - Starting ./_Render2Album__ink_v01_tst.sh
+2021-06-15T14:12:00-0400 CONFIG - __Render2Album_conf__ink_v01_tst.sh
+2021-06-15T14:12:00-0400 DS - gia-ds-Inktobers-v01-210611-864x
+2021-06-15T14:12:00-0400 FTAG - ink_v01_twopass-1900
+2021-06-15T14:12:01-0400 MODELTAG - model_gia-ds-Inktobers-v01-210611-864x_new
+2021-06-15T14:12:02-0400 DEBUG - ds = gia-ds-Inktobers-v01-210611-864x
+2021-06-15T14:12:02-0400 DEBUG - modelname = model_gia-ds-Inktobers-v01-210611-864x_new
+2021-06-15T14:12:02-0400 DEBUG - modeltag = model_gia-ds-Inktobers-v01-210611-864x_new
+2021-06-15T14:12:02-0400 DEBUG - ftag = ink_v01_twopass-1900
+2021-06-15T14:12:02-0400 DEBUG - savedirnamespace = Inktobers-v01-210611-864x
+2021-06-15T14:12:02-0400 DEBUG - savefulldir = /a/lib/results/Inktobers-v01-210611-864x/ink_v01_twopass-1900
+2021-06-15T14:12:04-0400 STARTING - Rendering
+2021-06-15T14:20:32-0400 COMPLETED - Rendering
+2021-06-15T14:26:01-0400 INFO - Starting ./_Render2Album__ink_v01_tst.sh
+2021-06-15T14:26:01-0400 CONFIG - __Render2Album_conf__ink_v01_tst.sh
+2021-06-15T14:26:01-0400 DS - gia-ds-Inktobers-v01-210611-864x
+2021-06-15T14:26:01-0400 FTAG - ink_v01_twopass-1900
+2021-06-15T14:26:02-0400 MODELTAG - model_gia-ds-Inktobers-v01-210611-864x_new
+2021-06-15T14:26:02-0400 DEBUG - ds = gia-ds-Inktobers-v01-210611-864x
+2021-06-15T14:26:02-0400 DEBUG - modelname = model_gia-ds-Inktobers-v01-210611-864x_new
+2021-06-15T14:26:02-0400 DEBUG - modeltag = model_gia-ds-Inktobers-v01-210611-864x_new
+2021-06-15T14:26:02-0400 DEBUG - ftag = ink_v01_twopass-1900
+2021-06-15T14:26:02-0400 DEBUG - savedirnamespace = Inktobers-v01-210611-864x
+2021-06-15T14:26:02-0400 DEBUG - savefulldir = /a/lib/results/Inktobers-v01-210611-864x/ink_v01_twopass-1900
+2021-06-15T14:26:04-0400 STARTING - Rendering
+2021-06-15T14:34:32-0400 COMPLETED - Rendering
+2021-06-15T14:49:11-0400 INFO - Starting ./_Render2Album__ink_v01_tst.sh
+2021-06-15T14:49:11-0400 CONFIG - __Render2Album_conf__ink_v01_tst.sh
+2021-06-15T14:49:11-0400 DS - gia-ds-Inktobers-v01-210611-864x
+2021-06-15T14:49:11-0400 FTAG - ink_v01_twopass2k-2400
+2021-06-15T14:49:13-0400 MODELTAG - model_gia-ds-Inktobers-v01-210611-864x_new
+2021-06-15T14:49:13-0400 DEBUG - ds = gia-ds-Inktobers-v01-210611-864x
+2021-06-15T14:49:13-0400 DEBUG - modelname = model_gia-ds-Inktobers-v01-210611-864x_new
+2021-06-15T14:49:13-0400 DEBUG - modeltag = model_gia-ds-Inktobers-v01-210611-864x_new
+2021-06-15T14:49:13-0400 DEBUG - ftag = ink_v01_twopass2k-2400
+2021-06-15T14:49:13-0400 DEBUG - savedirnamespace = Inktobers-v01-210611-864x
+2021-06-15T14:49:13-0400 DEBUG - savefulldir = /a/lib/results/Inktobers-v01-210611-864x/ink_v01_twopass2k-2400
+2021-06-15T14:49:15-0400 STARTING - Rendering
+2021-06-15T14:50:06-0400 COMPLETED - Rendering
