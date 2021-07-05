@@ -56,6 +56,7 @@ fi
 
 
 export container_tag=$container_name:$container_arc
+export containertag=$container_tag
 #echo "Container tag is set: $container_tag"
 
 export model_local_dir=$mount_root
