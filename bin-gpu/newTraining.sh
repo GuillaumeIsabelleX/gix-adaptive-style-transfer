@@ -11,6 +11,8 @@ sdir=$cdir
 
 ds="$1"
 ftag="$2"
+expectedmodelname='model_'$ds'_new'
+
 if [ "$1" == "" ] || [ "$2" == "" ] ; then 
 	echo "Usage :"
 	echo "     $0  <dsname> <ftag>"
@@ -49,6 +51,19 @@ fi
 git add $traintargetfile $rendertargetfile &> /dev/null
 git commit $traintargetfile $rendertargetfile -m "add:$ftag $ds" &> /dev/null && \
 git push &> /dev/null &
+
+#RWROOT Server launcher
+#/a/src/rwml__adaptive_style_transfer/d2-run-TEMPLATE-all
+svrtargetfile=$rwroot/d2-run-$ftag-all
+svrtemplate=$rwroot/d2-run-TEMPLATE-all
+cp $svrtemplate $svrtargetfile
+sed -i 's/MODELNAME/'"$expectedmodelname"'/g' $svrtargetfile &&  msg_status  "SVR file created $svrtargetfile" SUCCESS ||  \
+          msg_status "Failed to prep $tfile" FAILED
+(cd $rwroot;git add $svrtargetfile; git commit $svrtargetfile -m add:svr-$svrtargetfile  &> /dev/null; git pull  &> /dev/null ; git push  &> /dev/null )
+
+
+
+# 
 echo "---------------------Training and Rendering script generated-----------------"
 echo "train :  ./$traintargetfile"
 echo "render:  ./doit.sh $rendertargetfile 15 30 45 ..."
@@ -57,3 +72,6 @@ echo "alias train$ftag=\"./$traintargetfile\"" >> .bash_aliases
 echo "alias render$ftag=\"./doit.sh $rendertargetfile \""  >> .bash_aliases
 echo 'alias render'$ftag'Edit="vi '$rendertargetfile' "'  >> .bash_aliases
 echo "alias : source .bash_aliases then : renderinko-v01  or renderinko-v01Edit"
+echo "alias svrd2$ftag=\"(cdrw;. $svrtargetfile)\""  >> .bash_aliases
+echo "svr: (cdrw;. $svrtargetfile)   or  use alias : svrd2$ftag"
+
