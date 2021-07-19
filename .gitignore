@@ -1,4 +1,6 @@
 zold/
+*.log
+**/*.log
 *.swp
 **/context*
 **/*context*
