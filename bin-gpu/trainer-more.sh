@@ -4,7 +4,7 @@
 source _env.sh 
 source _setmodel.sh $1
 
-last_checkpoint_to_train=405000
+last_checkpoint_to_train=495000
 #export model_rel_path=model/models/$model_context_name
 #export model_local_fullpath=$model_local_dir/$model_rel_path
 
