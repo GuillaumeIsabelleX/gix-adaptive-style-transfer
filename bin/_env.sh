@@ -1,10 +1,10 @@
 #!/bin/bash
 #@STCIssue Set to Your ARC
 export container_arc=cpu
-export tlid_context=2012181217
+export tlid_context=2101080253
 
 #@STCGoal Set to your Local ENV where is stored your lib and models
-export mount_root=/mnt/b
+export mount_root=/a
 
 #@STCGoal Set the Target container name
 export container_name=jgwill/gix-adaptive-style-transfer
@@ -48,5 +48,5 @@ echo "Container tag is set: $container_tag"
 
 export model_local_dir=$mount_root
 
-
+export  container_tag=$container_name:prod-cpu
 

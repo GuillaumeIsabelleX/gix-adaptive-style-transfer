@@ -20,7 +20,8 @@ echo "------------------------------------------"
 echo "---------------------------------------------------"
 cmd="$docker_exec run -it  -v $(pwd):$container_workdir \
 	-v $lib_root:$docker_lib_root \
-	-v  $model_root/models:$container_models_fullpath \
+	-v  /a/model:/a/model \
+	-v /a/model/models:/model/models \
 	-e DISPLAY=$DISPLAY \
 	$container_tag
 	"

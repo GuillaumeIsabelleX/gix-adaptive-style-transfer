@@ -1,4 +1,9 @@
 zold/
+*.log
+**/*.log
+*.swp
+**/context*
+**/*context*
 
 _tmp/
 # Byte-compiled / optimized / DLL files

@@ -83,6 +83,8 @@ class Artgan(object):
             os.makedirs(self.inference_dir)
 
         self._build_model()
+        #@STCGoal Keep an entire sequence of each 1000 iterations steps
+        #@q Do that bellow set to 405 would keep the whole sequence ??
         self.saver = tf.train.Saver(max_to_keep=2)
         self.saver_long = tf.train.Saver(max_to_keep=None)
 
@@ -372,6 +374,8 @@ class Artgan(object):
             p.terminate()
 
         print("Done.")
+        print("Does the sys.exit() made this process to exit ??")
+        sys.exit()
 
     # Don't use this function yet.
     def inference_video(self, args, path_to_folder, to_save_dir=None, resize_to_original=True,
@@ -471,6 +475,8 @@ class Artgan(object):
                 print(" [*] Load SUCCESS")
             else:
                 print(" [!] Load failed...")
+                #Exit if we can not load (fix issue inferencing noizy image)
+                sys.exit()
 
         # Create folder to store results.
         if to_save_dir is None:

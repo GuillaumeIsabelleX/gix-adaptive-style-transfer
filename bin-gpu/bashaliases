@@ -1,0 +1,11 @@
+alias dx="drox -f /config/.dropbox_uploader "
+alias dxmkdir="drox -f /config/.dropbox_uploader mkdir "
+alias dxmd="drox -f /config/.dropbox_uploader mkdir "
+alias dxup="drox -f /config/.dropbox_uploader upload "
+
+alias dxls="drox -f /config/.dropbox_uploader list "
+
+#alias drob="dros -f /config/.dropbox_uploader "
+
+export binroot=/a/bin
+alias cdb="cd $binroot"

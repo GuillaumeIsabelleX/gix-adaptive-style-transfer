@@ -1,0 +1,33 @@
+#!/bin/bash
+
+source _env.sh
+
+source _setmodel.sh $1
+
+# var 2 will set the --lr of the training to 0.0001 which is twice higher than its first traning
+# this is done in an attempt to see if the quality of the inferences will increase.
+# CHG: Rather another container with the default value was created to simplify this
+#export train_script=./trainer_var2.sh
+
+
+echo "Mount Point::"
+echo "$model_local_fullpath:$model_rel_path"
+
+export model_name=$1
+
+mkdir -p $model_local_fullpath
+echo "bash $train_script $model_name"
+echo "Container tag: $container_tag"
+export container_tag="jgwill/gix-adaptive-style-transfer:gpu-var2"
+echo "Container tag CHANGED (for var2): $container_tag"
+
+
+sleep 3
+
+$docker_exec run -it  -v $(pwd):$container_workdir \
+        -v $lib_root:$docker_lib_root \
+	-v $(cd ..;pwd):/wmodel \
+        -v  $model_local_fullpath:/$model_rel_path \
+        -e DISPLAY=$DISPLAY \
+        $container_tag \
+	bash $train_script $model_name

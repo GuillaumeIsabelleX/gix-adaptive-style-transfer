@@ -13,7 +13,9 @@ mkdir -p $model_local_fullpath
 echo "bash $train_script $model_name"
 
 $docker_exec run -it  -v $(pwd):$container_workdir \
+	--name ast_trainer \
         -v $lib_root:$docker_lib_root \
+	-v $(cd ..;pwd):/wmodel \
         -v  $model_local_fullpath:/$model_rel_path \
         -e DISPLAY=$DISPLAY \
         $container_tag \

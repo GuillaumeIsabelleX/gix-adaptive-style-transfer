@@ -1,0 +1,13 @@
+2021-06-20T05:18:31-0400 INFO - Starting ./_Render2Album__fpw_v02.sh
+2021-06-20T05:18:31-0400 CONFIG - __Render2Album_conf__fpw_v02.sh
+2021-06-20T05:18:31-0400 DS - gia-ds-fpolsonwill_v02_210424
+2021-06-20T05:18:31-0400 FTAG - fpw_v02-2200
+2021-06-20T05:18:31-0400 MODELTAG - model_gia-ds-fpolsonwill_v02_210424_new
+2021-06-20T05:18:31-0400 DEBUG - ds = gia-ds-fpolsonwill_v02_210424
+2021-06-20T05:18:31-0400 DEBUG - modelname = model_gia-ds-fpolsonwill_v02_210424_new
+2021-06-20T05:18:31-0400 DEBUG - modeltag = model_gia-ds-fpolsonwill_v02_210424_new
+2021-06-20T05:18:31-0400 DEBUG - ftag = fpw_v02-2200
+2021-06-20T05:18:31-0400 DEBUG - savedirnamespace = fpolsonwill_v02_210424
+2021-06-20T05:18:31-0400 DEBUG - savefulldir = /a/lib/results/fpolsonwill_v02_210424/fpw_v02-2200
+2021-06-20T05:18:33-0400 STARTING - Rendering
+2021-06-20T05:21:24-0400 COMPLETED - Rendering

@@ -7,7 +7,7 @@ source _setmodel.sh $1
 #export model_rel_path=model/models/$model_context_name
 #export model_local_fullpath=$model_local_dir/$model_rel_path
 
-echo "model_local_fullpath: $model_local_fullpath"
+#echo "model_local_fullpath: $model_local_fullpath"
 
 
 export lib_root_folder=datasets
@@ -16,17 +16,20 @@ export model_name='model_'$modelbasename'_new'
 
 echo " model_name= $model_name"
 
-echo "data/$modelbasename"
-echo "$model_local_fullpath"
+#echo "data/$modelbasename"
+#echo "$model_local_fullpath"
 
 
-echo "mkdir -p data/$modelbasename"
+#echo "mkdir -p data/$modelbasename"
 
-sleep 3
+#sleep 1
 mkdir -p data/$modelbasename
-sleep 1
-cp -f $lib_fullpath/*jpg data/$modelbasename
-cp -f $lib_fullpath/*JPG data/$modelbasename
+#sleep 1
+cp -f $lib_fullpath/*jpg data/$modelbasename &> /dev/null
+cp -f $lib_fullpath/*JPG data/$modelbasename &> /dev/null
+cp -f $lib_fullpath/*PNG data/$modelbasename &> /dev/null
+cp -f $lib_fullpath/*png data/$modelbasename &> /dev/null
+
 sleep 1
 
 CUDA_VISIBLE_DEVICES=0 python main.py \

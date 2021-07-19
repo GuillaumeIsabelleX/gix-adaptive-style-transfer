@@ -1,0 +1,15 @@
+#!/bin/bash
+
+source _env.sh
+
+
+
+
+export model_name=$1
+
+
+
+
+#echo "ContainerTag:  $container_tag"
+
+

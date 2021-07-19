@@ -4,9 +4,14 @@ export container_arc=gpu
 
 #@STCGoal Set to your Local ENV where is stored your lib and models
 export mount_root=/a
+export hb=/work/hooks
+
+export droxuplib=/a/bin/droxuplib.sh
 
 #@STCGoal Set the Target container name
 export container_name=jgwill/gix-adaptive-style-transfer
+
+export getenvo="--get-env-only"
 
 #-------------------------------------
 #@STCGoal Stay away of bellow unless your re-architecturing the whole thing
@@ -16,6 +21,12 @@ export lib_root=$mount_root/lib
 export docker_lib_root=/a/lib
 export model_root=$mount_root/model
 
+# export cuserhome=/home/jgi
+export cuserhome=/root
+#export dkrun_mount_droxconf_config_args="-v $HOME:$cuserhome -v $HOME:/config"
+export dkrun_mount_droxconf_config_args="-v $HOME/.dropbox_uploader:$cuserhome/.dropbox_uploader -v $HOME:/config"
+#binroot support in container
+export dkrun_mount_binroot=" -v $binroot:$binroot -e binroot=$binroot "
 
 export container_models_fullpath=/model/models
 
@@ -35,17 +46,18 @@ export CUDA_VISIBLE_DEVICES=0
 if [ "$container_arc" = "cpu" ]; then
     export docker_exec=$docker_exec_cpu
     export CUDA_VISIBLE_DEVICES=-1
-    echo "Docker Exec is set to CPU ($docker_exec)"
+    #echo "Docker Exec is set to CPU ($docker_exec)"
 else
     export docker_exec=$docker_exec_gpu
     # I guess it might be another number in other hosting but on platform AS.Nad.ca it is 0
     export CUDA_VISIBLE_DEVICES=0
-    echo "Docker Exec is set to GPU ($docker_exec)"
+    #echo "Docker Exec is set to GPU ($docker_exec)"
 fi
 
 
 export container_tag=$container_name:$container_arc
-echo "Container tag is set: $container_tag"
+export containertag=$container_tag
+#echo "Container tag is set: $container_tag"
 
 export model_local_dir=$mount_root
 

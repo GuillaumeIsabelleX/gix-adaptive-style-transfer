@@ -1,0 +1,11 @@
+----------------------------------------------------------------------------
+Welcome to ASTIA :)
+                                                                                  
+.--.   .----..---. .-.  .--.  
+ / {} \ { {__ {_   _}| | / {} \ 
+/  /\  \.-._} } | |  | |/  /\  \
+`-'  `-'`----'  `-'  `-'`-'  `-'
+
+A Containerized infrastructure for Adaptive Style Transfer. 
+An AI Neural Style Transfer adapted from (Sanakoyeu et al., 2018)'s work 
+by Guillaume Descoteaux-Isabelle, 2020-2021

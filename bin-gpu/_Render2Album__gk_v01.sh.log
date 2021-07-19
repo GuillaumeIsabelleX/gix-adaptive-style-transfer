@@ -1,0 +1,51 @@
+2021-06-30T00:34:03-0400 INFO - Starting ./_Render2Album__gk_v01.sh
+2021-06-30T00:34:03-0400 CONFIG - __Render2Album_conf__gk_v01.sh
+2021-06-30T00:34:03-0400 DS - ds-GabrielleKelly-v01-210624-864x
+2021-06-30T00:34:03-0400 FTAG - gk_v01-2200
+2021-06-30T00:34:03-0400 MODELTAG - model_ds-GabrielleKelly-v01-210624-864x_new
+2021-06-30T00:34:03-0400 DEBUG - ds = ds-GabrielleKelly-v01-210624-864x
+2021-06-30T00:34:03-0400 DEBUG - modelname = model_ds-GabrielleKelly-v01-210624-864x_new
+2021-06-30T00:34:03-0400 DEBUG - modeltag = model_ds-GabrielleKelly-v01-210624-864x_new
+2021-06-30T00:34:03-0400 DEBUG - ftag = gk_v01-2200
+2021-06-30T00:34:03-0400 DEBUG - savedirnamespace = ds-GabrielleKelly-v01-210624-864x
+2021-06-30T00:34:03-0400 DEBUG - savefulldir = /a/lib/results/ds-GabrielleKelly-v01-210624-864x/gk_v01-2200
+2021-06-30T00:34:05-0400 STARTING - Rendering
+2021-06-30T00:50:32-0400 COMPLETED - Rendering
+2021-06-30T02:22:42-0400 INFO - Starting ./_Render2Album__gk_v01.sh
+2021-06-30T02:22:42-0400 CONFIG - __Render2Album_conf__gk_v01.sh
+2021-06-30T02:22:42-0400 DS - ds-GabrielleKelly-v01-210624-864x
+2021-06-30T02:22:42-0400 FTAG - gk_v01_anger02-2250
+2021-06-30T02:22:42-0400 MODELTAG - model_ds-GabrielleKelly-v01-210624-864x_new
+2021-06-30T02:22:42-0400 DEBUG - ds = ds-GabrielleKelly-v01-210624-864x
+2021-06-30T02:22:42-0400 DEBUG - modelname = model_ds-GabrielleKelly-v01-210624-864x_new
+2021-06-30T02:22:42-0400 DEBUG - modeltag = model_ds-GabrielleKelly-v01-210624-864x_new
+2021-06-30T02:22:42-0400 DEBUG - ftag = gk_v01_anger02-2250
+2021-06-30T02:22:42-0400 DEBUG - savedirnamespace = ds-GabrielleKelly-v01-210624-864x
+2021-06-30T02:22:43-0400 DEBUG - savefulldir = /a/lib/results/ds-GabrielleKelly-v01-210624-864x/gk_v01_anger02-2250
+2021-06-30T02:22:45-0400 STARTING - Rendering
+2021-06-30T02:37:33-0400 COMPLETED - Rendering
+2021-06-30T02:42:38-0400 INFO - Starting ./_Render2Album__gk_v01.sh
+2021-06-30T02:42:38-0400 CONFIG - __Render2Album_conf__gk_v01.sh
+2021-06-30T02:42:38-0400 DS - ds-GabrielleKelly-v01-210624-864x
+2021-06-30T02:42:38-0400 FTAG - gk_v01_redraw_twop-2250
+2021-06-30T02:42:38-0400 MODELTAG - model_ds-GabrielleKelly-v01-210624-864x_new
+2021-06-30T02:42:38-0400 DEBUG - ds = ds-GabrielleKelly-v01-210624-864x
+2021-06-30T02:42:38-0400 DEBUG - modelname = model_ds-GabrielleKelly-v01-210624-864x_new
+2021-06-30T02:42:38-0400 DEBUG - modeltag = model_ds-GabrielleKelly-v01-210624-864x_new
+2021-06-30T02:42:38-0400 DEBUG - ftag = gk_v01_redraw_twop-2250
+2021-06-30T02:42:38-0400 DEBUG - savedirnamespace = ds-GabrielleKelly-v01-210624-864x
+2021-06-30T02:42:38-0400 DEBUG - savefulldir = /a/lib/results/ds-GabrielleKelly-v01-210624-864x/gk_v01_redraw_twop-2250
+2021-06-30T02:42:40-0400 STARTING - Rendering
+2021-06-30T02:50:53-0400 INFO - Starting ./_Render2Album__gk_v01.sh
+2021-06-30T02:50:53-0400 CONFIG - __Render2Album_conf__gk_v01.sh
+2021-06-30T02:50:53-0400 DS - ds-GabrielleKelly-v01-210624-864x
+2021-06-30T02:50:53-0400 FTAG - gk_v01_redraw_twop-2250
+2021-06-30T02:50:53-0400 MODELTAG - model_ds-GabrielleKelly-v01-210624-864x_new
+2021-06-30T02:50:53-0400 DEBUG - ds = ds-GabrielleKelly-v01-210624-864x
+2021-06-30T02:50:53-0400 DEBUG - modelname = model_ds-GabrielleKelly-v01-210624-864x_new
+2021-06-30T02:50:53-0400 DEBUG - modeltag = model_ds-GabrielleKelly-v01-210624-864x_new
+2021-06-30T02:50:53-0400 DEBUG - ftag = gk_v01_redraw_twop-2250
+2021-06-30T02:50:53-0400 DEBUG - savedirnamespace = ds-GabrielleKelly-v01-210624-864x
+2021-06-30T02:50:53-0400 DEBUG - savefulldir = /a/lib/results/ds-GabrielleKelly-v01-210624-864x/gk_v01_redraw_twop-2250
+2021-06-30T02:50:55-0400 STARTING - Rendering
+2021-06-30T09:20:48-0400 COMPLETED - Rendering

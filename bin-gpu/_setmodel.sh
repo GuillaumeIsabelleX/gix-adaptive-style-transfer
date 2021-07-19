@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-source _env.sh
+#source _env.sh
 
 export train_script=./trainer.sh
 
@@ -22,8 +22,8 @@ export model_inference_name=model_$modelnameonly
 export modelbasename=$modelnameonly
 export lib_namespace=$modelnameonly
 
-echo "Model context: $model_context_name"
-echo "Modelbasename: $modelbasename"
+#echo "Model context: $model_context_name"
+#echo "Modelbasename: $modelbasename"
 
 #model_local_fullpath
 
